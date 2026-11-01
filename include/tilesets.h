@@ -2,6 +2,8 @@
 #define GUARD_tilesets_H
 
 extern const u32 gTilesetTiles_General[];
+extern const u32 gTilesetTiles_weirdshit1[];
+
 extern const u16 gTilesetPalettes_General[][16];
 
 extern const struct Tileset *const gTilesetPointer_SecretBase;
@@ -60,6 +62,6 @@ extern const struct Tileset gTileset_SilphCo;
 extern const struct Tileset gTileset_SSAnne;
 extern const struct Tileset gTileset_SeaCottage;
 extern const struct Tileset gTileset_TrainerTower;
-extern const struct Tileset gTileset_weirdshit1;
+
 
 #endif //GUARD_tilesets_H

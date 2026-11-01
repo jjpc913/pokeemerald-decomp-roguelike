@@ -9327,9 +9327,9 @@
     {
       "id": "LAYOUT_SPAWN",
       "name": "SPAWN_Layout",
-      "width": 24,
-      "height": 22,
-      "primary_tileset": "gTileset_weirdshit1",
+      "width": 14,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/SPAWN/border.bin",
       "blockdata_filepath": "data/layouts/SPAWN/map.bin",

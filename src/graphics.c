@@ -2046,7 +2046,6 @@ const u16 ALIGNED(4) gTilesetPalettes_General[][16] =
 };
 
 const u32 gTilesetTiles_General[] = INCGFX_U32("data/tilesets/primary/general/tiles.png", ".4bpp.smol");
-
 // trade/egg hatch
 
 const u16 gTradeGba_Pal[] = INCGFX_U16("graphics/trade/gba.pal", ".gbapal");

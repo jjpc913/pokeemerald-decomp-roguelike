@@ -6,6 +6,9 @@ const u16 gMetatileAttributes_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/
 
 #if !IS_FRLG
 
+const u16 gMetatiles_weirdshit1[] = INCBIN_U16("data/tilesets/primary/weirdshit_1/metatiles.bin");
+const u16 gMetatileAttributes_weirdshit1[] = INCBIN_U16("data/tilesets/primary/weirdshit_1/metatile_attributes.bin");
+
 const u16 gMetatiles_General[] = INCBIN_U16("data/tilesets/primary/general/metatiles.bin");
 const u16 gMetatileAttributes_General[] = INCBIN_U16("data/tilesets/primary/general/metatile_attributes.bin");
 
@@ -406,5 +409,6 @@ const u16 gMetatileAttributes_PokemonLeague[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatiles.bin");
 const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatile_attributes.bin");
+
 
 #endif // IS_FRLG

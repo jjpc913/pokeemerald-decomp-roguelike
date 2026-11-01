@@ -2,3 +2,8 @@ raw `SPAWN_MapScripts::
 	.byte 0
 `
 
+script SPAWN_MapScripts_Enable_Permadeath {
+	lockall
+	setflag(FLAG_PERMADEATH)
+	releaseall
+}
