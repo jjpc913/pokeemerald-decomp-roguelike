@@ -1,0 +1,4 @@
+raw `SPAWN_MapScripts::
+	.byte 0
+`
+
