@@ -17,13 +17,29 @@
   "warp_events": [
     {
       "x": 6,
-      "y": 13,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_SPAWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_SPAWN",
       "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SPAWN_MapScripts_Sign"
+    }
+  ],
   "region": "REGION_HOENN"
 }

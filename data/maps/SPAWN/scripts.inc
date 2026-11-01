@@ -12,3 +12,15 @@ SPAWN_MapScripts_Enable_Permadeath::
 	releaseall
 	return
 
+
+SPAWN_MapScripts_Sign::
+# 12 "data/maps/SPAWN/scripts.pory"
+	lockall
+# 13 "data/maps/SPAWN/scripts.pory"
+	msgbox SPAWN_MapScripts_Sign_Text_0
+	return
+
+
+SPAWN_MapScripts_Sign_Text_0:
+# 13 "data/maps/SPAWN/scripts.pory"
+	.string "     's House$"

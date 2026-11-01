@@ -7,3 +7,9 @@ script SPAWN_MapScripts_Enable_Permadeath {
 	setflag(FLAG_PERMADEATH)
 	releaseall
 }
+
+script SPAWN_MapScripts_Sign {
+	lockall
+	msgbox("     's House")
+	releaseall
+}
