@@ -18,13 +18,28 @@ script SPAWN_MapScripts_Hole {
 	lockall
 	msgbox("(.........)")
 	msgbox("(The hole goes so deep, you can't make\nout anything.)")
-	msgbox("(You can hear wind blowing from deep inside.)")
+	msgbox("(You can hear wind blowing from deep\ninside.)")
 	msgbox("(You can tell that, once you jump down,\nyou won't be able to return.)")
 	msgbox("Are you sure you are ready?", MSGBOX_YESNO)
 	if (var(VAR_RESULT) == YES) {
-		# fade screen here
-		msgbox("...another step into the abyss.")
+		fadescreen(FADE_TO_BLACK)
+		delay(30)
+		msgbox("...one step further into the abyss.")
+		delay(30)
+		msgbox(".............")
+		delay(40)
+		msgbox("You've been falling for a long time...")
+		delay(10)
+		msgbox("........")
+		delay(30)
+		msgbox("You've been falling for so long, you\nalmost forget the feeling of standing on\pthe ground.")
+		delay(20)
+		msgbox("...until....")
+		delay(5)
+		fadescreen(FADE_FROM_BLACK)
+		delay(1)
 	}
+	releaseall
 }
 
 script Rummage_Common {
@@ -78,7 +93,7 @@ script Rummage_Common {
 		case 22:
 			giveitem(ITEM_NUGGET, 1)
 		case 23:
-			giveitem(ITEM_REPEL, 1)
+			giveitem(ITEM_POKE_BALL, 1)
 		case 24:
 			giveitem(ITEM_REPEL, 2)
 		case 25:
@@ -134,5 +149,25 @@ script Rummage_Common {
 		case 50:
 			giveitem(ITEM_BURN_HEAL, 1)
 	}
+	releaseall
+}
+
+script Rummage_Uncommon {
+	lockall
+
+	releaseall
+}
+
+script Rummage_Rare {
+	lockall
+	switch(var(VAR_RESULT)) {
+		case 0:
+			giveitem(ITEM_BASEMENT_KEY, 1)
+			setflag(FLAG_HAS_KEY)
+	}
+
+	random(50)
+
+
 	releaseall
 }

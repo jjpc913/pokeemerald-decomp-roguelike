@@ -2,7 +2,7 @@
   "id": "MAP_SPAWN",
   "name": "SPAWN",
   "layout": "LAYOUT_SPAWN",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_VERDANTURF",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -26,7 +26,7 @@
       "x": 7,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_SPAWN",
+      "dest_map": "MAP_SPAWN_HOUSE",
       "dest_warp_id": "0"
     }
   ],

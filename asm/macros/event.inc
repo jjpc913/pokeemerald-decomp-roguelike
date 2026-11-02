@@ -2973,7 +2973,6 @@
 	setorcopyvar VAR_0x8000, \item
 	setorcopyvar VAR_0x8001, \amount
 	setorcopyvar VAR_0x8002, \fanfare
-	callstd STD_RECEIVED_ITEM
 	.endm
 
 	@ Adds the specified item to the bag, then prints a message with fanfare. See description of msgreceiveditem.

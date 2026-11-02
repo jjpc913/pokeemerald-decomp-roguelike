@@ -5,20 +5,27 @@ raw `SPAWN_HOUSE_MapScripts::
 script SPAWN_HOUSE_EventScript_Rose{
     lockall
     faceplayer
-    msgbox("...ah.")
-    msgbox("Hello, there.")
-    msgbox("Have we met?")
-    msgbox("....")
-    msgbox("Well, it doesn't matter.")
-    msgbox("Don't bother giving me your name.")
-    msgbox("I've seen enough like you.")
-    msgbox("Well, adventurer...")
-    msgbox("You've got an arduous journey ahead of\nyou.")
-    msgbox("The least I can do is help you get\nstarted.")
-    msgbox("Pick your favorite from these Pokéballs.")
-    msgbox("I'm sure they'll make a helpful companion.")
+    if (!flag(FLAG_TALKED_TO_ROSE)) {
+        msgbox("...ah.")
+        msgbox("Hello, there.")
+        msgbox("Have we met?")
+        msgbox("....")
+        msgbox("Well, it doesn't matter.")
+        msgbox("Don't bother giving me your name.")
+        msgbox("I've seen enough like you.")
+        msgbox("You've got an arduous journey ahead of\nyou.")
+        msgbox("The least I can do is help you get\nstarted.")
+    } elif (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox("Ah...good choice.")
+        msgbox("You can go ahead and take what\nyou can find from the cabinets too.")
+        msgbox("You're gonna need it.")
+        releaseall
+        return
+    } 
+    setflag(FLAG_TALKED_TO_ROSE)
+    msgbox("Pick your favorite from these Pokemon.")
+    msgbox("I'm sure they'll make a useful companion.")
     releaseall
-    msgbox("You look a bit confused...")
 }
 
 script SPAWN_HOUSE_EventScript_Cabinet2 {
@@ -60,5 +67,91 @@ script SPAWN_HOUSE_EventScript_Fridge {
 script SPAWN_HOUSE_EventScript_TV {
     lockall
     msgbox("The TV is off.")
+    releaseall
+}
+
+script SPAWN_HOUSE_EventScript_Door {
+    lockall
+    msgbox("There is a door here, but it's locked.")
+    if (flag(FLAG_HAS_KEY)) {
+        msgbox("Use SECRET KEY?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == TRUE) {
+            msgbox("You slowly open the door...")
+        }
+    }
+    releaseall
+}
+
+script SPAWN_HOUSE_EventScript_Mudkip {
+    lockall
+    if (flag(FLAG_TREECKO) || flag(FLAG_TORCHIC)) {
+        msgbox("It's just a doll...")
+        releaseall
+    } else {
+        msgbox("Take Mudkip, the water type?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            givemon(SPECIES_MUDKIP, 10, ITEM_ORAN_BERRY)
+            setflag(FLAG_MUDKIP)
+            setflag(FLAG_SYS_POKEMON_GET)
+            removeobject(3)
+        }
+    }
+    
+    releaseall
+}
+
+script SPAWN_HOUSE_EventScript_Torchic {
+    lockall
+    if (flag(FLAG_TREECKO) || flag(FLAG_MUDKIP)) {
+        msgbox("It's just a doll...")
+        releaseall
+    } else {
+        msgbox("Take Torchic, the fire type?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            givemon(SPECIES_TORCHIC, 10, ITEM_ORAN_BERRY)
+            setflag(FLAG_TORCHIC)
+            setflag(FLAG_SYS_POKEMON_GET)
+            removeobject(4)
+        }
+    }
+    releaseall
+}
+
+script SPAWN_HOUSE_EventScript_Treecko {
+    lockall
+    if (flag(FLAG_MUDKIP) || flag(FLAG_TORCHIC)) {
+        msgbox("It's just a doll...")
+        releaseall
+    } else {
+        msgbox("Take Treecko, the grass type?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            givemon(SPECIES_TREECKO, 10, ITEM_ORAN_BERRY)
+            setflag(FLAG_TREECKO)
+            setflag(FLAG_SYS_POKEMON_GET)
+            removeobject(5)
+        }
+    }
+    releaseall
+}
+
+
+script SPAWN_HOUSE_EventScript_OneMoreThing {
+    lockall
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET) && !flag(FLAG_OMINOUS_MESSAGE)) {
+        delay(30)
+        msgbox("....hey.")
+        msgbox("One more thing, before you go.")
+        msgbox("If you happen to see a girl with\npurple hair down there...")
+        msgbox("...")
+        msgbox("...nevermind.")
+        msgbox("Just...don't let her reach the\nbottom.")
+        msgbox("I don't care how you do it.")
+        msgbox("Under no circumstances can she\nreach the end.")
+        msgbox("Got that?")
+        msgbox("That's all.")
+        msgbox("Good luck, kid.")
+        setflag(FLAG_OMINOUS_MESSAGE)
+    }
     releaseall
 }
