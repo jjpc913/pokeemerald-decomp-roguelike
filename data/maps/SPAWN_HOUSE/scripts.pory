@@ -1,0 +1,64 @@
+raw `SPAWN_HOUSE_MapScripts::
+	.byte 0
+`
+
+script SPAWN_HOUSE_EventScript_Rose{
+    lockall
+    faceplayer
+    msgbox("...ah.")
+    msgbox("Hello, there.")
+    msgbox("Have we met?")
+    msgbox("....")
+    msgbox("Well, it doesn't matter.")
+    msgbox("Don't bother giving me your name.")
+    msgbox("I've seen enough like you.")
+    msgbox("Well, adventurer...")
+    msgbox("You've got an arduous journey ahead of\nyou.")
+    msgbox("The least I can do is help you get\nstarted.")
+    msgbox("Pick your favorite from these Pokéballs.")
+    msgbox("I'm sure they'll make a helpful companion.")
+    releaseall
+    msgbox("You look a bit confused...")
+}
+
+script SPAWN_HOUSE_EventScript_Cabinet2 {
+    lockall
+    msgbox("You rummage through the strange woman's\ncabinet...")
+    if (flag(FLAG_CABINET2)) {
+        msgbox("...but there's nothing left.")
+    } else {
+        call(Rummage_Common)
+        setflag(FLAG_CABINET2)
+    }
+}
+
+script SPAWN_HOUSE_EventScript_Cabinet {
+    lockall
+    msgbox("You rummage through the strange woman's\ncabinet...")
+    if (flag(FLAG_CABINET1)) {
+        msgbox("...but there's nothing left.")
+    } else {
+        call(Rummage_Common)
+        setflag(FLAG_CABINET1)
+    }
+    
+    releaseall
+}
+
+script SPAWN_HOUSE_EventScript_Fridge {
+    lockall
+    msgbox("You rummage through the strange woman's\nfridge...")
+    if (flag(FLAG_FRIDGE)) {
+        msgbox("...but there's nothing left.")
+    } else {
+        call(Rummage_Common)
+        setflag(FLAG_FRIDGE)
+    }
+    releaseall
+}
+
+script SPAWN_HOUSE_EventScript_TV {
+    lockall
+    msgbox("The TV is off.")
+    releaseall
+}

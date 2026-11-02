@@ -9328,11 +9328,22 @@
       "id": "LAYOUT_SPAWN",
       "name": "SPAWN_Layout",
       "width": 14,
-      "height": 22,
+      "height": 28,
       "primary_tileset": "gTileset_weirdshit1",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/SPAWN/border.bin",
       "blockdata_filepath": "data/layouts/SPAWN/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SPAWN_HOUSE",
+      "name": "SPAWN_HOUSE_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SPAWN_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/SPAWN_HOUSE/map.bin",
       "layout_version": "emerald"
     }
   ]

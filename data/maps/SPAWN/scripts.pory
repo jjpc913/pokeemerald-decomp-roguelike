@@ -13,3 +13,126 @@ script SPAWN_MapScripts_Sign {
 	msgbox("     's House")
 	releaseall
 }
+
+script SPAWN_MapScripts_Hole {
+	lockall
+	msgbox("(.........)")
+	msgbox("(The hole goes so deep, you can't make\nout anything.)")
+	msgbox("(You can hear wind blowing from deep inside.)")
+	msgbox("(You can tell that, once you jump down,\nyou won't be able to return.)")
+	msgbox("Are you sure you are ready?", MSGBOX_YESNO)
+	if (var(VAR_RESULT) == YES) {
+		# fade screen here
+		msgbox("...another step into the abyss.")
+	}
+}
+
+script Rummage_Common {
+	lockall
+	random(50)
+	switch(var(VAR_RESULT)) {
+		case 0:
+			giveitem(ITEM_ANTIDOTE, 1)
+		case 1:
+			giveitem(ITEM_ORAN_BERRY, 1)
+		case 2:
+			giveitem(ITEM_BERRY_JUICE, 1)
+		case 3:
+			giveitem(ITEM_ORAN_BERRY, 2)
+		case 4: 
+			giveitem(ITEM_ANTIDOTE, 2)
+		case 5:
+			giveitem(ITEM_ELIXER, 3)
+		case 6:
+			giveitem(ITEM_ELIXER, 2)
+		case 7:
+			giveitem(ITEM_ETHER, 3)
+		case 8:
+			giveitem(ITEM_ETHER, 4)
+		case 9:
+			giveitem(ITEM_ANTIDOTE, 1)
+		case 10:
+			giveitem(ITEM_ELIXER, 1)
+		case 11:
+			giveitem(ITEM_FULL_HEAL, 1)
+		case 12:
+			giveitem(ITEM_PARALYZE_HEAL, 1)
+		case 13:
+			giveitem(ITEM_PARALYZE_HEAL, 2)
+		case 14:
+			giveitem(ITEM_FULL_HEAL, 1)
+		case 15:
+			giveitem(ITEM_POTION, 1)
+		case 16:
+			giveitem(ITEM_POTION, 2)
+		case 17:
+			giveitem(ITEM_POTION, 3)
+		case 18:
+			giveitem(ITEM_RARE_CANDY, 1)
+		case 19:
+			giveitem(ITEM_RARE_CANDY, 2)
+		case 20:
+			giveitem(ITEM_RARE_CANDY, 1)
+		case 21:
+			giveitem(ITEM_NUGGET, 1)
+		case 22:
+			giveitem(ITEM_NUGGET, 1)
+		case 23:
+			giveitem(ITEM_REPEL, 1)
+		case 24:
+			giveitem(ITEM_REPEL, 2)
+		case 25:
+			giveitem(ITEM_BURN_HEAL, 2)
+		case 26:
+			giveitem(ITEM_X_ATTACK, 1)
+		case 27:
+			giveitem(ITEM_X_DEFEND, 2)
+		case 28:
+			giveitem(ITEM_X_DEFEND, 1)
+		case 29:
+			giveitem(ITEM_X_ACCURACY, 2)
+		case 30:
+			giveitem(ITEM_X_ACCURACY, 1)
+		case 31:
+			giveitem(ITEM_X_SPEED, 2)
+		case 32:
+			giveitem(ITEM_X_SPEED, 1)
+		case 33:
+			giveitem(ITEM_X_SPECIAL, 2)
+		case 34:
+			giveitem(ITEM_POKE_BALL, 2)
+		case 35:
+			giveitem(ITEM_POKE_BALL, 1)
+		case 36:
+			giveitem(ITEM_POKE_BALL, 1)
+		case 37:
+			giveitem(ITEM_GREAT_BALL, 1)
+		case 38:
+			giveitem(ITEM_DIRE_HIT, 1)
+		case 39:
+			giveitem(ITEM_DIRE_HIT, 2)
+		case 40:
+			giveitem(ITEM_HP_UP, 1)
+		case 41:
+			giveitem(ITEM_CALCIUM, 1)
+		case 42:
+			giveitem(ITEM_ZINC, 1)
+		case 43:
+			giveitem(ITEM_IRON, 1)
+		case 44:
+			giveitem(ITEM_GUARD_SPEC, 1)
+		case 45:
+			giveitem(ITEM_SUPER_POTION, 1)
+		case 46:
+			giveitem(ITEM_MOOMOO_MILK, 1)
+		case 47:
+			giveitem(ITEM_SUPER_POTION, 2)
+		case 48:
+			giveitem(ITEM_FULL_HEAL, 1)
+		case 49:
+			giveitem(ITEM_ANTIDOTE, 1)
+		case 50:
+			giveitem(ITEM_BURN_HEAL, 1)
+	}
+	releaseall
+}
