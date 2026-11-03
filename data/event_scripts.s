@@ -1742,3 +1742,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SPAWN/scripts.inc"
 
 	.include "data/maps/SPAWN_HOUSE/scripts.inc"
+
+	.include "data/maps/LANDING_CAVE/scripts.inc"
+
+	.include "data/maps/LAYER1_MAINAREA/scripts.inc"

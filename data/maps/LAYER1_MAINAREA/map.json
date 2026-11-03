@@ -1,0 +1,71 @@
+{
+  "id": "MAP_LAYER1_MAINAREA",
+  "name": "LAYER1_MAINAREA",
+  "layout": "LAYOUT_LAYER1_MAINAREA",
+  "music": "MUS_ROUTE104",
+  "region_map_section": "MAPSEC_ROUTE_116",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 29,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LAYER1_MAINAREA_EventScript_Mothman",
+      "flag": "FLAG_MET_MOTHMAN"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 47,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_LANDING_CAVE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "LAYER1_MAINAREA_EventScript_Mothman"
+    },
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "LAYER1_MAINAREA_EventScript_Mothman"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 72,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAYER1_MAINAREA_EventScript_Lamp"
+    }
+  ],
+  "region": "REGION_HOENN"
+}

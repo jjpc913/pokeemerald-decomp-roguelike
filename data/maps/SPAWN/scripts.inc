@@ -40,7 +40,7 @@ SPAWN_MapScripts_Hole::
 	compare VAR_RESULT, YES
 	goto_if_eq SPAWN_MapScripts_Hole_2
 SPAWN_MapScripts_Hole_1:
-# 42 "data/maps/SPAWN/scripts.pory"
+# 43 "data/maps/SPAWN/scripts.pory"
 	releaseall
 	return
 
@@ -74,410 +74,784 @@ SPAWN_MapScripts_Hole_2:
 # 38 "data/maps/SPAWN/scripts.pory"
 	delay 5
 # 39 "data/maps/SPAWN/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	warp MAP_LANDING_CAVE, 8, 6
 # 40 "data/maps/SPAWN/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 41 "data/maps/SPAWN/scripts.pory"
 	delay 1
 	goto SPAWN_MapScripts_Hole_1
 
 
 Rummage_Common::
-# 46 "data/maps/SPAWN/scripts.pory"
-	lockall
 # 47 "data/maps/SPAWN/scripts.pory"
-	random 50
+	lockall
 # 48 "data/maps/SPAWN/scripts.pory"
-	switch VAR_RESULT
+	random 50
 # 49 "data/maps/SPAWN/scripts.pory"
+	switch VAR_RESULT
+# 50 "data/maps/SPAWN/scripts.pory"
 	case 0, Rummage_Common_3
-# 51 "data/maps/SPAWN/scripts.pory"
+# 52 "data/maps/SPAWN/scripts.pory"
 	case 1, Rummage_Common_4
-# 53 "data/maps/SPAWN/scripts.pory"
+# 54 "data/maps/SPAWN/scripts.pory"
 	case 2, Rummage_Common_5
-# 55 "data/maps/SPAWN/scripts.pory"
+# 56 "data/maps/SPAWN/scripts.pory"
 	case 3, Rummage_Common_6
-# 57 "data/maps/SPAWN/scripts.pory"
+# 58 "data/maps/SPAWN/scripts.pory"
 	case 4, Rummage_Common_7
-# 59 "data/maps/SPAWN/scripts.pory"
+# 60 "data/maps/SPAWN/scripts.pory"
 	case 5, Rummage_Common_8
-# 61 "data/maps/SPAWN/scripts.pory"
+# 62 "data/maps/SPAWN/scripts.pory"
 	case 6, Rummage_Common_9
-# 63 "data/maps/SPAWN/scripts.pory"
+# 64 "data/maps/SPAWN/scripts.pory"
 	case 7, Rummage_Common_10
-# 65 "data/maps/SPAWN/scripts.pory"
+# 66 "data/maps/SPAWN/scripts.pory"
 	case 8, Rummage_Common_11
-# 67 "data/maps/SPAWN/scripts.pory"
+# 68 "data/maps/SPAWN/scripts.pory"
 	case 9, Rummage_Common_12
-# 69 "data/maps/SPAWN/scripts.pory"
+# 70 "data/maps/SPAWN/scripts.pory"
 	case 10, Rummage_Common_13
-# 71 "data/maps/SPAWN/scripts.pory"
+# 72 "data/maps/SPAWN/scripts.pory"
 	case 11, Rummage_Common_14
-# 73 "data/maps/SPAWN/scripts.pory"
+# 74 "data/maps/SPAWN/scripts.pory"
 	case 12, Rummage_Common_15
-# 75 "data/maps/SPAWN/scripts.pory"
+# 76 "data/maps/SPAWN/scripts.pory"
 	case 13, Rummage_Common_16
-# 77 "data/maps/SPAWN/scripts.pory"
+# 78 "data/maps/SPAWN/scripts.pory"
 	case 14, Rummage_Common_17
-# 79 "data/maps/SPAWN/scripts.pory"
+# 80 "data/maps/SPAWN/scripts.pory"
 	case 15, Rummage_Common_18
-# 81 "data/maps/SPAWN/scripts.pory"
+# 82 "data/maps/SPAWN/scripts.pory"
 	case 16, Rummage_Common_19
-# 83 "data/maps/SPAWN/scripts.pory"
+# 84 "data/maps/SPAWN/scripts.pory"
 	case 17, Rummage_Common_20
-# 85 "data/maps/SPAWN/scripts.pory"
+# 86 "data/maps/SPAWN/scripts.pory"
 	case 18, Rummage_Common_21
-# 87 "data/maps/SPAWN/scripts.pory"
+# 88 "data/maps/SPAWN/scripts.pory"
 	case 19, Rummage_Common_22
-# 89 "data/maps/SPAWN/scripts.pory"
+# 90 "data/maps/SPAWN/scripts.pory"
 	case 20, Rummage_Common_23
-# 91 "data/maps/SPAWN/scripts.pory"
+# 92 "data/maps/SPAWN/scripts.pory"
 	case 21, Rummage_Common_24
-# 93 "data/maps/SPAWN/scripts.pory"
+# 94 "data/maps/SPAWN/scripts.pory"
 	case 22, Rummage_Common_25
-# 95 "data/maps/SPAWN/scripts.pory"
+# 96 "data/maps/SPAWN/scripts.pory"
 	case 23, Rummage_Common_26
-# 97 "data/maps/SPAWN/scripts.pory"
+# 98 "data/maps/SPAWN/scripts.pory"
 	case 24, Rummage_Common_27
-# 99 "data/maps/SPAWN/scripts.pory"
+# 100 "data/maps/SPAWN/scripts.pory"
 	case 25, Rummage_Common_28
-# 101 "data/maps/SPAWN/scripts.pory"
+# 102 "data/maps/SPAWN/scripts.pory"
 	case 26, Rummage_Common_29
-# 103 "data/maps/SPAWN/scripts.pory"
+# 104 "data/maps/SPAWN/scripts.pory"
 	case 27, Rummage_Common_30
-# 105 "data/maps/SPAWN/scripts.pory"
+# 106 "data/maps/SPAWN/scripts.pory"
 	case 28, Rummage_Common_31
-# 107 "data/maps/SPAWN/scripts.pory"
+# 108 "data/maps/SPAWN/scripts.pory"
 	case 29, Rummage_Common_32
-# 109 "data/maps/SPAWN/scripts.pory"
+# 110 "data/maps/SPAWN/scripts.pory"
 	case 30, Rummage_Common_33
-# 111 "data/maps/SPAWN/scripts.pory"
+# 112 "data/maps/SPAWN/scripts.pory"
 	case 31, Rummage_Common_34
-# 113 "data/maps/SPAWN/scripts.pory"
+# 114 "data/maps/SPAWN/scripts.pory"
 	case 32, Rummage_Common_35
-# 115 "data/maps/SPAWN/scripts.pory"
+# 116 "data/maps/SPAWN/scripts.pory"
 	case 33, Rummage_Common_36
-# 117 "data/maps/SPAWN/scripts.pory"
+# 118 "data/maps/SPAWN/scripts.pory"
 	case 34, Rummage_Common_37
-# 119 "data/maps/SPAWN/scripts.pory"
+# 120 "data/maps/SPAWN/scripts.pory"
 	case 35, Rummage_Common_38
-# 121 "data/maps/SPAWN/scripts.pory"
+# 122 "data/maps/SPAWN/scripts.pory"
 	case 36, Rummage_Common_39
-# 123 "data/maps/SPAWN/scripts.pory"
+# 124 "data/maps/SPAWN/scripts.pory"
 	case 37, Rummage_Common_40
-# 125 "data/maps/SPAWN/scripts.pory"
+# 126 "data/maps/SPAWN/scripts.pory"
 	case 38, Rummage_Common_41
-# 127 "data/maps/SPAWN/scripts.pory"
+# 128 "data/maps/SPAWN/scripts.pory"
 	case 39, Rummage_Common_42
-# 129 "data/maps/SPAWN/scripts.pory"
+# 130 "data/maps/SPAWN/scripts.pory"
 	case 40, Rummage_Common_43
-# 131 "data/maps/SPAWN/scripts.pory"
+# 132 "data/maps/SPAWN/scripts.pory"
 	case 41, Rummage_Common_44
-# 133 "data/maps/SPAWN/scripts.pory"
+# 134 "data/maps/SPAWN/scripts.pory"
 	case 42, Rummage_Common_45
-# 135 "data/maps/SPAWN/scripts.pory"
+# 136 "data/maps/SPAWN/scripts.pory"
 	case 43, Rummage_Common_46
-# 137 "data/maps/SPAWN/scripts.pory"
+# 138 "data/maps/SPAWN/scripts.pory"
 	case 44, Rummage_Common_47
-# 139 "data/maps/SPAWN/scripts.pory"
+# 140 "data/maps/SPAWN/scripts.pory"
 	case 45, Rummage_Common_48
-# 141 "data/maps/SPAWN/scripts.pory"
+# 142 "data/maps/SPAWN/scripts.pory"
 	case 46, Rummage_Common_49
-# 143 "data/maps/SPAWN/scripts.pory"
+# 144 "data/maps/SPAWN/scripts.pory"
 	case 47, Rummage_Common_50
-# 145 "data/maps/SPAWN/scripts.pory"
+# 146 "data/maps/SPAWN/scripts.pory"
 	case 48, Rummage_Common_51
-# 147 "data/maps/SPAWN/scripts.pory"
+# 148 "data/maps/SPAWN/scripts.pory"
 	case 49, Rummage_Common_52
-# 149 "data/maps/SPAWN/scripts.pory"
+# 150 "data/maps/SPAWN/scripts.pory"
 	case 50, Rummage_Common_53
 Rummage_Common_1:
-# 152 "data/maps/SPAWN/scripts.pory"
+# 153 "data/maps/SPAWN/scripts.pory"
 	releaseall
 	return
 
 Rummage_Common_3:
-# 50 "data/maps/SPAWN/scripts.pory"
+# 51 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ANTIDOTE, 1
 	goto Rummage_Common_1
 
 Rummage_Common_4:
-# 52 "data/maps/SPAWN/scripts.pory"
+# 53 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ORAN_BERRY, 1
 	goto Rummage_Common_1
 
 Rummage_Common_5:
-# 54 "data/maps/SPAWN/scripts.pory"
+# 55 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_BERRY_JUICE, 1
 	goto Rummage_Common_1
 
 Rummage_Common_6:
-# 56 "data/maps/SPAWN/scripts.pory"
+# 57 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ORAN_BERRY, 2
 	goto Rummage_Common_1
 
 Rummage_Common_7:
-# 58 "data/maps/SPAWN/scripts.pory"
+# 59 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ANTIDOTE, 2
 	goto Rummage_Common_1
 
 Rummage_Common_8:
-# 60 "data/maps/SPAWN/scripts.pory"
+# 61 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ELIXER, 3
 	goto Rummage_Common_1
 
 Rummage_Common_9:
-# 62 "data/maps/SPAWN/scripts.pory"
+# 63 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ELIXER, 2
 	goto Rummage_Common_1
 
 Rummage_Common_10:
-# 64 "data/maps/SPAWN/scripts.pory"
+# 65 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ETHER, 3
 	goto Rummage_Common_1
 
 Rummage_Common_11:
-# 66 "data/maps/SPAWN/scripts.pory"
+# 67 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ETHER, 4
 	goto Rummage_Common_1
 
 Rummage_Common_12:
-# 68 "data/maps/SPAWN/scripts.pory"
+# 69 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ANTIDOTE, 1
 	goto Rummage_Common_1
 
 Rummage_Common_13:
-# 70 "data/maps/SPAWN/scripts.pory"
+# 71 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ELIXER, 1
 	goto Rummage_Common_1
 
 Rummage_Common_14:
-# 72 "data/maps/SPAWN/scripts.pory"
+# 73 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_FULL_HEAL, 1
 	goto Rummage_Common_1
 
 Rummage_Common_15:
-# 74 "data/maps/SPAWN/scripts.pory"
+# 75 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_PARALYZE_HEAL, 1
 	goto Rummage_Common_1
 
 Rummage_Common_16:
-# 76 "data/maps/SPAWN/scripts.pory"
+# 77 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_PARALYZE_HEAL, 2
 	goto Rummage_Common_1
 
 Rummage_Common_17:
-# 78 "data/maps/SPAWN/scripts.pory"
+# 79 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_FULL_HEAL, 1
 	goto Rummage_Common_1
 
 Rummage_Common_18:
-# 80 "data/maps/SPAWN/scripts.pory"
+# 81 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_POTION, 1
 	goto Rummage_Common_1
 
 Rummage_Common_19:
-# 82 "data/maps/SPAWN/scripts.pory"
+# 83 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_POTION, 2
 	goto Rummage_Common_1
 
 Rummage_Common_20:
-# 84 "data/maps/SPAWN/scripts.pory"
+# 85 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_POTION, 3
 	goto Rummage_Common_1
 
 Rummage_Common_21:
-# 86 "data/maps/SPAWN/scripts.pory"
+# 87 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 1
 	goto Rummage_Common_1
 
 Rummage_Common_22:
-# 88 "data/maps/SPAWN/scripts.pory"
+# 89 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 2
 	goto Rummage_Common_1
 
 Rummage_Common_23:
-# 90 "data/maps/SPAWN/scripts.pory"
+# 91 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 1
 	goto Rummage_Common_1
 
 Rummage_Common_24:
-# 92 "data/maps/SPAWN/scripts.pory"
+# 93 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_NUGGET, 1
 	goto Rummage_Common_1
 
 Rummage_Common_25:
-# 94 "data/maps/SPAWN/scripts.pory"
+# 95 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_NUGGET, 1
 	goto Rummage_Common_1
 
 Rummage_Common_26:
-# 96 "data/maps/SPAWN/scripts.pory"
+# 97 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_POKE_BALL, 1
 	goto Rummage_Common_1
 
 Rummage_Common_27:
-# 98 "data/maps/SPAWN/scripts.pory"
+# 99 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_REPEL, 2
 	goto Rummage_Common_1
 
 Rummage_Common_28:
-# 100 "data/maps/SPAWN/scripts.pory"
+# 101 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_BURN_HEAL, 2
 	goto Rummage_Common_1
 
 Rummage_Common_29:
-# 102 "data/maps/SPAWN/scripts.pory"
+# 103 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_X_ATTACK, 1
 	goto Rummage_Common_1
 
 Rummage_Common_30:
-# 104 "data/maps/SPAWN/scripts.pory"
+# 105 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_X_DEFEND, 2
 	goto Rummage_Common_1
 
 Rummage_Common_31:
-# 106 "data/maps/SPAWN/scripts.pory"
+# 107 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_X_DEFEND, 1
 	goto Rummage_Common_1
 
 Rummage_Common_32:
-# 108 "data/maps/SPAWN/scripts.pory"
+# 109 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_X_ACCURACY, 2
 	goto Rummage_Common_1
 
 Rummage_Common_33:
-# 110 "data/maps/SPAWN/scripts.pory"
+# 111 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_X_ACCURACY, 1
 	goto Rummage_Common_1
 
 Rummage_Common_34:
-# 112 "data/maps/SPAWN/scripts.pory"
+# 113 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_X_SPEED, 2
 	goto Rummage_Common_1
 
 Rummage_Common_35:
-# 114 "data/maps/SPAWN/scripts.pory"
+# 115 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_X_SPEED, 1
 	goto Rummage_Common_1
 
 Rummage_Common_36:
-# 116 "data/maps/SPAWN/scripts.pory"
+# 117 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_X_SPECIAL, 2
 	goto Rummage_Common_1
 
 Rummage_Common_37:
-# 118 "data/maps/SPAWN/scripts.pory"
+# 119 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_POKE_BALL, 2
 	goto Rummage_Common_1
 
 Rummage_Common_38:
-# 120 "data/maps/SPAWN/scripts.pory"
+# 121 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_POKE_BALL, 1
 	goto Rummage_Common_1
 
 Rummage_Common_39:
-# 122 "data/maps/SPAWN/scripts.pory"
+# 123 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_POKE_BALL, 1
 	goto Rummage_Common_1
 
 Rummage_Common_40:
-# 124 "data/maps/SPAWN/scripts.pory"
+# 125 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_GREAT_BALL, 1
 	goto Rummage_Common_1
 
 Rummage_Common_41:
-# 126 "data/maps/SPAWN/scripts.pory"
+# 127 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_DIRE_HIT, 1
 	goto Rummage_Common_1
 
 Rummage_Common_42:
-# 128 "data/maps/SPAWN/scripts.pory"
+# 129 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_DIRE_HIT, 2
 	goto Rummage_Common_1
 
 Rummage_Common_43:
-# 130 "data/maps/SPAWN/scripts.pory"
+# 131 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_HP_UP, 1
 	goto Rummage_Common_1
 
 Rummage_Common_44:
-# 132 "data/maps/SPAWN/scripts.pory"
+# 133 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_CALCIUM, 1
 	goto Rummage_Common_1
 
 Rummage_Common_45:
-# 134 "data/maps/SPAWN/scripts.pory"
+# 135 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ZINC, 1
 	goto Rummage_Common_1
 
 Rummage_Common_46:
-# 136 "data/maps/SPAWN/scripts.pory"
+# 137 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_IRON, 1
 	goto Rummage_Common_1
 
 Rummage_Common_47:
-# 138 "data/maps/SPAWN/scripts.pory"
+# 139 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_GUARD_SPEC, 1
 	goto Rummage_Common_1
 
 Rummage_Common_48:
-# 140 "data/maps/SPAWN/scripts.pory"
+# 141 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_SUPER_POTION, 1
 	goto Rummage_Common_1
 
 Rummage_Common_49:
-# 142 "data/maps/SPAWN/scripts.pory"
+# 143 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_MOOMOO_MILK, 1
 	goto Rummage_Common_1
 
 Rummage_Common_50:
-# 144 "data/maps/SPAWN/scripts.pory"
+# 145 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_SUPER_POTION, 2
 	goto Rummage_Common_1
 
 Rummage_Common_51:
-# 146 "data/maps/SPAWN/scripts.pory"
+# 147 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_FULL_HEAL, 1
 	goto Rummage_Common_1
 
 Rummage_Common_52:
-# 148 "data/maps/SPAWN/scripts.pory"
+# 149 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_ANTIDOTE, 1
 	goto Rummage_Common_1
 
 Rummage_Common_53:
-# 150 "data/maps/SPAWN/scripts.pory"
+# 151 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_BURN_HEAL, 1
 	goto Rummage_Common_1
 
 
 Rummage_Uncommon::
-# 156 "data/maps/SPAWN/scripts.pory"
+# 157 "data/maps/SPAWN/scripts.pory"
 	lockall
 # 158 "data/maps/SPAWN/scripts.pory"
+	random 50
+# 159 "data/maps/SPAWN/scripts.pory"
+	switch VAR_RESULT
+# 160 "data/maps/SPAWN/scripts.pory"
+	case 0, Rummage_Uncommon_3
+# 162 "data/maps/SPAWN/scripts.pory"
+	case 1, Rummage_Uncommon_4
+# 164 "data/maps/SPAWN/scripts.pory"
+	case 2, Rummage_Uncommon_5
+# 166 "data/maps/SPAWN/scripts.pory"
+	case 3, Rummage_Uncommon_6
+# 168 "data/maps/SPAWN/scripts.pory"
+	case 4, Rummage_Uncommon_7
+# 170 "data/maps/SPAWN/scripts.pory"
+	case 5, Rummage_Uncommon_8
+# 172 "data/maps/SPAWN/scripts.pory"
+	case 6, Rummage_Uncommon_9
+# 174 "data/maps/SPAWN/scripts.pory"
+	case 7, Rummage_Uncommon_10
+# 176 "data/maps/SPAWN/scripts.pory"
+	case 8, Rummage_Uncommon_11
+# 178 "data/maps/SPAWN/scripts.pory"
+	case 9, Rummage_Uncommon_12
+# 180 "data/maps/SPAWN/scripts.pory"
+	case 10, Rummage_Uncommon_13
+# 182 "data/maps/SPAWN/scripts.pory"
+	case 11, Rummage_Uncommon_14
+# 184 "data/maps/SPAWN/scripts.pory"
+	case 12, Rummage_Uncommon_15
+# 186 "data/maps/SPAWN/scripts.pory"
+	case 13, Rummage_Uncommon_16
+# 188 "data/maps/SPAWN/scripts.pory"
+	case 14, Rummage_Uncommon_17
+# 190 "data/maps/SPAWN/scripts.pory"
+	case 15, Rummage_Uncommon_18
+# 192 "data/maps/SPAWN/scripts.pory"
+	case 16, Rummage_Uncommon_19
+# 194 "data/maps/SPAWN/scripts.pory"
+	case 17, Rummage_Uncommon_20
+# 196 "data/maps/SPAWN/scripts.pory"
+	case 18, Rummage_Uncommon_21
+# 198 "data/maps/SPAWN/scripts.pory"
+	case 19, Rummage_Uncommon_22
+# 200 "data/maps/SPAWN/scripts.pory"
+	case 20, Rummage_Uncommon_23
+# 202 "data/maps/SPAWN/scripts.pory"
+	case 21, Rummage_Uncommon_24
+# 204 "data/maps/SPAWN/scripts.pory"
+	case 22, Rummage_Uncommon_25
+# 206 "data/maps/SPAWN/scripts.pory"
+	case 23, Rummage_Uncommon_26
+# 208 "data/maps/SPAWN/scripts.pory"
+	case 24, Rummage_Uncommon_27
+# 210 "data/maps/SPAWN/scripts.pory"
+	case 25, Rummage_Uncommon_28
+# 212 "data/maps/SPAWN/scripts.pory"
+	case 26, Rummage_Uncommon_29
+# 214 "data/maps/SPAWN/scripts.pory"
+	case 27, Rummage_Uncommon_30
+# 216 "data/maps/SPAWN/scripts.pory"
+	case 28, Rummage_Uncommon_31
+# 218 "data/maps/SPAWN/scripts.pory"
+	case 29, Rummage_Uncommon_32
+# 220 "data/maps/SPAWN/scripts.pory"
+	case 30, Rummage_Uncommon_33
+# 222 "data/maps/SPAWN/scripts.pory"
+	case 31, Rummage_Uncommon_34
+# 224 "data/maps/SPAWN/scripts.pory"
+	case 32, Rummage_Uncommon_35
+# 226 "data/maps/SPAWN/scripts.pory"
+	case 33, Rummage_Uncommon_36
+# 228 "data/maps/SPAWN/scripts.pory"
+	case 34, Rummage_Uncommon_37
+# 230 "data/maps/SPAWN/scripts.pory"
+	case 35, Rummage_Uncommon_38
+# 232 "data/maps/SPAWN/scripts.pory"
+	case 36, Rummage_Uncommon_39
+# 234 "data/maps/SPAWN/scripts.pory"
+	case 37, Rummage_Uncommon_40
+# 236 "data/maps/SPAWN/scripts.pory"
+	case 38, Rummage_Uncommon_41
+# 238 "data/maps/SPAWN/scripts.pory"
+	case 39, Rummage_Uncommon_42
+# 240 "data/maps/SPAWN/scripts.pory"
+	case 40, Rummage_Uncommon_43
+# 242 "data/maps/SPAWN/scripts.pory"
+	case 41, Rummage_Uncommon_44
+# 244 "data/maps/SPAWN/scripts.pory"
+	case 42, Rummage_Uncommon_45
+# 246 "data/maps/SPAWN/scripts.pory"
+	case 43, Rummage_Uncommon_46
+# 248 "data/maps/SPAWN/scripts.pory"
+	case 44, Rummage_Uncommon_47
+# 250 "data/maps/SPAWN/scripts.pory"
+	case 45, Rummage_Uncommon_48
+# 252 "data/maps/SPAWN/scripts.pory"
+	case 46, Rummage_Uncommon_49
+# 254 "data/maps/SPAWN/scripts.pory"
+	case 47, Rummage_Uncommon_50
+# 256 "data/maps/SPAWN/scripts.pory"
+	case 48, Rummage_Uncommon_51
+# 258 "data/maps/SPAWN/scripts.pory"
+	case 49, Rummage_Uncommon_52
+# 260 "data/maps/SPAWN/scripts.pory"
+	case 50, Rummage_Uncommon_53
+Rummage_Uncommon_1:
+# 264 "data/maps/SPAWN/scripts.pory"
 	releaseall
 	return
 
+Rummage_Uncommon_3:
+# 161 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_FULL_HEAL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_4:
+# 163 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_FULL_HEAL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_5:
+# 165 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_SITRUS_BERRY, 2
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_6:
+# 167 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_FOCUS_SASH, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_7:
+# 169 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_CHARCOAL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_8:
+# 171 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_MYSTIC_WATER, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_9:
+# 173 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_SILK_SCARF, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_10:
+# 175 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_MIRACLE_SEED, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_11:
+# 177 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_NEVER_MELT_ICE, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_12:
+# 179 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_MAGNET, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_13:
+# 181 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 2
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_14:
+# 183 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_15:
+# 185 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_PREMIER_BALL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_16:
+# 187 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_ULTRA_BALL, 2
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_17:
+# 189 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_GREAT_BALL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_18:
+# 191 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_ABILITY_CAPSULE, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_19:
+# 193 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_POKE_DOLL, 2
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_20:
+# 195 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_POKE_DOLL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_21:
+# 197 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_BIG_PEARL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_22:
+# 199 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_STAR_PIECE, 2
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_23:
+# 201 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_FIRE_STONE, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_24:
+# 203 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_WATER_STONE, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_25:
+# 205 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_THUNDER_STONE, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_26:
+# 207 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_SOFT_SAND, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_27:
+# 209 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_BLACK_GLASSES, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_28:
+# 211 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_QUICK_CLAW, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_29:
+# 213 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_CHESTO_BERRY, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_30:
+# 215 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_PECHA_BERRY, 2
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_31:
+# 217 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_PECHA_BERRY, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_32:
+# 219 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_CHESTO_BERRY, 2
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_33:
+# 221 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_CHERI_BERRY, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_34:
+# 223 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_QUICK_BALL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_35:
+# 225 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_HEAL_POWDER, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_36:
+# 227 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_POKE_BALL, 3
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_37:
+# 229 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_MAX_ELIXER, 3
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_38:
+# 231 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_ABILITY_PATCH, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_39:
+# 233 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_POTION, 3
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_40:
+# 235 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_ANTIDOTE, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_41:
+# 237 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_LEMONADE, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_42:
+# 239 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_ORAN_BERRY, 2
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_43:
+# 241 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_PP_MAX, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_44:
+# 243 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_PP_UP, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_45:
+# 245 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_ETHER, 3
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_46:
+# 247 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_ETHER, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_47:
+# 249 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_FOCUS_SASH, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_48:
+# 251 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_DUSK_BALL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_49:
+# 253 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_NET_BALL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_50:
+# 255 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_HEAL_BALL, 2
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_51:
+# 257 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_HEAL_BALL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_52:
+# 259 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_HEAL_BALL, 1
+	goto Rummage_Uncommon_1
+
+Rummage_Uncommon_53:
+# 261 "data/maps/SPAWN/scripts.pory"
+	giveitem ITEM_REVIVE, 1
+	goto Rummage_Uncommon_1
+
 
 Rummage_Rare::
-# 162 "data/maps/SPAWN/scripts.pory"
+# 268 "data/maps/SPAWN/scripts.pory"
 	lockall
-# 163 "data/maps/SPAWN/scripts.pory"
+# 269 "data/maps/SPAWN/scripts.pory"
 	switch VAR_RESULT
-# 164 "data/maps/SPAWN/scripts.pory"
+# 270 "data/maps/SPAWN/scripts.pory"
 	case 0, Rummage_Rare_3
 Rummage_Rare_1:
-# 169 "data/maps/SPAWN/scripts.pory"
+# 275 "data/maps/SPAWN/scripts.pory"
 	random 50
-# 172 "data/maps/SPAWN/scripts.pory"
+# 278 "data/maps/SPAWN/scripts.pory"
 	releaseall
 	return
 
 Rummage_Rare_3:
-# 165 "data/maps/SPAWN/scripts.pory"
+# 271 "data/maps/SPAWN/scripts.pory"
 	giveitem ITEM_BASEMENT_KEY, 1
-# 166 "data/maps/SPAWN/scripts.pory"
+# 272 "data/maps/SPAWN/scripts.pory"
 	setflag FLAG_HAS_KEY
 	goto Rummage_Rare_1
+
+
+EnableRunning::
+# 282 "data/maps/SPAWN/scripts.pory"
+	lockall
+# 283 "data/maps/SPAWN/scripts.pory"
+	setflag FLAG_SYS_B_DASH
+# 284 "data/maps/SPAWN/scripts.pory"
+	releaseall
+	return
 
 
 SPAWN_MapScripts_Sign_Text_0:
@@ -494,7 +868,7 @@ SPAWN_MapScripts_Hole_Text_1:
 
 SPAWN_MapScripts_Hole_Text_2:
 # 21 "data/maps/SPAWN/scripts.pory"
-	.string "(You can hear wind blowing from deep inside.)$"
+	.string "(You can hear wind blowing from deep\ninside.)$"
 
 SPAWN_MapScripts_Hole_Text_3:
 # 22 "data/maps/SPAWN/scripts.pory"

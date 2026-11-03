@@ -135,7 +135,9 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "SPAWN",
-    "SPAWN_HOUSE"
+    "SPAWN_HOUSE",
+    "LANDING_CAVE",
+    "LAYER1_MAINAREA"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

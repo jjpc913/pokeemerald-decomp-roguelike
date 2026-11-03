@@ -1,0 +1,65 @@
+raw `LAYER1_MAINAREA_MapScripts::
+	.byte 0
+`
+
+script LAYER1_MAINAREA_EventScript_Mothman {
+    lockall
+    if (flag(FLAG_MET_MOTHMAN)) {
+        releaseall
+        return
+    }
+    msgbox("..not so fast, buddy!")
+    applymovement(1, MothmanMoveRight)
+    waitmovement(1)
+    msgbox("I couldn't help but notice you were\nabout to wander into the grass\pwithout a care in the world.")
+    msgbox("You know the grass is dangerous,\nright?")
+    msgbox("I mean, more dangerous than normal.")
+    msgbox("This place is special, you see.")
+    msgbox("The Pokemon are more aggressive.")
+    msgbox("They'll hunt you down before they\nlet you run away.")
+    applymovement(1, MothmanMoveOne)
+    waitmovement(1)
+    msgbox("And even if you do beat 'em, you\nwon't get anything in return.")
+    msgbox("You won't find any Pokemon Centers\neither.")
+    msgbox("In other words, you should\navoid fights when you can.")
+    msgbox("...just a friendly word of advice.")
+    applymovement(1, MothmanMoveOne)
+    waitmovement(1)
+    msgbox("You can call me MOTHMAN.")
+    msgbox("I'm your guardian angel, in a way.\nEheheh...")
+    msgbox("You can take this.")
+    giveitem(ITEM_FULL_HEAL, 1)
+    giveitem(ITEM_POTION, 1)
+    msgbox("It's brutal out there.")
+    msgbox("Good luck, {PLAYER}.\n")
+    msgbox("I'll be rooting for you...eheheh.")
+    applymovement(1, MothmanFaceLeft)
+    waitmovement(1)
+    applymovement(1, MothmanMoveLeft)
+    waitmovement(1)
+    setflag(FLAG_MET_MOTHMAN)
+    removeobject(1)
+    releaseall
+}
+
+movement MothmanMoveRight {
+    walk_right * 5
+}
+movement MothmanMoveOne {
+    walk_right
+}
+movement MothmanFaceLeft {
+    face_left
+}
+
+movement MothmanMoveLeft {
+    walk_left * 8
+}
+
+script LAYER1_MAINAREA_EventScript_Lamp {
+    lockall
+    msgbox("There is a suspicious looking\nlamppost here.")
+    if (flag(FLAG_ACTIVATE_LAMP)) {
+        msgbox("The lamp is resonating with your wishing stone...")
+    }
+}

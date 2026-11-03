@@ -9345,6 +9345,28 @@
       "border_filepath": "data/layouts/SPAWN_HOUSE/border.bin",
       "blockdata_filepath": "data/layouts/SPAWN_HOUSE/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LANDING_CAVE",
+      "name": "LANDING_CAVE_Layout",
+      "width": 17,
+      "height": 33,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/LANDING_CAVE/border.bin",
+      "blockdata_filepath": "data/layouts/LANDING_CAVE/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_LAYER1_MAINAREA",
+      "name": "LAYER1_MAINAREA_Layout",
+      "width": 100,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/LAYER1_MAINAREA/border.bin",
+      "blockdata_filepath": "data/layouts/LAYER1_MAINAREA/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

@@ -36,6 +36,7 @@ script SPAWN_MapScripts_Hole {
 		delay(20)
 		msgbox("...until....")
 		delay(5)
+		warp(MAP_LANDING_CAVE, 8, 6)
 		fadescreen(FADE_FROM_BLACK)
 		delay(1)
 	}
@@ -154,6 +155,111 @@ script Rummage_Common {
 
 script Rummage_Uncommon {
 	lockall
+	random(50)
+	switch(var(VAR_RESULT)) {
+		case 0:
+			giveitem(ITEM_FULL_HEAL, 1)
+		case 1:
+			giveitem(ITEM_FULL_HEAL, 1)
+		case 2:
+			giveitem(ITEM_SITRUS_BERRY, 2)
+		case 3:
+			giveitem(ITEM_FOCUS_SASH, 1)
+		case 4: 
+			giveitem(ITEM_CHARCOAL, 1)
+		case 5:
+			giveitem(ITEM_MYSTIC_WATER, 1)
+		case 6:
+			giveitem(ITEM_SILK_SCARF, 1)
+		case 7:
+			giveitem(ITEM_MIRACLE_SEED, 1)
+		case 8:
+			giveitem(ITEM_NEVER_MELT_ICE, 1)
+		case 9:
+			giveitem(ITEM_MAGNET, 1)
+		case 10:
+			giveitem(ITEM_RARE_CANDY, 2)
+		case 11:
+			giveitem(ITEM_RARE_CANDY, 1)
+		case 12:
+			giveitem(ITEM_PREMIER_BALL, 1)
+		case 13:
+			giveitem(ITEM_ULTRA_BALL, 2)
+		case 14:
+			giveitem(ITEM_GREAT_BALL, 1)
+		case 15:
+			giveitem(ITEM_ABILITY_CAPSULE, 1)
+		case 16:
+			giveitem(ITEM_POKE_DOLL, 2)
+		case 17:
+			giveitem(ITEM_POKE_DOLL, 1)
+		case 18:
+			giveitem(ITEM_BIG_PEARL, 1)
+		case 19:
+			giveitem(ITEM_STAR_PIECE, 2)
+		case 20:
+			giveitem(ITEM_FIRE_STONE, 1)
+		case 21:
+			giveitem(ITEM_WATER_STONE, 1)
+		case 22:
+			giveitem(ITEM_THUNDER_STONE, 1)
+		case 23:
+			giveitem(ITEM_SOFT_SAND, 1)
+		case 24:
+			giveitem(ITEM_BLACK_GLASSES, 1)
+		case 25:
+			giveitem(ITEM_QUICK_CLAW, 1)
+		case 26:
+			giveitem(ITEM_CHESTO_BERRY, 1)
+		case 27:
+			giveitem(ITEM_PECHA_BERRY, 2)
+		case 28:
+			giveitem(ITEM_PECHA_BERRY, 1)
+		case 29:
+			giveitem(ITEM_CHESTO_BERRY, 2)
+		case 30:
+			giveitem(ITEM_CHERI_BERRY, 1)
+		case 31:
+			giveitem(ITEM_QUICK_BALL, 1)
+		case 32:
+			giveitem(ITEM_HEAL_POWDER, 1)
+		case 33:
+			giveitem(ITEM_POKE_BALL, 3)
+		case 34:
+			giveitem(ITEM_MAX_ELIXER, 3)
+		case 35:
+			giveitem(ITEM_ABILITY_PATCH, 1)
+		case 36:
+			giveitem(ITEM_POTION, 3)
+		case 37:
+			giveitem(ITEM_ANTIDOTE, 1)
+		case 38:
+			giveitem(ITEM_LEMONADE, 1)
+		case 39:
+			giveitem(ITEM_ORAN_BERRY, 2)
+		case 40:
+			giveitem(ITEM_PP_MAX, 1)
+		case 41:
+			giveitem(ITEM_PP_UP, 1)
+		case 42:
+			giveitem(ITEM_ETHER, 3)
+		case 43:
+			giveitem(ITEM_ETHER, 1)
+		case 44:
+			giveitem(ITEM_FOCUS_SASH, 1)
+		case 45:
+			giveitem(ITEM_DUSK_BALL, 1)
+		case 46:
+			giveitem(ITEM_NET_BALL, 1)
+		case 47:
+			giveitem(ITEM_HEAL_BALL, 2)
+		case 48:
+			giveitem(ITEM_HEAL_BALL, 1)
+		case 49:
+			giveitem(ITEM_HEAL_BALL, 1)
+		case 50:
+			giveitem(ITEM_REVIVE, 1)
+	}
 
 	releaseall
 }
@@ -169,5 +275,11 @@ script Rummage_Rare {
 	random(50)
 
 
+	releaseall
+}
+
+script EnableRunning {
+	lockall
+	setflag(FLAG_SYS_B_DASH)
 	releaseall
 }

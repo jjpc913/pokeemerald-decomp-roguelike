@@ -8728,20 +8728,20 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_RED_SCARF] =
     {
-        .name = ITEM_NAME("Red Scarf"),
-        .pluralName = ITEM_PLURAL_NAME("Red Scarves"),
-        .price = 100,
+        .name = ITEM_NAME("Wishing Stone"),
+        .pluralName = ITEM_PLURAL_NAME("Wishing Stones"),
+        .price = 2000,
         .description = COMPOUND_STRING(
-            "A held item that\n"
-            "raises Cool in\n"
-            "Contests."),
+            "A rock pulsating\n"
+            "with ethereal\n"
+            "energy."),
         .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_CONTEST_HELD_ITEM,
+        .sortType = ITEM_TYPE_SELLABLE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
-        .iconPic = gItemIcon_Scarf,
-        .iconPalette = gItemIconPalette_RedScarf,
+        .iconPic = gItemIcon_WaterStone,
+        .iconPalette = gItemIconPalette_LuxuryBall,
     },
 
     [ITEM_BLUE_SCARF] =

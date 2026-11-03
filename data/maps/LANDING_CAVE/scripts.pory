@@ -1,0 +1,28 @@
+raw `LANDING_CAVE_MapScripts::
+	.byte 0
+`
+
+script LANDING_CAVE_EventScript_Ball1 {
+    lockall
+    call(Rummage_Uncommon)
+    setflag(FLAG_CAVE_BALL_1)
+    removeobject(1)
+    releaseall
+}
+
+script LANDING_CAVE_EventScript_Ball2 {
+    lockall
+    call(Rummage_Uncommon)
+    setflag(FLAG_CAVE_BALL_2)
+    removeobject(2)
+    releaseall
+}
+
+script LANDING_CAVE_EventScript_FindYourself {
+    lockall
+    if (!flag(FLAG_CAVE_MESSAGE)) {
+        msgbox("...somehow, you find yourself in a cave.")
+        setflag(FLAG_CAVE_MESSAGE)
+    }
+    releaseall
+}
