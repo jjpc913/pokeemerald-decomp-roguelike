@@ -110,6 +110,7 @@ script LAYER1_MAINAREA_EventScript_Lamp {
                     msgbox("Is this really what you want?", MSGBOX_YESNO)
                     if (var(VAR_RESULT) == YES) {
                         # death
+                        warp(MAP_DEATHZONE, 9,27)
                     } else {
                         msgbox("(You hesitated in your conviction.)")
                         msgbox("(The wish was wasted...)")

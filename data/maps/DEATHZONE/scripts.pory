@@ -1,0 +1,30 @@
+raw `DEATHZONE_MapScripts::
+	.byte 0
+`
+
+script DEATHZONE_EventScript_Mothman_Talk {
+    lockall
+    faceplayer
+    msgbox("Ah...")
+    msgbox("What a shame, what a shame.")
+    msgbox("I had high hopes for you.")
+    msgbox("...oh well.")
+    msgbox("On to the next one.")
+    releaseall
+}
+
+script DEATHZONE_EventScript_Lady_Talk {
+    lockall
+    faceplayer
+    msgbox("Dearest challenger...")
+    msgbox("It saddens me to see you throw\nyour life away like this..")
+    msgbox("")
+    releaseall
+}
+
+script DEATHZONE_EventScript_Rose_Talk {
+    lockall
+    msgbox("...here I stand as your reaper.")
+    msgbox("As is my duty.")
+    msgbox("To ")
+}
