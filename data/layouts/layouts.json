@@ -9367,6 +9367,16 @@
       "border_filepath": "data/layouts/LAYER1_MAINAREA/border.bin",
       "blockdata_filepath": "data/layouts/LAYER1_MAINAREA/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DEATHZONE",
+      "name": "DEATHZONE_Layout",
+      "width": 20,
+      "height": 29,
+      "primary_tileset": "gTileset_weirdshit1",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/DEATHZONE/border.bin",
+      "blockdata_filepath": "data/layouts/DEATHZONE/map.bin"
     }
   ]
 }

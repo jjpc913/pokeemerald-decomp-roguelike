@@ -58,8 +58,66 @@ movement MothmanMoveLeft {
 
 script LAYER1_MAINAREA_EventScript_Lamp {
     lockall
-    msgbox("There is a suspicious looking\nlamppost here.")
-    if (flag(FLAG_ACTIVATE_LAMP)) {
-        msgbox("The lamp is resonating with your wishing stone...")
+    msgbox("(There is a suspicious looking\nlamp post here.)")
+    checkitem(ITEM_RED_SCARF, 1)
+    if (var(VAR_RESULT)) {
+        msgbox("(The lamp is resonating with your wishing\nstone...)")
+        delay(1)
+        fadescreen(FADE_TO_WHITE)
+        delay(10)
+        fadescreen(FADE_FROM_WHITE)
+        delay(1)
+        msgbox("(The stone feels soft in your hand,\nmalleable like jelly but still\psolid enough to grip.)")
+        msgbox("(Would you like to crush a wishing\nstone?)", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox("(You smash the stone against the\nlamp post.)")
+            removeitem(ITEM_RED_SCARF, 1)
+            delay(1)
+            fadescreen(FADE_TO_WHITE)
+            delay(10)
+            fadescreen(FADE_FROM_WHITE)
+            delay(1)
+            msgbox("What is your wish?", MSGBOX_DEFAULT)
+            dynmultichoice(0,0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "I wish for power.", 
+                "I wish for healing.", "I wish for a better future.", "I wish for wealth.", 
+                "I wish for treasure.", "I wish for merciful death.")
+            switch(var(VAR_RESULT)) {
+                case 0: # power
+                    msgbox("(You wished for power.)")
+                    giveitem(ITEM_RARE_CANDY, 3)
+                case 1: # healing
+                    msgbox("(You wished for healing.)")
+                    special(HealPlayerParty)
+                    msgbox("(Your party was miraculously healed...!)")
+                case 2: # cure
+                    msgbox("(You wished for a better future.)")
+                    giveitem(ITEM_FULL_HEAL, 5)
+                    giveitem(ITEM_REVIVE, 1)
+                case 3: # wealth
+                    msgbox("(You wished for wealth.)")
+                    addmoney(5000)
+                    msgbox("(Your pockets feel a bit heavier...!)")
+                case 4: # treasure
+                    msgbox("(You wished for treasure.)")
+                    call(Rummage_Uncommon)
+                    call(Rummage_Uncommon)
+                    call(Rummage_Uncommon)
+                    call(Rummage_Rare)
+                    call(Rummage_Rare)
+                case 5: # death
+                    msgbox("(You wished for merciful death.)")
+                    msgbox("(....)")
+                    msgbox("Is this really what you want?", MSGBOX_YESNO)
+                    if (var(VAR_RESULT) == YES) {
+                        # death
+                    } else {
+                        msgbox("(You hesitated in your conviction.)")
+                        msgbox("(The wish was wasted...)")
+                    }
+                case MULTI_B_PRESSED:
+                    msgbox("(You tripped over your words,\nand the wish failed.)")
+            }
+        }
     }
+    releaseall
 }

@@ -1746,3 +1746,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/LANDING_CAVE/scripts.inc"
 
 	.include "data/maps/LAYER1_MAINAREA/scripts.inc"
+
+	.include "data/maps/DEATHZONE/scripts.inc"
