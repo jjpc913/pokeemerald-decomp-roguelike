@@ -147,6 +147,22 @@ script LAYER1_MAINAREA_EventScript_Ball1 {
     releaseall
 }
 
+script LAYER1_MAINAREA_EventScript_Ball2 {
+    lockall
+    call(Rummage_Common)
+    setflag(FLAG_L1AREA_BALL2)
+    removeobject(6)
+    releaseall
+}
+
+script LAYER1_MAINAREA_EventScript_Ball2 {
+    lockall
+    call(Rummage_Rare)
+    setflag(FLAG_L1AREA_BALL3)
+    removeobject(7)
+    releaseall
+}
+
 script LAYER1_MAINAREA_EventScript_Boy1 {
     lockall
     faceplayer

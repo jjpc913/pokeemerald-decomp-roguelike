@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 28,
-      "y": 12,
+      "x": 56,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -29,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 22,
-      "y": 7,
+      "x": 50,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
       "movement_range_x": 2,
@@ -42,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 24,
-      "y": 4,
+      "x": 52,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
-      "x": 59,
-      "y": 17,
+      "x": 87,
+      "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -65,12 +65,51 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LAYER1_MAINAREA_EventScript_Boy1",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 34,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LAYER1_MAINAREA_EventScript_Calvin",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 37,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LAYER1_MAINAREA_EventScript_Ball2",
+      "flag": "FLAG_L1AREA_BALL2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 29,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LAYER1_MAINAREA_EventScript_Ball3",
+      "flag": "FLAG_L1AREA_BALL3"
     }
   ],
   "warp_events": [
     {
-      "x": 47,
-      "y": 8,
+      "x": 75,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_LANDING_CAVE",
       "dest_warp_id": "0"
@@ -79,8 +118,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 36,
-      "y": 12,
+      "x": 64,
+      "y": 16,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -88,8 +127,8 @@
     },
     {
       "type": "trigger",
-      "x": 36,
-      "y": 13,
+      "x": 64,
+      "y": 17,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -97,8 +136,8 @@
     },
     {
       "type": "trigger",
-      "x": 36,
-      "y": 13,
+      "x": 64,
+      "y": 17,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -108,19 +147,19 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 72,
-      "y": 5,
+      "x": 100,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LAYER1_MAINAREA_EventScript_Lamp"
     },
     {
       "type": "sign",
-      "x": 73,
-      "y": 5,
+      "x": 101,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LAYER1_MAINAREA_EventScript_Sign"
+      "script": "LAYER1_MAINAREA_EventScript_Sign2"
     }
   ],
   "region": "REGION_HOENN"

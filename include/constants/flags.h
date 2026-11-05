@@ -68,7 +68,7 @@
 #define FLAG_MET_MOTHMAN    0x2E // Unused Flag
 #define FLAG_L1AREA_BALL1    0x2F // Unused Flag
 #define FLAG_L1AREA_BALL2    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
+#define FLAG_L1AREA_BALL3    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
