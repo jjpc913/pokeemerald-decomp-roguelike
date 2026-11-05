@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 29,
+      "x": 28,
       "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -26,6 +26,45 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LAYER1_MAINAREA_EventScript_Mothman",
       "flag": "FLAG_MET_MOTHMAN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "x": 22,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "LAYER1_MAINAREA_EventScript_Lass",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 24,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LAYER1_MAINAREA_EventScript_Ball1",
+      "flag": "FLAG_L1AREA_BALL1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 59,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LAYER1_MAINAREA_EventScript_Boy1",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -40,7 +79,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 37,
+      "x": 36,
       "y": 12,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -49,7 +88,16 @@
     },
     {
       "type": "trigger",
-      "x": 37,
+      "x": 36,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "LAYER1_MAINAREA_EventScript_Mothman"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
       "y": 13,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -65,6 +113,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LAYER1_MAINAREA_EventScript_Lamp"
+    },
+    {
+      "type": "sign",
+      "x": 73,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LAYER1_MAINAREA_EventScript_Sign"
     }
   ],
   "region": "REGION_HOENN"

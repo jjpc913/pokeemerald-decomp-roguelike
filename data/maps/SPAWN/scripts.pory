@@ -37,6 +37,7 @@ script SPAWN_MapScripts_Hole {
 		msgbox("...until....")
 		delay(5)
 		warp(MAP_LANDING_CAVE, 8, 6)
+		waitstate
 		fadescreen(FADE_FROM_BLACK)
 		delay(1)
 	}

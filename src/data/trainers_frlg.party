@@ -6531,12 +6531,11 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Poison Powder
 
 === TRAINER_COOLTRAINER_ALEXA ===
-Name: ALEXA
-Class: Cooltrainer Frlg
-Pic: Cooltrainer F Frlg
-Gender: Male
-Music: Serious
-Items: Full Restore
+Name: Rose
+Class: 
+Pic: Psychic F Frlg
+Gender: Female
+Music: Elite Four
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 

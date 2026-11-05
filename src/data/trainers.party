@@ -11054,14 +11054,23 @@ Pic: Lass
 Gender: Female
 Music: Female
 Double Battle: No
+Party Size: 2
 AI: Check Bad Move
 
 Zigzagoon
-Level: 4
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Shroomish
-Level: 4
+Cleffa
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Lillipup
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Hatenna
+Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HALEY_1 ===
@@ -12458,22 +12467,38 @@ Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALEXA ===
-Name: ALEXA
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: ????
+Class: Psychic
+Pic: Psychic M
 Gender: Female
-Music: Cool
-Items: Full Restore
+Music: Intense
 Double Battle: No
 AI: Basic Trainer
 
-Gloom
-Level: 34
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Spiritomb
+Level: 35
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Azumarill
-Level: 34
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Dusknoir
+Level: 35
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Porygon-Z
+Level: 35
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Zoroark
+Level: 35
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Froslass
+Level: 35
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Mismagius
+Level: 35
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
 
 === TRAINER_RUBEN ===
 Name: RUBEN

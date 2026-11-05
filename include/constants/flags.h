@@ -61,13 +61,13 @@
 #define FLAG_TREECKO    0x27 // Unused Flag
 #define FLAG_TALKED_TO_ROSE    0x28 // Unused Flag
 #define FLAG_OMINOUS_MESSAGE    0x29 // Unused Flag
-#define FLAG_RUNNING_SHOES_TOGGLE    0x2A // Unused Flag
+#define FLAG_SAD_GUY    0x2A // Unused Flag
 #define FLAG_CAVE_BALL_1    0x2B // Unused Flag
 #define FLAG_CAVE_BALL_2    0x2C // Unused Flag
 #define FLAG_CAVE_MESSAGE    0x2D // Unused Flag
 #define FLAG_MET_MOTHMAN    0x2E // Unused Flag
-#define FLAG_ACTIVATE_LAMP    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
+#define FLAG_L1AREA_BALL1    0x2F // Unused Flag
+#define FLAG_L1AREA_BALL2    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag

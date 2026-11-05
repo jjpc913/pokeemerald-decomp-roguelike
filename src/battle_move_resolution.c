@@ -199,6 +199,7 @@ static enum CancelerResult CancelerAsleepOrFrozen(struct BattleCalcValues *cv)
 
 static enum CancelerResult CancelerObedience(struct BattleCalcValues *cv)
 {
+    return CANCELER_RESULT_SUCCESS;
     if (!gBattleMons[cv->battlerAtk].volatiles.multipleTurns)
     {
         enum Obedience obedienceResult = GetAttackerObedienceForAction();

@@ -24,7 +24,24 @@ script DEATHZONE_EventScript_Lady_Talk {
 
 script DEATHZONE_EventScript_Rose_Talk {
     lockall
-    msgbox("...here I stand as your reaper.")
-    msgbox("As is my duty.")
-    msgbox("To ")
+    msgbox("...here I stand to fulfill my duty\nas the game master.")
+    msgbox("The founder...and the reaper.")
+    msgbox("Hello again, {PLAYER}.")
+    msgbox("I'm sorry things have to end this\nway.")
+    msgbox("I don't want to fight you.")
+    msgbox("Really...I don't.")
+    msgbox("I...don't want to do any of this.")
+    msgbox("But there's...nothing I can do.")
+    msgbox("Perhaps we'll be here forever.")
+    msgbox("Well, I've talked for too long.")
+    msgbox("You've wished for a swift death,\nand now, I am prepared to deliver it\pupon you.")
+    trainerbattle_single(TRAINER_ALEXA, RoseIntro, RoseOutro)
+}
+
+text RoseIntro {
+    "Please, be at peace, {PLAYER}."
+}
+
+text RoseOutro {
+    "...!"
 }

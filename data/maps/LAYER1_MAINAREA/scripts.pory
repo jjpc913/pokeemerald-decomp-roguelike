@@ -62,11 +62,6 @@ script LAYER1_MAINAREA_EventScript_Lamp {
     checkitem(ITEM_RED_SCARF, 1)
     if (var(VAR_RESULT)) {
         msgbox("(The lamp is resonating with your wishing\nstone...)")
-        delay(1)
-        fadescreen(FADE_TO_WHITE)
-        delay(10)
-        fadescreen(FADE_FROM_WHITE)
-        delay(1)
         msgbox("(The stone feels soft in your hand,\nmalleable like jelly but still\psolid enough to grip.)")
         msgbox("(Would you like to crush a wishing\nstone?)", MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
@@ -111,6 +106,7 @@ script LAYER1_MAINAREA_EventScript_Lamp {
                     if (var(VAR_RESULT) == YES) {
                         # death
                         warp(MAP_DEATHZONE, 9,27)
+                        waitstate
                     } else {
                         msgbox("(You hesitated in your conviction.)")
                         msgbox("(The wish was wasted...)")
@@ -120,5 +116,81 @@ script LAYER1_MAINAREA_EventScript_Lamp {
             }
         }
     }
+    releaseall
+}
+
+script LAYER1_MAINAREA_EventScript_Lass {
+    trainerbattle_single(TRAINER_TIANA, LAYER1_MAINAREA_LassIntro, LAYER1_MAINAREA_LassOutro)
+    msgbox(LAYER1_MAINAREA_LassPost, MSGBOX_AUTOCLOSE)
+}
+
+text LAYER1_MAINAREA_LassIntro {
+    "I'M GOING TO KEEP WINNING AND AIM\n"
+	"TO BE THE BEST TRAINER\p"
+	"HELP ME FURTHER MY CAREER !"
+}
+
+text LAYER1_MAINAREA_LassOutro {
+    "I ENDED UP FURTHERING YOUR CAREER"
+}
+
+text LAYER1_MAINAREA_LassPost {
+    "Sorry"
+}
+
+
+script LAYER1_MAINAREA_EventScript_Ball1 {
+    lockall
+    call(Rummage_Common)
+    setflag(FLAG_L1AREA_BALL1)
+    removeobject(3)
+    releaseall
+}
+
+script LAYER1_MAINAREA_EventScript_Boy1 {
+    lockall
+    faceplayer
+    if (!flag(FLAG_SAD_GUY)) {
+        msgbox("..Oh! You...!")
+        msgbox("You seem...normal!")
+        msgbox("Oh, thank god.")
+        checkplayergender
+        if (var(VAR_RESULT) == MALE) {
+            msgbox("You've gotta help, dude!")
+        } else {
+            msgbox("You've gotta help, ma'am!")
+        }
+        msgbox("Everyone's acting really weird!")
+        msgbox("It's like...it's like they all went\ncrazy!")
+        msgbox("I can't find how to leave this damn\nplace, either.")
+        msgbox("But you...I haven't seen you yet!")
+        msgbox("You must've gotten in here somehow!\nHow? How did you do it?")
+        msgbox("If you can get in, surely you can\nget out, right?")
+        msgbox("H...hello? Why aren't you saying anything?")
+        msgbox("Why won't you talk?")
+        msgbox("Please...help me!")
+        msgbox("Oh god...oh god! Don't tell me...")
+        msgbox("Please...I just want to go home...")
+        msgbox("...")
+        msgbox("(This man is hysterical.)")
+        msgbox("(He seems distracted...you could\ntry stealing from him.)", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox("You stole a potion from the mans bag.")
+            giveitem(ITEM_POTION, 1)
+            addvar(VAR_VENOM, 1)
+        } else {
+            msgbox("(You decide to be a good person.)")
+        }
+        setflag(FLAG_SAD_GUY)
+    } else {
+        msgbox("(This man is hysterical.)")
+        msgbox("(Best leave him alone.)")
+    }
+    releaseall
+}
+
+script LAYER1_MAINAREA_EventScript_Sign {
+    lockall
+    msgbox("'No matter what, never stop dreaming.'")
     releaseall
 }
