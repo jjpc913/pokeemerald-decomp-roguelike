@@ -290,96 +290,130 @@ LAYER1_MAINAREA_EventScript_Ball1::
 	return
 
 
-LAYER1_MAINAREA_EventScript_Boy1::
+LAYER1_MAINAREA_EventScript_Ball2::
 # 151 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	lockall
 # 152 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	faceplayer
+	call Rummage_Common
 # 153 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	setflag FLAG_L1AREA_BALL2
+# 154 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	removeobject 6
+# 155 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	releaseall
+	return
+
+
+LAYER1_MAINAREA_EventScript_Ball3::
+# 159 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	lockall
+# 160 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	call Rummage_Rare
+# 161 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	setflag FLAG_L1AREA_BALL3
+# 162 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	removeobject 7
+# 163 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	releaseall
+	return
+
+
+LAYER1_MAINAREA_EventScript_Boy1::
+# 167 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	lockall
+# 168 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	faceplayer
+# 169 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	goto_if_unset FLAG_SAD_GUY, LAYER1_MAINAREA_EventScript_Boy1_2
-# 186 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_17
-# 187 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_21
+# 205 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_20
+# 206 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_24
 LAYER1_MAINAREA_EventScript_Boy1_1:
-# 189 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 208 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	releaseall
 	return
 
 LAYER1_MAINAREA_EventScript_Boy1_2:
-# 154 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 170 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_0
-# 155 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 171 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_1
-# 156 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 172 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_2
-# 157 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 173 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	checkplayergender
-# 158 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 174 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq LAYER1_MAINAREA_EventScript_Boy1_6
-# 161 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 177 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_4
 LAYER1_MAINAREA_EventScript_Boy1_5:
-# 163 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 179 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_5
-# 164 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 180 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_6
-# 165 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 181 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_7
-# 166 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 182 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_8
-# 167 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 183 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_9
-# 168 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 184 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_10
-# 169 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 185 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_11
-# 170 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 186 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_12
-# 171 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 187 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_13
-# 172 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 188 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_14
-# 173 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 189 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_15
-# 174 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 190 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_16
-# 175 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 191 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_17
-# 176 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_18, MSGBOX_YESNO
-# 177 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 192 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_18
+# 193 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_19
+# 194 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_20
+# 195 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_21, MSGBOX_YESNO
+# 196 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq LAYER1_MAINAREA_EventScript_Boy1_10
-# 182 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_20
+# 201 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_23
 LAYER1_MAINAREA_EventScript_Boy1_9:
-# 184 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 203 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	setflag FLAG_SAD_GUY
 	goto LAYER1_MAINAREA_EventScript_Boy1_1
 
 LAYER1_MAINAREA_EventScript_Boy1_6:
-# 159 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 175 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_3
 	goto LAYER1_MAINAREA_EventScript_Boy1_5
 
 LAYER1_MAINAREA_EventScript_Boy1_10:
-# 178 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_19
-# 179 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 197 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Boy1_Text_22
+# 198 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	giveitem ITEM_POTION, 1
-# 180 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 199 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	addvar VAR_VENOM, 1
 	goto LAYER1_MAINAREA_EventScript_Boy1_9
 
 
 LAYER1_MAINAREA_EventScript_Sign::
-# 193 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 212 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	lockall
-# 194 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 213 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Sign_Text_0
-# 195 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 214 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	releaseall
 	return
 
@@ -553,95 +587,107 @@ LAYER1_MAINAREA_EventScript_Lamp_Text_24:
 	.string "(You tripped over your words,\nand the wish failed.)$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_0:
-# 154 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 170 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "..Oh! You...!$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_1:
-# 155 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 171 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "You seem...normal!$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_2:
-# 156 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 172 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "Oh, thank god.$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_3:
-# 159 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 175 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "You've gotta help, dude!$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_4:
-# 161 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 177 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "You've gotta help, ma'am!$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_5:
-# 163 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "Everyone's acting really weird!$"
+# 179 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Um...my name's Dubois.$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_6:
-# 164 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "It's like...it's like they all went\ncrazy!$"
+# 180 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I fell down here a while ago...um...\nwas it...two days ago?$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_7:
-# 165 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "I can't find how to leave this damn\nplace, either.$"
+# 181 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "No...more than that...I think.$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_8:
-# 166 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "But you...I haven't seen you yet!$"
+# 182 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Er, anyway, everyone's acting really weird!$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_9:
-# 167 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "You must've gotten in here somehow!\nHow? How did you do it?$"
+# 183 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "It's like...it's like they all went\ncrazy!$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_10:
-# 168 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "If you can get in, surely you can\nget out, right?$"
+# 184 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I can't find how to leave this damn\nplace, either.$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_11:
-# 169 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "H...hello? Why aren't you saying anything?$"
+# 185 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "But you...I haven't seen you yet!$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_12:
-# 170 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "Why won't you talk?$"
+# 186 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "You must've gotten in here somehow!\nHow? How did you do it?$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_13:
-# 171 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "Please...help me!$"
+# 187 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "If you can get in, surely you can\nget out, right?$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_14:
-# 172 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "Oh god...oh god! Don't tell me...$"
+# 188 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "H...hello? Why aren't you saying anything?$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_15:
-# 173 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "Please...I just want to go home...$"
+# 189 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Why won't you talk?$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_16:
-# 174 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "...$"
+# 190 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Please...help me!$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_17:
-# 175 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "(This man is hysterical.)$"
+# 191 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Oh god...oh god! Don't tell me...$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_18:
-# 176 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "(He seems distracted...you could\ntry stealing from him.)$"
+# 192 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Please...I just want to go home...$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_19:
-# 178 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "You stole a potion from the mans bag.$"
+# 193 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "...$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_20:
-# 182 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "(You decide to be a good person.)$"
+# 194 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "(This man is hysterical.)$"
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_21:
-# 187 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 195 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "(He seems distracted...you could\ntry stealing from him.)$"
+
+LAYER1_MAINAREA_EventScript_Boy1_Text_22:
+# 197 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "You stole a potion from the mans bag.$"
+
+LAYER1_MAINAREA_EventScript_Boy1_Text_23:
+# 201 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "(You decide to be a good person.)$"
+
+LAYER1_MAINAREA_EventScript_Boy1_Text_24:
+# 206 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "(Best leave him alone.)$"
 
 LAYER1_MAINAREA_EventScript_Sign_Text_0:
-# 194 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 213 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "'No matter what, never stop dreaming.'$"
 
 LAYER1_MAINAREA_LassIntro::

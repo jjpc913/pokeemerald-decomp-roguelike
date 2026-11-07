@@ -155,7 +155,7 @@ script LAYER1_MAINAREA_EventScript_Ball2 {
     releaseall
 }
 
-script LAYER1_MAINAREA_EventScript_Ball2 {
+script LAYER1_MAINAREA_EventScript_Ball3 {
     lockall
     call(Rummage_Rare)
     setflag(FLAG_L1AREA_BALL3)
@@ -176,7 +176,10 @@ script LAYER1_MAINAREA_EventScript_Boy1 {
         } else {
             msgbox("You've gotta help, ma'am!")
         }
-        msgbox("Everyone's acting really weird!")
+        msgbox("Um...my name's Dubois.")
+        msgbox("I fell down here a while ago...um...\nwas it...two days ago?")
+        msgbox("No...more than that...I think.")
+        msgbox("Er, anyway, everyone's acting really weird!")
         msgbox("It's like...it's like they all went\ncrazy!")
         msgbox("I can't find how to leave this damn\nplace, either.")
         msgbox("But you...I haven't seen you yet!")

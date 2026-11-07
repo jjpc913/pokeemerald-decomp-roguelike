@@ -37,6 +37,7 @@
 #include "constants/species.h"
 #include "constants/trainers.h"
 #include "constants/trainer_hill.h"
+#include "constants/trainer_slide.h"
 #include "constants/vars.h"
 #include "constants/weather.h"
 #include "trainer_slide.h"
@@ -61,6 +62,19 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
 {
     [DIFFICULTY_NORMAL] =
     {
+        [TRAINER_ALEXA] = 
+        {
+            //[TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("We've got a real difficult audience tonight, folks! Let's make this a show to remember, yeah?"),
+            //[TRAINER_SLIDE_PLAYER_LANDS_FIRST_CRITICAL_HIT] = COMPOUND_STRING("A devastating blow! But, witness my flawless recovery!{PAUSE_UNTIL_PRESS}"),
+            //[TRAINER_SLIDE_ENEMY_LANDS_FIRST_CRITICAL_HIT] = COMPOUND_STRING("A perfect strike! The audience is going wild!\p(....There is no audience.){PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_DEFENDER_TAKES_FIRST_DOWN] = COMPOUND_STRING("...why...do you resist?{PAUSE_UNTIL_PRESS}"),
+            //[TRAINER_SLIDE_ENEMY_MON_UNAFFECTED] = COMPOUND_STRING("...you really thought that would work on me?{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("..They aren't listening, are they?\pNo...surely not. They have no interest in broken toys.{PAUSE_UNTIL_PRESS}"),
+            //[TRAINER_SLIDE_LAST_HALF_HP] = COMPOUND_STRING("This...is nothing...!{PAUSE_UNTIL_PRESS}"),
+            //[TRAINER_SLIDE_LAST_LOW_HP] = COMPOUND_STRING("...please...god...{PAUSE_UNTIL_PRESS}"),
+            //[TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("I've never used this before...am I doing this right? {PAUSE_UNTIL_PRESS}"),
+            //[TRAINER_SLIDE_Z_MOVE] = COMPOUND_STRING("This one's for all those watching from home!{PAUSE_UNTIL_PRESS}"),
+        },
     },
 };
 
@@ -68,6 +82,8 @@ static const u8* const sFrontierTrainerSlides[DIFFICULTY_COUNT][FRONTIER_TRAINER
 {
     [DIFFICULTY_NORMAL] =
     {
+        
+
     },
 };
 
