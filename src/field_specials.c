@@ -4574,11 +4574,40 @@ void EnterCode(void)
 
 void GetCodeFeedback(void)
 {
-    static const u8 sText_SampleCode[] = _("SampleCode");
-    if (!StringCompare(gStringVar2, sText_SampleCode))
+    static const u8 sText_Yan[] = _("Yan");
+    static const u8 sText_YAN[] = _("YAN");
+    static const u8 sText_Rose[] = _("Rose");
+    static const u8 sText_ROSE[] = _("ROSE");
+    static const u8 sText_Mothman[] = _("Mothman");
+    static const u8 sText_MOTHMAN[] = _("MOTHMAN");
+    static const u8 sText_Psychic[] = _("Lady");
+    static const u8 sText_PSYCHIC[] = _("LADY");
+    static const u8 sText_You[] = _("You");
+    static const u8 sText_you[] = _("you");
+    static const u8 sText_briney[] = _("Dubois");
+    static const u8 sText_Briney[] = _("DUBOIS");
+
+    if (!StringCompare(gStringVar2, sText_Rose) || !StringCompare(gStringVar2, sText_ROSE)) {
         gSpecialVar_Result = 1;
-    else
+    }
+    else if (!StringCompare(gStringVar2, sText_MOTHMAN) || !StringCompare(gStringVar2, sText_Mothman)) {
+        gSpecialVar_Result = 2;
+    }
+    else if (!StringCompare(gStringVar2, sText_PSYCHIC) || !StringCompare(gStringVar2, sText_Psychic)) {
+        gSpecialVar_Result = 3;
+    }
+    else if (!StringCompare(gStringVar2, sText_YAN) || !StringCompare(gStringVar2, sText_Yan)) {
+        gSpecialVar_Result = 4;
+    }
+    else if (!StringCompare(gStringVar2, sText_Briney) || !StringCompare(gStringVar2, sText_briney)) {
+        gSpecialVar_Result = 5;
+    }
+    else if (!StringCompare(gStringVar2, sText_you) || !StringCompare(gStringVar2, sText_You)) {
+        gSpecialVar_Result = 6;
+    }
+    else {
         gSpecialVar_Result = 0;
+    }
 }
 
 void SetHiddenNature(void)

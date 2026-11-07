@@ -74,7 +74,7 @@ script LAYER1_MAINAREA_EventScript_Lamp {
             delay(1)
             msgbox("What is your wish?", MSGBOX_DEFAULT)
             dynmultichoice(0,0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "I wish for power.", 
-                "I wish for healing.", "I wish for a better future.", "I wish for wealth.", 
+                "I wish for healing.", "I wish for a better future.", "I wish for knowledge.", 
                 "I wish for treasure.", "I wish for merciful death.")
             switch(var(VAR_RESULT)) {
                 case 0: # power
@@ -88,10 +88,13 @@ script LAYER1_MAINAREA_EventScript_Lamp {
                     msgbox("(You wished for a better future.)")
                     giveitem(ITEM_FULL_HEAL, 5)
                     giveitem(ITEM_REVIVE, 1)
-                case 3: # wealth
-                    msgbox("(You wished for wealth.)")
-                    addmoney(5000)
-                    msgbox("(Your pockets feel a bit heavier...!)")
+                case 3: # knowledge
+                    msgbox("(You wished for knowledge.)")
+                    msgbox("...very well.")
+                    msgbox("As you wish, you will get three questions.")
+                    setvar(VAR_QUESTIONS_LEFT, 3)
+                    call(Learn)
+                    msgbox("(You feel enlightened.)")
                 case 4: # treasure
                     msgbox("(You wished for treasure.)")
                     call(Rummage_Uncommon)
@@ -176,10 +179,7 @@ script LAYER1_MAINAREA_EventScript_Boy1 {
         } else {
             msgbox("You've gotta help, ma'am!")
         }
-        msgbox("Um...my name's Dubois.")
-        msgbox("I fell down here a while ago...um...\nwas it...two days ago?")
-        msgbox("No...more than that...I think.")
-        msgbox("Er, anyway, everyone's acting really weird!")
+        msgbox("Everyone's acting really weird!")
         msgbox("It's like...it's like they all went\ncrazy!")
         msgbox("I can't find how to leave this damn\nplace, either.")
         msgbox("But you...I haven't seen you yet!")
@@ -203,7 +203,7 @@ script LAYER1_MAINAREA_EventScript_Boy1 {
         setflag(FLAG_SAD_GUY)
     } else {
         msgbox("(This man is hysterical.)")
-        msgbox("(Best leave him alone.)")
+        msgbox("(Best to leave him alone.)")
     }
     releaseall
 }

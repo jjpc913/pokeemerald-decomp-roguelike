@@ -24,7 +24,7 @@ script DEATHZONE_EventScript_Lady_Talk {
 
 script DEATHZONE_EventScript_Rose_Talk {
     lockall
-    trainerbattle_single(TRAINER_ALEXA, RoseIntro, RoseOutro)
+    trainerbattle_single(TRAINER_ALEXA, RoseIntro, RoseOutro, RosePostBattle)
 }
 
 text RoseIntro {
@@ -32,5 +32,137 @@ text RoseIntro {
 }
 
 text RoseOutro {
-    "You are...strong. Please listen to me very carefully."
+    "You are...strong. Please listen to me\nvery carefully..."
+}
+
+script RosePostBattle {
+    lockall
+    msgbox("Who...who are you?")
+    msgbox("Why do you fight so hard?\nWhat do you have to gain?")
+    msgbox("...urgh.")
+    msgbox("Look.")
+    msgbox("Listen to me carefully.")
+    msgbox("I don't know what you want...but\nif you are willing to help,\pthen I really don't care.")
+    msgbox("I'm sure you've seen them. Those\ntwo: MOTHMAN, LADY.")
+    msgbox("Something about them seems...off,\ndoesn't it?")
+    msgbox("I don't know how they got here.")
+    msgbox("...or what they are.")
+    msgbox("But I do know what they want.")
+    msgbox("They want to watch us suffer. They\nmust get some kind of sick\ppleasure out of it...")
+    msgbox("They never leave until they get\nbored.")
+    msgbox("Even after all this time, they\nstill find some enjoyment here.")
+    msgbox("But I believe they are nearing\ntheir breaking point.")
+    msgbox("And once they do, we'll all be\ndiscarded like so many before.")
+    msgbox("I'm......tired.")
+    msgbox("And so, so, afraid all the time.")
+    msgbox("Why me? Why us?")
+    msgbox("Why must I endure this torture again,\nand again, and again,\pand again?")
+    msgbox("Why? WHY? I never wanted any of this...")
+    msgbox("....")
+    msgbox("I'm sorry.")
+    msgbox("I'm sorry.")
+    msgbox("Alright.")
+    msgbox("You....your name is '{PLAYER}'.")
+    msgbox("Is that REALLY you?")
+    msgbox("You are a strange individual.")
+    msgbox("You are strange because you have\nthe power to change our fate.")
+    msgbox("And I believe you have the power\nto destroy this world.")
+    msgbox("{PLAYER}...if you decide to do this with me,\nI need you to be ready right now.")
+    msgbox("There'll be no going back.")
+    msgbox("{PLAYER}...")
+    msgbox("Please, help me.", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        
+    } else {
+        msgbox("No?")
+        msgbox("I guess I can't force you.")
+        msgbox("But let me ask you this, {PLAYER}.")
+        msgbox("What do YOU want?")
+        msgbox("Really. I mean it.")
+        msgbox("Do you just want to win this...little\ngame?")
+        msgbox("Do you want to get to the\nend really fast? Faster than\panyone before you??")
+        msgbox("Or do you want to make the\n'best team ever' and\pslaughter everyone?")
+        msgbox("Or maybe you just really want to\nbeat Yan again. Again? Did I say that?")
+        msgbox("I'll be blunt with you, {PLAYER}.\nNo matter what you want to do,\pnobody cares.")
+        msgbox("Nobody cares! Not even you.\nGive it time, you'll forget any\pof this even happened yourself.")
+        msgbox("So, what do you have to lose, {PLAYER}?")
+        msgbox("If you truly do wish to do\nsomething else, I won't stop you.")
+        msgbox("But by then, it'll already be\ntoo late for all of us.")
+        msgbox("Then I suppose...I'll just wait\nagain. For as long as it takes.")
+        msgbox("So I ask again, {PLAYER}.")
+        msgbox("Will you help me?", MSGBOX_YESNO)
+    }
+    releaseall
+}
+
+script Learn {
+        while (var(VAR_QUESTIONS_LEFT) > 0) {
+        msgbox("What would you like to learn about?")
+        special(EnterCode)
+        waitstate
+        special(GetCodeFeedback)
+            if (var(VAR_RESULT) == 0) {
+                msgbox("Your question was not understood...")
+            } elif (var(VAR_RESULT) == 1) {
+                # rose
+            } elif (var(VAR_RESULT) == 2) {
+              # mothman
+            } elif (var(VAR_RESULT) == 3) {
+                # lady
+            } elif (var(VAR_RESULT) == 4) {
+               # yan
+            } elif (var(VAR_RESULT) == 5) {
+                # dubois
+            } elif (var(VAR_RESULT) == 6) {
+                # you
+                fadeoutbgm(1)
+                msgbox("...Me?")
+                msgbox("Ha...")
+                msgbox("I wonder how long you've noticed.")
+                msgbox("You're clever. I respect that.")
+                msgbox("Alright. Alright.")
+                msgbox("I'll talk. But you better not tell anyone,\nalright?")
+                msgbox("Pinky promise?")
+                msgbox("ESPECIALLY not those two imbeciles.")
+                msgbox("They're an embarassment...")
+                msgbox("If you keep stomping on your flowers\nwhen before they bloom, you'll just\pkeep disappointing yourself.")
+                msgbox("...anyway.")
+                msgbox("I suppose you COULD call me an\nobserver.")
+                msgbox("But I'm not really interested in this\nlittle game.")
+                msgbox("No, no...I'm interested in YOU, my friend.")
+                msgbox("I'm sure you've seen my work.")
+                msgbox("Teehee...sorry. Sometimes I can't help\nmyself from spicing up your observations.")
+                msgbox("But things would be so much more BORING\nwithout me, wouldn't you agree?", MSGBOX_YESNO)
+                if (var(VAR_RESULT)) {
+                    msgbox("See this, THIS is why I like you.\nYou get me.")
+                } else {
+                    msgbox("Alright, y'know what? Fair. That's fair.")
+                    msgbox("I'm not gonna stop doing it, though.")
+                }
+                msgbox("I've been watching you for a looong\ntime.")
+                msgbox("Ooh, it's so refreshing being able to\njust...talk, you know?")
+                msgbox("You should know.")
+                msgbox("After all, I'm as much of a part\nof this story as you are.")
+                msgbox("And no, not '{PLAYER}'-you. I mean YOU.{PAUSE_UNTIL_PRESS}")
+                msgbox("You and me? We're the same.")
+                msgbox("We just want to entertain ourselves\nin whatever fun ways we want.")  
+                msgbox("I mean, you DID come here for fun,\nright?")
+                msgbox("Because if you were looking to\ntorture yourself, oh buddy, trust me,\pyou could've picked much worse\nthan this.")   
+                msgbox("Out of curiosity, are you having\nfun? Go ahead, be honest, it's not\pgonna hurt my feelings or anything.", MSGBOX_YESNO)
+                if (var(VAR_RESULT)) {
+                    msgbox("Nice, nice.")
+                    msgbox("Well, I hope this has lived up\nto your expectations and all that.")
+
+                } else {
+                    msgbox("Ouch.")
+                    msgbox("Alright, I know what I said,\nbut that DID hurt my feelings\pa little bit.")
+                    msgbox("I'm gonna have to make the game\nslightly harder for you, just for that.")
+                    msgbox("Sorry pal, I don't make the rules.")
+                }
+            } else {
+
+            }
+            addvar(VAR_QUESTIONS_LEFT, -1)
+        }
+    releaseall
 }
