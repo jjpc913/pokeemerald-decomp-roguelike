@@ -213,3 +213,101 @@ script LAYER1_MAINAREA_EventScript_Sign {
     msgbox("'No matter what, never stop dreaming.'")
     releaseall
 }
+
+script LAYER1_MAINAREA_EventScript_Yan1 {
+    lockall
+    msgbox("Hmm?")
+    applymovement(8, YanTurnAround1)
+    waitmovement(8)
+    msgbox("Oh, hello there!")
+    msgbox("I haven't met you before.")
+    msgbox("'Name's Yan.")
+    msgbox("You can take this.")
+    giveitem(ITEM_BLUE_SCARF, 1)
+    msgbox("I'm a detective currently investigating\nthis strange phenomenon.")
+    msgbox("...what, don't tell me you haven't\nseen it?")
+    msgbox("All these people, gone completely\ncuckoo.")
+    msgbox("I, uh, haven't really made any\nprogress, yet.")
+    msgbox("But, young explorer, don't fret.")
+    msgbox("I'm going to get to the bottom of this.")
+    msgbox("I mean that literally.")
+    msgbox("I think...the answers I seek are\nin the deepest pits below.")
+    msgbox("...weird.")
+    msgbox("I'm getting a really strange feeling...")
+    msgbox("The only way to go deeper is to\nkeep jumping into holes, right?")
+    msgbox("Well, if that's what you're looking\nfor, there was one just up ahead.")
+    msgbox("I'll meet you down there, 'kay?")
+    msgbox("I still have a few more interviews\nto conduct, and stones to turn over.")
+    msgbox("Toodles!")
+    applymovement(8, YanLeave1)
+    waitmovement(8)
+    setflag(FLAG_YAN_1)
+    removeobject(8)
+    releaseall
+}
+
+script LAYER1_MAINAREA_EventScript_Yan2 {
+    lockall
+    msgbox("Hmm?")
+    applymovement(8, YanTurnAround2)
+    waitmovement(8)
+    msgbox("Oh, hello there!")
+    msgbox("I haven't met you before.")
+    msgbox("'Name's Yan.")
+    msgbox("You can take this.")
+    giveitem(ITEM_BLUE_SCARF, 1)
+    msgbox("I'm a detective currently investigating\nthis strange phenomenon.")
+    msgbox("...what, don't tell me you haven't\nseen it?")
+    msgbox("All these people, gone completely\ncuckoo.")
+    msgbox("I, uh, haven't really made any\nprogress, yet.")
+    msgbox("But, young explorer, don't fret.")
+    msgbox("I'm going to get to the bottom of this.")
+    msgbox("I mean that literally.")
+    msgbox("I think...the answers I seek are\nin the deepest pits below.")
+    msgbox("...weird.")
+    msgbox("I'm getting a really strange feeling...")
+    msgbox("The only way to go deeper is to\nkeep jumping into holes, right?")
+    msgbox("Well, if that's what you're looking\nfor, there was one just up ahead.")
+    msgbox("I'll meet you down there, 'kay?")
+    msgbox("I still have a few more interviews\nto conduct, and stones to turn over.")
+    msgbox("Toodles!")
+    applymovement(8, YanLeave2)
+    waitmovement(8)
+    setflag(FLAG_YAN_1)
+    removeobject(8)
+    releaseall
+}
+
+movement YanTurnAround1 {
+    face_right
+    walk_left * 4
+}
+
+movement YanTurnAround2 {
+    face_right
+    walk_left * 4
+    face_down
+    walk_down
+    face_right
+}
+
+movement YanLeave1 {
+    face_down
+    walk_down
+    face_left
+    walk_left * 10
+}
+
+movement YanLeave2 {
+    face_up
+    walk_up
+    face_left
+    walk_left * 10
+}
+
+script LAYER1_MAINAREA_EventScript_dubois {
+    lockall
+    msgbox("(There is a man standing here,\nsilently staring into the ocean.)")
+    msgbox("(He doesn't even acknowledge your\npresence.)")
+    releaseall
+}

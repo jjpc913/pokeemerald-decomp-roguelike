@@ -8746,20 +8746,20 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BLUE_SCARF] =
     {
-        .name = ITEM_NAME("Blue Scarf"),
-        .pluralName = ITEM_PLURAL_NAME("Blue Scarves"),
+        .name = ITEM_NAME("Business Card"),
+        .pluralName = ITEM_PLURAL_NAME("Business Cards"),
         .price = 100,
         .description = COMPOUND_STRING(
-            "A held item that\n"
-            "raises Beauty in\n"
-            "Contests."),
-        .pocket = POCKET_ITEMS,
+            "A business card.\n"
+            "It says 'Yan'\n"
+            "on it."),
+        .pocket = POCKET_KEY_ITEMS,
         .sortType = ITEM_TYPE_CONTEST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
-        .iconPic = gItemIcon_Scarf,
-        .iconPalette = gItemIconPalette_BlueScarf,
+        .iconPic = gItemIcon_RedCard,
+        .iconPalette = gItemIconPalette_MetalCoat,
     },
 
     [ITEM_PINK_SCARF] =

@@ -418,6 +418,224 @@ LAYER1_MAINAREA_EventScript_Sign::
 	return
 
 
+LAYER1_MAINAREA_EventScript_Yan1::
+# 218 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	lockall
+# 219 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_0
+# 220 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	applymovement 8, YanTurnAround1
+# 221 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	waitmovement 8
+# 222 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_1
+# 223 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_2
+# 224 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_3
+# 225 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Mothman_Text_13
+# 226 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	giveitem ITEM_BLUE_SCARF, 1
+# 227 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_4
+# 228 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_5
+# 229 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_6
+# 230 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_7
+# 231 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_8
+# 232 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_9
+# 233 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_10
+# 234 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_11
+# 235 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_12
+# 236 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_13
+# 237 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_14
+# 238 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_15
+# 239 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_16
+# 240 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_17
+# 241 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_18
+# 242 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	applymovement 8, YanLeave1
+# 243 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	waitmovement 8
+# 244 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	setflag FLAG_YAN_1
+# 245 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	removeobject 8
+# 246 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	releaseall
+	return
+
+
+LAYER1_MAINAREA_EventScript_Yan2::
+# 250 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	lockall
+# 251 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_0
+# 252 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	applymovement 8, YanTurnAround2
+# 253 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	waitmovement 8
+# 254 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_1
+# 255 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_2
+# 256 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_3
+# 257 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Mothman_Text_13
+# 258 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	giveitem ITEM_BLUE_SCARF, 1
+# 259 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_4
+# 260 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_5
+# 261 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_6
+# 262 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_7
+# 263 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_8
+# 264 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_9
+# 265 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_10
+# 266 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_11
+# 267 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_12
+# 268 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_13
+# 269 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_14
+# 270 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_15
+# 271 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_16
+# 272 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_17
+# 273 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Yan1_Text_18
+# 274 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	applymovement 8, YanLeave2
+# 275 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	waitmovement 8
+# 276 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	setflag FLAG_YAN_1
+# 277 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	removeobject 8
+# 278 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	releaseall
+	return
+
+
+# 281 "data/maps/LAYER1_MAINAREA/scripts.pory"
+YanTurnAround1:
+# 282 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	face_right
+# 283 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 283 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 283 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 283 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+	step_end
+
+# 286 "data/maps/LAYER1_MAINAREA/scripts.pory"
+YanTurnAround2:
+# 287 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	face_right
+# 288 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 288 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 288 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 288 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 289 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	face_down
+# 290 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_down
+# 291 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	face_right
+	step_end
+
+# 294 "data/maps/LAYER1_MAINAREA/scripts.pory"
+YanLeave1:
+# 295 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	face_down
+# 296 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_down
+# 297 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	face_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 298 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+	step_end
+
+# 301 "data/maps/LAYER1_MAINAREA/scripts.pory"
+YanLeave2:
+# 302 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	face_up
+# 303 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_up
+# 304 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	face_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+# 305 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	walk_left
+	step_end
+
 LAYER1_MAINAREA_EventScript_Mothman_Text_0:
 # 11 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "..not so fast, buddy!$"
@@ -680,11 +898,87 @@ LAYER1_MAINAREA_EventScript_Boy1_Text_20:
 
 LAYER1_MAINAREA_EventScript_Boy1_Text_21:
 # 206 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "(Best leave him alone.)$"
+	.string "(Best to leave him alone.)$"
 
 LAYER1_MAINAREA_EventScript_Sign_Text_0:
 # 213 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "'No matter what, never stop dreaming.'$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_0:
+# 219 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Hmm?$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_1:
+# 222 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Oh, hello there!$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_2:
+# 223 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I haven't met you before.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_3:
+# 224 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "'Name's Yan.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_4:
+# 227 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I'm a detective currently investigating\nthis strange phenomenon.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_5:
+# 228 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "...what, don't tell me you haven't\nseen it?$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_6:
+# 229 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "All these people, gone completely\ncuckoo.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_7:
+# 230 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I, uh, haven't really made any\nprogress, yet.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_8:
+# 231 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "But, young explorer, don't fret.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_9:
+# 232 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I'm going to get to the bottom of this.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_10:
+# 233 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I mean that literally.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_11:
+# 234 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I think...the answers I seek are\nin the deepest pits below.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_12:
+# 235 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "...weird.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_13:
+# 236 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I'm getting a really strange feeling...$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_14:
+# 237 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "The only way to go deeper is to\nkeep jumping into holes, right?$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_15:
+# 238 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Well, if that's what you're looking\nfor, there was one just up ahead.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_16:
+# 239 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I'll meet you down there, 'kay?$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_17:
+# 240 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "I still have a few more interviews\nto conduct, and stones to turn over.$"
+
+LAYER1_MAINAREA_EventScript_Yan1_Text_18:
+# 241 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	.string "Toodles!$"
 
 LAYER1_MAINAREA_LassIntro::
 # 130 "data/maps/LAYER1_MAINAREA/scripts.pory"
