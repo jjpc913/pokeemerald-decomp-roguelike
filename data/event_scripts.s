@@ -1748,3 +1748,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/LAYER1_MAINAREA/scripts.inc"
 
 	.include "data/maps/DEATHZONE/scripts.inc"
+
+	.include "data/maps/HOMETOWN/scripts.inc"
+
+	.include "data/maps/HOMETOWN2/scripts.inc"
+
+	.include "data/maps/L1_HOUSE1/scripts.inc"

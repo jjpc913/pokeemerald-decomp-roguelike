@@ -151,6 +151,7 @@ script SPAWN_HOUSE_EventScript_OneMoreThing {
         msgbox("Got that?")
         msgbox("That's all.")
         msgbox("Good luck, kid.")
+        setflag(FLAG_DISABLE_EXP)
         setflag(FLAG_OMINOUS_MESSAGE)
     }
     releaseall

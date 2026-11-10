@@ -271,7 +271,7 @@ SPAWN_HOUSE_EventScript_OneMoreThing::
 # 141 "data/maps/SPAWN_HOUSE/scripts.pory"
 	goto_if_set FLAG_SYS_POKEMON_GET, SPAWN_HOUSE_EventScript_OneMoreThing_3
 SPAWN_HOUSE_EventScript_OneMoreThing_1:
-# 156 "data/maps/SPAWN_HOUSE/scripts.pory"
+# 157 "data/maps/SPAWN_HOUSE/scripts.pory"
 	releaseall
 	return
 
@@ -301,6 +301,8 @@ SPAWN_HOUSE_EventScript_OneMoreThing_2:
 # 153 "data/maps/SPAWN_HOUSE/scripts.pory"
 	msgbox SPAWN_HOUSE_EventScript_OneMoreThing_Text_10
 # 154 "data/maps/SPAWN_HOUSE/scripts.pory"
+	setflag FLAG_DISABLE_EXP
+# 155 "data/maps/SPAWN_HOUSE/scripts.pory"
 	setflag FLAG_OMINOUS_MESSAGE
 	goto SPAWN_HOUSE_EventScript_OneMoreThing_1
 

@@ -75,6 +75,11 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
             //[TRAINER_SLIDE_MEGA_EVOLUTION] = COMPOUND_STRING("I've never used this before...am I doing this right? {PAUSE_UNTIL_PRESS}"),
             //[TRAINER_SLIDE_Z_MOVE] = COMPOUND_STRING("This one's for all those watching from home!{PAUSE_UNTIL_PRESS}"),
         },
+        [TRAINER_JOHANNA] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("Look, you have only yourself to blame here, sleeping in some strangers house.\p'Sides, you don't even need this, do you?\pYou should count yourself lucky I didn't take something worse.{PAUSE_UNTIL_PRESS}"),
+
+        }
     },
 };
 

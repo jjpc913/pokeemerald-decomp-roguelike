@@ -138,7 +138,10 @@
     "SPAWN_HOUSE",
     "LANDING_CAVE",
     "LAYER1_MAINAREA",
-    "DEATHZONE"
+    "DEATHZONE",
+    "HOMETOWN",
+    "HOMETOWN2",
+    "L1_HOUSE1"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

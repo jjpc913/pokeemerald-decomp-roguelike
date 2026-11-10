@@ -48,6 +48,24 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "EnableRunning"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "DISABLEEXP"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "DISABLEEXP"
     }
   ],
   "bg_events": [

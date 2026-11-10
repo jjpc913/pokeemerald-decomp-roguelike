@@ -70,11 +70,11 @@
 #define FLAG_L1AREA_BALL2    0x30 // Unused Flag
 #define FLAG_L1AREA_BALL3    0x31 // Unused Flag
 #define FLAG_YAN_1    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
+#define FLAG_CABINET4    0x33 // Unused Flag
+#define FLAG_CABINET3    0x34 // Unused Flag
+#define FLAG_DISABLE_EXP    0x35 // Unused Flag
+#define FLAG_L1AREA_BALL4    0x36 // Unused Flag
+#define FLAG_ROBBED    0x37 // Unused Flag
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag

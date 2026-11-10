@@ -152,6 +152,7 @@ script Rummage_Common {
 			giveitem(ITEM_BURN_HEAL, 1)
 	}
 	releaseall
+	return
 }
 
 script Rummage_Uncommon {
@@ -263,24 +264,108 @@ script Rummage_Uncommon {
 	}
 
 	releaseall
+	return
 }
 
 script Rummage_Rare {
 	lockall
+	random(34)
 	switch(var(VAR_RESULT)) {
 		case 0:
-			giveitem(ITEM_BASEMENT_KEY, 1)
-			setflag(FLAG_HAS_KEY)
+		# wishing stone
+			giveitem(ITEM_RED_SCARF, 1)
+		case 1:
+			giveitem(ITEM_REVIVE, 1)
+		case 2:
+			giveitem(ITEM_RARE_CANDY, 3)
+		case 3:
+			giveitem(ITEM_FOCUS_SASH, 1)
+		case 4: 
+			giveitem(ITEM_MAX_REVIVE, 1)
+		case 5:
+			giveitem(ITEM_CHOICE_BAND, 1)
+		case 6:
+			giveitem(ITEM_CHOICE_SCARF, 1)
+		case 7:
+			giveitem(ITEM_LEFTOVERS, 1)
+		case 8:
+			giveitem(ITEM_SHELL_BELL, 1)
+		case 9:
+			giveitem(ITEM_MASTER_BALL, 1)
+		case 10:
+			giveitem(ITEM_BICYCLE, 1)
+		case 11:
+			giveitem(ITEM_RARE_CANDY, 1)
+		case 12:
+			giveitem(ITEM_CHOICE_SPECS, 1)
+		case 13:
+			giveitem(ITEM_ULTRA_BALL, 4)
+		case 14:
+			giveitem(ITEM_GREAT_BALL, 1)
+		case 15:
+			giveitem(ITEM_KINGS_ROCK, 1)
+		case 16:
+			giveitem(ITEM_FOCUS_BAND, 2)
+		case 17:
+			giveitem(ITEM_EXPERT_BELT, 1)
+		case 18:
+			giveitem(ITEM_LIFE_ORB, 1)
+		case 19:
+			giveitem(ITEM_EVIOLITE, 1)
+		case 20:
+			giveitem(ITEM_ROCKY_HELMET, 1)
+		case 21:
+			giveitem(ITEM_TM_EARTHQUAKE, 1)
+		case 22:
+			giveitem(ITEM_ASSAULT_VEST, 1)
+		case 23:
+			giveitem(ITEM_MASTER_BALL, 1)
+		case 24:
+			giveitem(ITEM_MAX_REVIVE, 1)
+		case 25:
+			giveitem(ITEM_TM_SHADOW_BALL, 1)
+		case 26:
+			giveitem(ITEM_TM_BRICK_BREAK, 1)
+		case 27:
+			giveitem(ITEM_TM_REFLECT, 1)
+		case 28:
+			giveitem(ITEM_TM_LIGHT_SCREEN, 1)
+		case 29:
+			giveitem(ITEM_TM_PROTECT, 1)
+		case 30:
+			giveitem(ITEM_TM_PSYCHIC, 1)
+		case 31:
+			giveitem(ITEM_TM_BULK_UP, 1)
+		case 32:
+			giveitem(ITEM_TM_CALM_MIND, 1)
+		case 33:
+			giveitem(ITEM_TM_FLAMETHROWER, 1)
+		case 34:
+			giveitem(ITEM_MASTER_BALL)
 	}
-
-	random(50)
-
-
 	releaseall
+	return
 }
 
 script EnableRunning {
 	lockall
 	setflag(FLAG_SYS_B_DASH)
+	releaseall
+}
+
+script Script_Save {
+	lockall
+	fadescreen(FADE_TO_WHITE)
+	delay(5)
+	msgbox("You exhale a sigh of relief.")
+	special(SaveGame)
+	waitstate
+	fadescreen(FADE_FROM_WHITE)
+	releaseall
+}
+
+script DISABLEEXP {
+	lockall
+	setflag(FLAG_DISABLE_EXP)
 	releaseall
 }

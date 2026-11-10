@@ -1,0 +1,34 @@
+raw `HOMETOWN2_MapScripts::
+	.byte 0
+`
+
+script HOMETOWN2_EventScript_Mothman {
+    lockall
+    msgbox("...oh?")
+    msgbox("{PLAYER}! What an excellent surprise.")
+    msgbox("Don't mind the mess...I can\nget a little frustrated sometimes!")
+    msgbox("You....you...")
+    msgbox("I really...despise you, kid.")
+    msgbox("You have absolutely no idea\nwhat you are messing with.")
+    msgbox("You just had to go and\nfuck with us.")
+    msgbox("For no benefit of your own, mind you.")
+    msgbox("You can walk away at any time.")
+    msgbox("But you don't.")
+    msgbox("That really pisses me off.")
+    msgbox("I'm really not supposed to fight you.")
+    msgbox("So how about this, kid. A\nfriendly wager.")
+    msgbox("You love stuff like this, right?")
+    msgbox("Let's make this interesting.\nI'll put my own life on the line\pjust to kick your ass.")
+    msgbox("But it only works both ways, kid.")
+    msgbox("If you lose, I'll take your entire save.")
+    msgbox("Well, you ready for this?", MSGBOX_YESNO)
+    trainerbattle_single(TRAINER_CHANDLER, MOTHMAN_INTRO, MOTHMAN_OUTRO)
+}
+
+text MOTHMAN_INTRO {
+    "That wasn't a question."
+}
+
+text MOTHMAN_OUTRO {
+    "...G...goddamn."
+}

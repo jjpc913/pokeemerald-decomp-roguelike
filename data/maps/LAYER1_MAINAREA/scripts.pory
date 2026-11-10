@@ -141,6 +141,62 @@ text LAYER1_MAINAREA_LassPost {
     "Sorry"
 }
 
+script LAYER1_MAINAREA_EventScript_Youngster {
+    trainerbattle_single(TRAINER_DEANDRE, LAYER1_MAINAREA_YoungsterIntro, LAYER1_MAINAREA_YoungsterOutro)
+    msgbox(LAYER1_MAINAREA_YoungsterPost, MSGBOX_AUTOCLOSE)
+}
+
+text LAYER1_MAINAREA_YoungsterIntro {
+    "LETS HAVE A FUN POKEMON BATTLE\n"
+}
+
+text LAYER1_MAINAREA_YoungsterOutro {
+    " "
+}
+
+text LAYER1_MAINAREA_YoungsterPost {
+    "Sorry"
+}
+
+
+
+script LAYER1_MAINAREA_EventScript_Youngster2 {
+    trainerbattle_single(TRAINER_JOHNSON, LAYER1_MAINAREA_YoungsterIntro, LAYER1_MAINAREA_YoungsterOutro)
+    msgbox(LAYER1_MAINAREA_YoungsterPost, MSGBOX_AUTOCLOSE)
+}
+
+text LAYER1_MAINAREA_Youngster2Intro {
+    "I LOVE SHORTS THEY ARE EASY\nAND COMFY TO WEAR"
+}
+
+text LAYER1_MAINAREA_Youngster2Outro {
+    "I LOVE "
+}
+
+text LAYER1_MAINAREA_Youngster2Post {
+    "Sorry"
+}
+
+
+
+
+script LAYER1_MAINAREA_EventScript_BugCatcher {
+    trainerbattle_single(TRAINER_DAVIS, LAYER1_MAINAREA_BugCatcherIntro, LAYER1_MAINAREA_BugCatcherOutro)
+    msgbox(LAYER1_MAINAREA_BugCatcherPost, MSGBOX_AUTOCLOSE)
+}
+
+text LAYER1_MAINAREA_BugCatcherIntro {
+    "I LOVE BUGS\nPLEASE PLAY WITH ME"
+}
+
+text LAYER1_MAINAREA_BugCatcherOutro {
+    "BUGS"
+}
+
+text LAYER1_MAINAREA_BugCatcherPost {
+    "Sorry"
+}
+
 
 script LAYER1_MAINAREA_EventScript_Ball1 {
     lockall
@@ -158,12 +214,40 @@ script LAYER1_MAINAREA_EventScript_Ball2 {
     releaseall
 }
 
+script LAYER1_MAINAREA_EventScript_Ball4 {
+    lockall
+    if (!flag(FLAG_L1AREA_BALL4)) {
+        call(Rummage_Rare)
+        setflag(FLAG_L1AREA_BALL4)
+    }
+    releaseall
+}
+
 script LAYER1_MAINAREA_EventScript_Ball3 {
     lockall
     call(Rummage_Rare)
+    waitstate
+    trainerbattle_single(TRAINER_WAYNE, WAYNEINTRO, WAYNEOUTRO, WAYNEPOST)
+    releaseall
+}
+
+text WAYNEINTRO {
+    "DO NOT TAKE THE GIFTS FROM THE ONE\nTHAT WILL DELIVER UNTO US SAVALATION IN VAIN "
+}
+
+text WAYNEOUTRO {
+    ""
+}
+
+script WAYNEPOST {
     setflag(FLAG_L1AREA_BALL3)
     removeobject(7)
+    removeobject(10)
     releaseall
+}
+
+movement CULTISTRUN {
+    walk_right * 15
 }
 
 script LAYER1_MAINAREA_EventScript_Boy1 {

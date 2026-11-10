@@ -1,0 +1,75 @@
+raw `L1_HOUSE1_MapScripts::
+	.byte 0
+`
+
+script L1HOUSE_EventScript_Cabinet1 {
+    lockall
+    msgbox("You rummage through the cabinet...")
+    if (flag(FLAG_CABINET3)) {
+        msgbox("...but there's nothing left.")
+    } else {
+        call(Rummage_Common)
+        setflag(FLAG_CABINET3)
+    }
+}
+
+script L1HOUSE_EventScript_Cabine2 {
+    lockall
+    msgbox("You rummage through the cabinet...")
+    if (flag(FLAG_CABINET4)) {
+        msgbox("...but there's nothing left.")
+    } else {
+        call(Rummage_Uncommon)
+        setflag(FLAG_CABINET4)
+    }
+    
+    releaseall
+}
+
+script L1_HOUSE1_EventScript_Girl {
+    lockall
+    faceplayer
+    msgbox("It's dangerous outside.")
+    msgbox("Feel free to rest here, traveler.")
+    msgbox("You can use the bed to SAVE.")
+    if (flag(FLAG_ROBBED)) {
+        msgbox("(You notice something shiny\nin the woman's pocket.)")
+        msgbox("(Confront her?)", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox("Hm? What's up?")
+            msgbox("(You pad your hands on your pockets\nand realize your money is gone.)")
+            msgbox("What are you doing?")
+            trainerbattle_single(TRAINER_JOHANNA, JohannaOpening, JohannaOutro, JohannaPost)
+        }
+    }
+    releaseall
+}
+
+text JohannaOpening {
+    "This? Oh, it's...!"
+}
+
+text JohannaOutro {
+    "Bastard..."
+}
+
+script JohannaPost {
+    removeobject(1)
+    setflag(FLAG_ROBBED)
+    msgbox("(You aren't sure where the rest\nwent, but you recovered 1 dollar.)")
+    addmoney(1)
+    releaseall
+}
+
+script L1_HOUSE1_EventScript_Bed {
+    lockall
+    call(Script_Save)
+    checkmoney(1)
+    if (!flag(FLAG_ROBBED)) {
+        if (var(VAR_RESULT) == TRUE) {
+        removemoney(9999)
+        setflag(FLAG_ROBBED)
+        }
+    }
+    releaseall
+}

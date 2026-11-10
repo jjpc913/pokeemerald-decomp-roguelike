@@ -36582,7 +36582,7 @@
           "map": "MAP_LAYER1_MAINAREA",
           "base_label": "gLAYER1_MAINAREA",
           "land_mons": {
-            "encounter_rate": 7,
+            "encounter_rate": 8,
             "mons": [
               {
                 "min_level": 10,
@@ -36632,7 +36632,7 @@
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_WEEDLE"
+                "species": "SPECIES_LARVESTA"
               },
               {
                 "min_level": 10,

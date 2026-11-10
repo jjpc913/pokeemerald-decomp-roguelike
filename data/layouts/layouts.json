@@ -9361,7 +9361,7 @@
       "id": "LAYOUT_LAYER1_MAINAREA",
       "name": "LAYER1_MAINAREA_Layout",
       "width": 128,
-      "height": 43,
+      "height": 47,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/LAYER1_MAINAREA/border.bin",
@@ -9377,6 +9377,39 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/DEATHZONE/border.bin",
       "blockdata_filepath": "data/layouts/DEATHZONE/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMETOWN",
+      "name": "HOMETOWN_Layout",
+      "width": 80,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/HOMETOWN/border.bin",
+      "blockdata_filepath": "data/layouts/HOMETOWN/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HOMETOWN2",
+      "name": "HOMETOWN2_Layout",
+      "width": 40,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/HOMETOWN2/border.bin",
+      "blockdata_filepath": "data/layouts/HOMETOWN2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_L1_HOUSE1",
+      "name": "L1_HOUSE1_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/L1_HOUSE1/border.bin",
+      "blockdata_filepath": "data/layouts/L1_HOUSE1/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
