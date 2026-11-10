@@ -395,3 +395,15 @@ script LAYER1_MAINAREA_EventScript_dubois {
     msgbox("(He doesn't even acknowledge your\npresence.)")
     releaseall
 }
+
+script LAYER1_MAINAREA_EventScript_SignCave {
+    lockall
+    msgbox("DANKDRIP CAVE")
+    releaseall
+}
+
+script LAYER1_MAINAREA_EventScript_SignWoods {
+    lockall
+    msgbox("DEEP WOODS")
+    releaseall
+}

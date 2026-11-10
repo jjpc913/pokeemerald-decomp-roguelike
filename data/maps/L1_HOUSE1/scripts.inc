@@ -80,7 +80,7 @@ L1_HOUSE1_EventScript_Girl_4:
 # 41 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_7
 # 42 "data/maps/L1_HOUSE1/scripts.pory"
-	trainerbattle_single TRAINER_JOHANNA, JohannaOpening, JohannaOutro, JohannaPost
+	trainerbattle_single TRAINER_WALLY_VR_5, JohannaOpening, JohannaOutro, JohannaPost
 	goto L1_HOUSE1_EventScript_Girl_1
 
 
@@ -93,6 +93,8 @@ JohannaPost::
 	msgbox JohannaPost_Text_0
 # 60 "data/maps/L1_HOUSE1/scripts.pory"
 	addmoney 1
+# 61 "data/maps/L1_HOUSE1/scripts.pory"
+	releaseall
 	return
 
 
@@ -162,7 +164,7 @@ L1_HOUSE1_EventScript_Girl_Text_6:
 
 L1_HOUSE1_EventScript_Girl_Text_7:
 # 41 "data/maps/L1_HOUSE1/scripts.pory"
-	.string "What are you doing?$"
+	.string "Hmm?$"
 
 JohannaPost_Text_0:
 # 59 "data/maps/L1_HOUSE1/scripts.pory"

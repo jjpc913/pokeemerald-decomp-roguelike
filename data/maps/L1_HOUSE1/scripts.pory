@@ -38,7 +38,7 @@ script L1_HOUSE1_EventScript_Girl {
         if (var(VAR_RESULT) == YES) {
             msgbox("Hm? What's up?")
             msgbox("(You pad your hands on your pockets\nand realize your money is gone.)")
-            msgbox("What are you doing?")
+            msgbox("Hmm?")
             trainerbattle_single(TRAINER_JOHANNA, JohannaOpening, JohannaOutro, JohannaPost)
         }
     }
@@ -65,10 +65,12 @@ script L1_HOUSE1_EventScript_Bed {
     lockall
     call(Script_Save)
     checkmoney(1)
-    if (!flag(FLAG_ROBBED)) {
-        if (var(VAR_RESULT) == TRUE) {
-        removemoney(9999)
-        setflag(FLAG_ROBBED)
+    if (var(VAR_RESULT) == TRUE) {
+        if (!flag(FLAG_ROBBED)) {
+            if (var(VAR_RESULT) == TRUE) {
+            removemoney(9999)
+            setflag(FLAG_ROBBED)
+            }
         }
     }
     releaseall

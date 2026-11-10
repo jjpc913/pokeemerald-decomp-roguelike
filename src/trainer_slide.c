@@ -77,7 +77,16 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
         },
         [TRAINER_JOHANNA] =
         {
-            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("Look, you have only yourself to blame here, sleeping in some strangers house.\p'Sides, you don't even need this, do you?\pYou should count yourself lucky I didn't take something worse.{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("Look, you have only yourself to blame here, sleeping in some random strangers house.\p'Sides, you don't even need this, do you?\pYou should count yourself lucky I didn't take a kidney or something.{PAUSE_UNTIL_PRESS}"),
+
+        },
+
+        [TRAINER_WALLY_VR_5] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("Lay down your arms.\pI can't bear to see your wonderful friends get hurt.{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_DEFENDER_TAKES_FIRST_DOWN] = COMPOUND_STRING("I won't forget your courage, my friend.{PAUSE_UNTIL_PRESS}"),
+            [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("...so this is it, then.{PAUSE_UNTIL_PRESS}"),
+
 
         }
     },
