@@ -1088,38 +1088,40 @@ EnableRunning::
 # 352 "data/maps/SPAWN/scripts.pory"
 	setflag FLAG_SYS_B_DASH
 # 353 "data/maps/SPAWN/scripts.pory"
+	removemoney 9999
+# 354 "data/maps/SPAWN/scripts.pory"
 	releaseall
 	return
 
 
 Script_Save::
-# 357 "data/maps/SPAWN/scripts.pory"
-	lockall
 # 358 "data/maps/SPAWN/scripts.pory"
-	fadescreen FADE_TO_WHITE
+	lockall
 # 359 "data/maps/SPAWN/scripts.pory"
-	delay 5
+	fadescreen FADE_TO_WHITE
 # 360 "data/maps/SPAWN/scripts.pory"
-	msgbox Script_Save_Text_0
+	delay 5
 # 361 "data/maps/SPAWN/scripts.pory"
-	special SaveGame
+	msgbox Script_Save_Text_0
 # 362 "data/maps/SPAWN/scripts.pory"
-	waitstate
+	special SaveGame
 # 363 "data/maps/SPAWN/scripts.pory"
-	fadescreen FADE_FROM_WHITE
+	waitstate
 # 364 "data/maps/SPAWN/scripts.pory"
-	msgbox Script_Save_Text_1
+	fadescreen FADE_FROM_WHITE
 # 365 "data/maps/SPAWN/scripts.pory"
+	msgbox Script_Save_Text_1
+# 366 "data/maps/SPAWN/scripts.pory"
 	releaseall
 	return
 
 
 DISABLEEXP::
-# 369 "data/maps/SPAWN/scripts.pory"
-	lockall
 # 370 "data/maps/SPAWN/scripts.pory"
-	setflag FLAG_DISABLE_EXP
+	lockall
 # 371 "data/maps/SPAWN/scripts.pory"
+	setflag FLAG_DISABLE_EXP
+# 372 "data/maps/SPAWN/scripts.pory"
 	releaseall
 	return
 
@@ -1173,9 +1175,9 @@ SPAWN_MapScripts_Hole_Text_10:
 	.string "...until....$"
 
 Script_Save_Text_0:
-# 360 "data/maps/SPAWN/scripts.pory"
+# 361 "data/maps/SPAWN/scripts.pory"
 	.string "You exhale a sigh of relief.$"
 
 Script_Save_Text_1:
-# 364 "data/maps/SPAWN/scripts.pory"
+# 365 "data/maps/SPAWN/scripts.pory"
 	.string "It seems like you were asleep\nfor a few hours.$"

@@ -1,187 +1,224 @@
-# 1 "data/maps/L1_HOUSE1/scripts.pory"
 L1_HOUSE1_MapScripts::
 # 2 "data/maps/L1_HOUSE1/scripts.pory"
+	map_script MAP_SCRIPT_ON_TRANSITION, L1_HOUSE1_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
 
-L1HOUSE_EventScript_Cabinet1::
+L1_HOUSE1_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+# 3 "data/maps/L1_HOUSE1/scripts.pory"
+	goto_if_set FLAG_ROBBED, L1_HOUSE1_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 # 6 "data/maps/L1_HOUSE1/scripts.pory"
-	lockall
-# 7 "data/maps/L1_HOUSE1/scripts.pory"
-	msgbox L1HOUSE_EventScript_Cabinet1_Text_0
-# 8 "data/maps/L1_HOUSE1/scripts.pory"
-	goto_if_set FLAG_CABINET3, L1HOUSE_EventScript_Cabinet1_1
-# 11 "data/maps/L1_HOUSE1/scripts.pory"
-	call Rummage_Common
+	setflag FLAG_PRANKED
+	return
+
+L1_HOUSE1_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+# 4 "data/maps/L1_HOUSE1/scripts.pory"
+	clearflag FLAG_PRANKED
+	return
+
+
+L1HOUSE_EventScript_Cabinet1::
 # 12 "data/maps/L1_HOUSE1/scripts.pory"
+	lockall
+# 13 "data/maps/L1_HOUSE1/scripts.pory"
+	msgbox L1HOUSE_EventScript_Cabinet1_Text_0
+# 14 "data/maps/L1_HOUSE1/scripts.pory"
+	goto_if_set FLAG_CABINET3, L1HOUSE_EventScript_Cabinet1_1
+# 17 "data/maps/L1_HOUSE1/scripts.pory"
+	call Rummage_Common
+# 18 "data/maps/L1_HOUSE1/scripts.pory"
 	setflag FLAG_CABINET3
 	return
 
 L1HOUSE_EventScript_Cabinet1_1:
-# 9 "data/maps/L1_HOUSE1/scripts.pory"
+# 15 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1HOUSE_EventScript_Cabinet1_Text_1
 	return
 
 
 L1HOUSE_EventScript_Cabine2::
-# 17 "data/maps/L1_HOUSE1/scripts.pory"
-	lockall
-# 18 "data/maps/L1_HOUSE1/scripts.pory"
-	msgbox L1HOUSE_EventScript_Cabinet1_Text_0
-# 19 "data/maps/L1_HOUSE1/scripts.pory"
-	goto_if_set FLAG_CABINET4, L1HOUSE_EventScript_Cabine2_2
-# 22 "data/maps/L1_HOUSE1/scripts.pory"
-	call Rummage_Uncommon
 # 23 "data/maps/L1_HOUSE1/scripts.pory"
+	lockall
+# 24 "data/maps/L1_HOUSE1/scripts.pory"
+	msgbox L1HOUSE_EventScript_Cabinet1_Text_0
+# 25 "data/maps/L1_HOUSE1/scripts.pory"
+	goto_if_set FLAG_CABINET4, L1HOUSE_EventScript_Cabine2_2
+# 28 "data/maps/L1_HOUSE1/scripts.pory"
+	call Rummage_Uncommon
+# 29 "data/maps/L1_HOUSE1/scripts.pory"
 	setflag FLAG_CABINET4
 L1HOUSE_EventScript_Cabine2_1:
-# 26 "data/maps/L1_HOUSE1/scripts.pory"
+# 32 "data/maps/L1_HOUSE1/scripts.pory"
 	releaseall
 	return
 
 L1HOUSE_EventScript_Cabine2_2:
-# 20 "data/maps/L1_HOUSE1/scripts.pory"
+# 26 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1HOUSE_EventScript_Cabinet1_Text_1
 	goto L1HOUSE_EventScript_Cabine2_1
 
 
 L1_HOUSE1_EventScript_Girl::
-# 30 "data/maps/L1_HOUSE1/scripts.pory"
+# 36 "data/maps/L1_HOUSE1/scripts.pory"
 	lockall
-# 31 "data/maps/L1_HOUSE1/scripts.pory"
+# 37 "data/maps/L1_HOUSE1/scripts.pory"
 	faceplayer
-# 32 "data/maps/L1_HOUSE1/scripts.pory"
+# 38 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_0
-# 33 "data/maps/L1_HOUSE1/scripts.pory"
+# 39 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_1
-# 34 "data/maps/L1_HOUSE1/scripts.pory"
+# 40 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_2
-# 35 "data/maps/L1_HOUSE1/scripts.pory"
+# 41 "data/maps/L1_HOUSE1/scripts.pory"
 	goto_if_set FLAG_ROBBED, L1_HOUSE1_EventScript_Girl_2
 L1_HOUSE1_EventScript_Girl_1:
-# 45 "data/maps/L1_HOUSE1/scripts.pory"
+# 51 "data/maps/L1_HOUSE1/scripts.pory"
 	releaseall
 	return
 
 L1_HOUSE1_EventScript_Girl_2:
-# 36 "data/maps/L1_HOUSE1/scripts.pory"
+# 42 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_3
-# 37 "data/maps/L1_HOUSE1/scripts.pory"
+# 43 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_4, MSGBOX_YESNO
-# 38 "data/maps/L1_HOUSE1/scripts.pory"
+# 44 "data/maps/L1_HOUSE1/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq L1_HOUSE1_EventScript_Girl_4
 	goto L1_HOUSE1_EventScript_Girl_1
 
 L1_HOUSE1_EventScript_Girl_4:
-# 39 "data/maps/L1_HOUSE1/scripts.pory"
+# 45 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_5
-# 40 "data/maps/L1_HOUSE1/scripts.pory"
+# 46 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_6
-# 41 "data/maps/L1_HOUSE1/scripts.pory"
+# 47 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_7
-# 42 "data/maps/L1_HOUSE1/scripts.pory"
+# 48 "data/maps/L1_HOUSE1/scripts.pory"
 	trainerbattle_single TRAINER_JOHANNA, JohannaOpening, JohannaOutro, JohannaPost
 	goto L1_HOUSE1_EventScript_Girl_1
 
 
 JohannaPost::
-# 57 "data/maps/L1_HOUSE1/scripts.pory"
+# 63 "data/maps/L1_HOUSE1/scripts.pory"
 	removeobject 1
-# 58 "data/maps/L1_HOUSE1/scripts.pory"
+# 64 "data/maps/L1_HOUSE1/scripts.pory"
 	setflag FLAG_ROBBED
-# 59 "data/maps/L1_HOUSE1/scripts.pory"
+# 65 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox JohannaPost_Text_0
-# 60 "data/maps/L1_HOUSE1/scripts.pory"
-	addmoney 1
-# 61 "data/maps/L1_HOUSE1/scripts.pory"
+# 66 "data/maps/L1_HOUSE1/scripts.pory"
+	addmoney 1000
+# 67 "data/maps/L1_HOUSE1/scripts.pory"
 	releaseall
 	return
 
 
 L1_HOUSE1_EventScript_Bed::
-# 65 "data/maps/L1_HOUSE1/scripts.pory"
+# 71 "data/maps/L1_HOUSE1/scripts.pory"
 	lockall
-# 66 "data/maps/L1_HOUSE1/scripts.pory"
+# 72 "data/maps/L1_HOUSE1/scripts.pory"
 	showobjectat 9, MAP_LAYER1_MAINAREA
-# 67 "data/maps/L1_HOUSE1/scripts.pory"
+# 73 "data/maps/L1_HOUSE1/scripts.pory"
 	call Script_Save
-# 68 "data/maps/L1_HOUSE1/scripts.pory"
+# 74 "data/maps/L1_HOUSE1/scripts.pory"
 	checkmoney 1
-# 69 "data/maps/L1_HOUSE1/scripts.pory"
+# 75 "data/maps/L1_HOUSE1/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq L1_HOUSE1_EventScript_Bed_2
 L1_HOUSE1_EventScript_Bed_1:
-# 77 "data/maps/L1_HOUSE1/scripts.pory"
+# 83 "data/maps/L1_HOUSE1/scripts.pory"
 	releaseall
 	return
 
 L1_HOUSE1_EventScript_Bed_2:
-# 70 "data/maps/L1_HOUSE1/scripts.pory"
+# 76 "data/maps/L1_HOUSE1/scripts.pory"
 	goto_if_unset FLAG_ROBBED, L1_HOUSE1_EventScript_Bed_4
 	goto L1_HOUSE1_EventScript_Bed_1
 
 L1_HOUSE1_EventScript_Bed_4:
-# 71 "data/maps/L1_HOUSE1/scripts.pory"
+# 77 "data/maps/L1_HOUSE1/scripts.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq L1_HOUSE1_EventScript_Bed_6
 	goto L1_HOUSE1_EventScript_Bed_1
 
 L1_HOUSE1_EventScript_Bed_6:
-# 72 "data/maps/L1_HOUSE1/scripts.pory"
+# 78 "data/maps/L1_HOUSE1/scripts.pory"
 	removemoney 9999
-# 73 "data/maps/L1_HOUSE1/scripts.pory"
+# 79 "data/maps/L1_HOUSE1/scripts.pory"
 	setflag FLAG_ROBBED
 	goto L1_HOUSE1_EventScript_Bed_1
 
 
+L1_HOUSE1_EventScript_GetPranked::
+# 87 "data/maps/L1_HOUSE1/scripts.pory"
+	lockall
+# 88 "data/maps/L1_HOUSE1/scripts.pory"
+	msgbox L1_HOUSE1_EventScript_GetPranked_Text_0
+# 89 "data/maps/L1_HOUSE1/scripts.pory"
+	msgbox L1_HOUSE1_EventScript_GetPranked_Text_1
+# 90 "data/maps/L1_HOUSE1/scripts.pory"
+	removeobject 2
+# 91 "data/maps/L1_HOUSE1/scripts.pory"
+	setflag FLAG_PRANKED
+# 92 "data/maps/L1_HOUSE1/scripts.pory"
+	releaseall
+	return
+
+
 L1HOUSE_EventScript_Cabinet1_Text_0:
-# 7 "data/maps/L1_HOUSE1/scripts.pory"
+# 13 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "You rummage through the cabinet...$"
 
 L1HOUSE_EventScript_Cabinet1_Text_1:
-# 9 "data/maps/L1_HOUSE1/scripts.pory"
+# 15 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "...but there's nothing left.$"
 
 L1_HOUSE1_EventScript_Girl_Text_0:
-# 32 "data/maps/L1_HOUSE1/scripts.pory"
+# 38 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "It's dangerous outside.$"
 
 L1_HOUSE1_EventScript_Girl_Text_1:
-# 33 "data/maps/L1_HOUSE1/scripts.pory"
+# 39 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "Feel free to rest here, traveler.$"
 
 L1_HOUSE1_EventScript_Girl_Text_2:
-# 34 "data/maps/L1_HOUSE1/scripts.pory"
+# 40 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "You can use the bed to SAVE.$"
 
 L1_HOUSE1_EventScript_Girl_Text_3:
-# 36 "data/maps/L1_HOUSE1/scripts.pory"
+# 42 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "(You notice something shiny\nin the woman's pocket.)$"
 
 L1_HOUSE1_EventScript_Girl_Text_4:
-# 37 "data/maps/L1_HOUSE1/scripts.pory"
+# 43 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "(Confront her?)$"
 
 L1_HOUSE1_EventScript_Girl_Text_5:
-# 39 "data/maps/L1_HOUSE1/scripts.pory"
+# 45 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "Hm? What's up?$"
 
 L1_HOUSE1_EventScript_Girl_Text_6:
-# 40 "data/maps/L1_HOUSE1/scripts.pory"
+# 46 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "(You pad your hands on your pockets\nand realize your money is gone.)$"
 
 L1_HOUSE1_EventScript_Girl_Text_7:
-# 41 "data/maps/L1_HOUSE1/scripts.pory"
+# 47 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "Hmm?$"
 
 JohannaPost_Text_0:
-# 59 "data/maps/L1_HOUSE1/scripts.pory"
-	.string "(You aren't sure where the rest\nwent, but you recovered 1 dollar.)$"
+# 65 "data/maps/L1_HOUSE1/scripts.pory"
+	.string "(You aren't sure where the rest\nwent, but you recovered 1000 dollars.)$"
+
+L1_HOUSE1_EventScript_GetPranked_Text_0:
+# 88 "data/maps/L1_HOUSE1/scripts.pory"
+	.string "The Pokeball has a note in it.$"
+
+L1_HOUSE1_EventScript_GetPranked_Text_1:
+# 89 "data/maps/L1_HOUSE1/scripts.pory"
+	.string "'Thanks for the money, sucker!'$"
 
 JohannaOpening::
-# 48 "data/maps/L1_HOUSE1/scripts.pory"
+# 54 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "This? Oh, it's...!$"
 
 JohannaOutro::
-# 52 "data/maps/L1_HOUSE1/scripts.pory"
+# 58 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "Bastard...$"

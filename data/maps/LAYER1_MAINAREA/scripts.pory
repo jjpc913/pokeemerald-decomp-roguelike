@@ -1,6 +1,13 @@
-raw `LAYER1_MAINAREA_MapScripts::
-	.byte 0
-`
+mapscripts LAYER1_MAINAREA_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (flag(FLAG_ROBBED)) {
+            clearflag(FLAG_DUBOIS_LAYER1_MAINAREA)
+            setflag(FLAG_LADY_LAYER1)
+        } else {
+            setflag(FLAG_DUBOIS_LAYER1_MAINAREA)
+        }
+    }
+}
 
 script LAYER1_MAINAREA_EventScript_Mothman {
     lockall
@@ -10,6 +17,7 @@ script LAYER1_MAINAREA_EventScript_Mothman {
     }
     hideobjectat(9, MAP_LAYER1_MAINAREA)
     msgbox("..not so fast, buddy!")
+    setflag(FLAG_LADY_LAYER1)
     applymovement(1, MothmanMoveRight)
     waitmovement(1)
     msgbox("I couldn't help but notice you were\nabout to wander into the grass\pwithout a care in the world.")
@@ -261,7 +269,6 @@ script WAYNEPOST {
     removeobject(7)
     removeobject(10)
     call(Rummage_Rare)
-    waitstate
     releaseall
 }
 
@@ -323,6 +330,7 @@ script LAYER1_MAINAREA_EventScript_Yan1 {
     msgbox("Hmm?")
     applymovement(8, YanTurnAround1)
     waitmovement(8)
+    playbgm(MUS_ENCOUNTER_INTERVIEWER, FALSE)
     msgbox("Oh, hello there!")
     msgbox("I haven't met you before.")
     msgbox("'Name's Yan.")
@@ -347,15 +355,18 @@ script LAYER1_MAINAREA_EventScript_Yan1 {
     waitmovement(8)
     setflag(FLAG_YAN_1)
     removeobject(8)
+    fadedefaultbgm
     }
     releaseall
 }
 
 script LAYER1_MAINAREA_EventScript_Yan2 {
     lockall
+    if (!flag(FLAG_YAN_1)) {
     msgbox("Hmm?")
     applymovement(8, YanTurnAround2)
     waitmovement(8)
+    playbgm(MUS_ENCOUNTER_INTERVIEWER, FALSE)
     msgbox("Oh, hello there!")
     msgbox("I haven't met you before.")
     msgbox("'Name's Yan.")
@@ -380,17 +391,19 @@ script LAYER1_MAINAREA_EventScript_Yan2 {
     waitmovement(8)
     setflag(FLAG_YAN_1)
     removeobject(8)
+    fadedefaultbgm
+    }
     releaseall
 }
 
 movement YanTurnAround1 {
     face_right
-    walk_left * 4
+    walk_left * 5
 }
 
 movement YanTurnAround2 {
     face_right
-    walk_left * 4
+    walk_left * 5
     face_down
     walk_down
     face_right
@@ -438,10 +451,119 @@ script LAYER1_MAINAREA_EventScript_SignWoods {
 script LAYER1_MAINAREA_EventScript_RemoveDubois {
     lockall
     if (!flag(FLAG_ROBBED)) {
-        hideobjectat(9, MAP_LAYER1_MAINAREA)
-    } else {
-        hideobjectat(9, MAP_LAYER1_MAINAREA)
         setflag(FLAG_DUBOIS_LAYER1_MAINAREA)
+    } else {
+        clearflag(FLAG_DUBOIS_LAYER1_MAINAREA)
     }
     releaseall
+}
+
+script GET_PRANKED {
+    lockall
+    msgbox("(The Pokeball has a note in it.)")
+    msgbox("'Thanks for the money, sucker!'")
+    setflag(FLAG_PRANKED)
+    removeobject(2)
+    releaseall
+}
+
+script SCRIPT_BOX_LAYER_1 { 
+    lockall
+    msgbox("(A box that says 'MART'.)")
+    msgbox("(It looks like it contains a bunch\nof goodies.)")
+    
+    if (flag(FLAG_THIEF)) {
+        msgbox("(The seal has been broken and\nshoddily repaired.)")
+    } else {
+        msgbox("It looks properly sealed.")
+    }
+    
+    if (flag(FLAG_LADY_LAYER1) && !flag(FLAG_THIEF)) {
+        msgbox("It doesn't seem like the shopkeeper's\naround...")
+        msgbox("Did she forget this?")
+        msgbox("Steal something?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            msgbox("...")
+            msgbox("This seems like it might have\nconsequences...")
+            msgbox("Are you really sure about this?", MSGBOX_YESNO) 
+            if (var(VAR_RESULT) == YES) {
+                setflag(FLAG_THIEF)
+                msgbox("(You unsealed the box and grabbed\nthe first few things you could see.)")
+                call(Rummage_Common)
+                call(Rummage_Common)
+                call(Rummage_Common)
+                call(Rummage_Uncommon)
+                call(Rummage_Uncommon)
+                call(Rummage_Rare)
+                call(Rummage_Rare)
+                call(Rummage_Common)
+                call(Rummage_Uncommon)
+                msgbox("(You hastily tried to reseal the box.)")
+                msgbox("(...it won't fully seal, but\nhopefully it's good enough.)")
+                msgbox("Better get out of here.")
+            }
+        }
+    }
+    releaseall
+}
+
+script LAYER1_MAINAREA_EventScript_Lady {
+    lockall
+    msgbox("Hello, {PLAYER}.")
+    msgbox("It is nice to see you.")
+    msgbox("I am but a humble shopkeeper.")
+    if (flag(FLAG_THIEF)) {
+        msgbox("Normally, I would offer to sell\nyou some of my goods.")
+        msgbox("However, it appears that they\nhave been stolen.")
+        msgbox("What a tragedy...")
+        msgbox("I'm sorry, but I won't be able\nto be of any use to you until\pthe criminal is found.")
+        msgbox("Once I find them, I will make\nthem pay.")
+        msgbox("But for now, I have nothing to\noffer you.")
+        msgbox("You wouldn't happen to have seen\nanything, have you?", MSGBOX_YESNO)
+        if (var(VAR_RESULT)) {
+            msgbox("You have?")
+            msgbox("Oh, joyous day.")
+            msgbox("With you help, we can bring the\ncriminal to justice.")
+            msgbox(".........{PAUSE_UNTIL_PRESS}")
+            msgbox("It was you, wasn't it?")
+        } else {
+            msgbox("Oh, that is a shame.")
+            msgbox("If you see anything, please let me know.")
+        }
+        setflag(FLAG_TALKED_TO_LADY_THIEF)
+    } else {
+        msgbox("Please, take a look at what I\nhave to offer.")
+        pokemart(L1_LADY_MART)
+        msgbox("I will be traveling futher soon.")
+        msgbox("If you need anything, please see\nme again as soon as possible.")
+    }
+    releaseall
+}
+
+script DIE_THIEF {
+    lockall
+    if (flag(FLAG_TALKED_TO_LADY_THIEF)) {
+        fadeoutbgm(1)
+        msgbox("...do you think I'm stupid?")
+        msgbox("I know it was you.")
+        msgbox("Who else could it possibly be?")
+        msgbox("You're the only one that can\ninfluence this world.")
+        msgbox("Time for retribution.")
+        trainerbattle_no_intro(TRAINER_VIVI, LADY_OUTRO)
+    }
+    releaseall
+}
+
+text LADY_OUTRO {
+    "Impossible."
+}
+
+mart L1_LADY_MART {
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_POKE_BALL
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_BURN_HEAL
+    ITEM_AWAKENING
 }

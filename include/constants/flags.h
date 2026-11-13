@@ -82,10 +82,10 @@
 #define FLAG_CAVE_BALL1    0x3C // Unused Flag
 #define FLAG_CAVE_BALL2    0x3D // Unused Flag
 #define FLAG_CAVE_BALL3    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
+#define FLAG_PRANKED    0x3F // Unused Flag
+#define FLAG_LADY_LAYER1    0x40 // Unused Flag
+#define FLAG_THIEF    0x41 // Unused Flag
+#define FLAG_TALKED_TO_LADY_THIEF    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag

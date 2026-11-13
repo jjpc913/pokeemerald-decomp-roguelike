@@ -350,6 +350,7 @@ script Rummage_Rare {
 script EnableRunning {
 	lockall
 	setflag(FLAG_SYS_B_DASH)
+	removemoney(9999)
 	releaseall
 }
 

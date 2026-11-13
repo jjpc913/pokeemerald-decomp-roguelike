@@ -1,6 +1,12 @@
-raw `L1_HOUSE1_MapScripts::
-	.byte 0
-`
+mapscripts L1_HOUSE1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (flag(FLAG_ROBBED)) {
+            clearflag(FLAG_PRANKED)
+        } else {
+            setflag(FLAG_PRANKED)
+        }
+    }
+}
 
 script L1HOUSE_EventScript_Cabinet1 {
     lockall
@@ -56,8 +62,8 @@ text JohannaOutro {
 script JohannaPost {
     removeobject(1)
     setflag(FLAG_ROBBED)
-    msgbox("(You aren't sure where the rest\nwent, but you recovered 1 dollar.)")
-    addmoney(1)
+    msgbox("(You aren't sure where the rest\nwent, but you recovered 1000 dollars.)")
+    addmoney(1000)
     releaseall
 }
 
@@ -74,5 +80,14 @@ script L1_HOUSE1_EventScript_Bed {
             }
         }
     }
+    releaseall
+}
+
+script L1_HOUSE1_EventScript_GetPranked {
+    lockall
+    msgbox("The Pokeball has a note in it.")
+    msgbox("'Thanks for the money, sucker!'")
+    removeobject(2)
+    setflag(FLAG_PRANKED)
     releaseall
 }
