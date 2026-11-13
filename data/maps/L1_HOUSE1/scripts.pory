@@ -63,6 +63,7 @@ script JohannaPost {
 
 script L1_HOUSE1_EventScript_Bed {
     lockall
+    showobjectat(9, MAP_LAYER1_MAINAREA)
     call(Script_Save)
     checkmoney(1)
     if (var(VAR_RESULT) == TRUE) {

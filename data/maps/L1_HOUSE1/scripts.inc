@@ -80,7 +80,7 @@ L1_HOUSE1_EventScript_Girl_4:
 # 41 "data/maps/L1_HOUSE1/scripts.pory"
 	msgbox L1_HOUSE1_EventScript_Girl_Text_7
 # 42 "data/maps/L1_HOUSE1/scripts.pory"
-	trainerbattle_single TRAINER_WALLY_VR_5, JohannaOpening, JohannaOutro, JohannaPost
+	trainerbattle_single TRAINER_JOHANNA, JohannaOpening, JohannaOutro, JohannaPost
 	goto L1_HOUSE1_EventScript_Girl_1
 
 
@@ -102,26 +102,34 @@ L1_HOUSE1_EventScript_Bed::
 # 65 "data/maps/L1_HOUSE1/scripts.pory"
 	lockall
 # 66 "data/maps/L1_HOUSE1/scripts.pory"
-	call Script_Save
+	showobjectat 9, MAP_LAYER1_MAINAREA
 # 67 "data/maps/L1_HOUSE1/scripts.pory"
-	checkmoney 1
+	call Script_Save
 # 68 "data/maps/L1_HOUSE1/scripts.pory"
-	goto_if_unset FLAG_ROBBED, L1_HOUSE1_EventScript_Bed_2
+	checkmoney 1
+# 69 "data/maps/L1_HOUSE1/scripts.pory"
+	compare VAR_RESULT, TRUE
+	goto_if_eq L1_HOUSE1_EventScript_Bed_2
 L1_HOUSE1_EventScript_Bed_1:
-# 74 "data/maps/L1_HOUSE1/scripts.pory"
+# 77 "data/maps/L1_HOUSE1/scripts.pory"
 	releaseall
 	return
 
 L1_HOUSE1_EventScript_Bed_2:
-# 69 "data/maps/L1_HOUSE1/scripts.pory"
-	compare VAR_RESULT, TRUE
-	goto_if_eq L1_HOUSE1_EventScript_Bed_4
+# 70 "data/maps/L1_HOUSE1/scripts.pory"
+	goto_if_unset FLAG_ROBBED, L1_HOUSE1_EventScript_Bed_4
 	goto L1_HOUSE1_EventScript_Bed_1
 
 L1_HOUSE1_EventScript_Bed_4:
-# 70 "data/maps/L1_HOUSE1/scripts.pory"
-	removemoney 9999
 # 71 "data/maps/L1_HOUSE1/scripts.pory"
+	compare VAR_RESULT, TRUE
+	goto_if_eq L1_HOUSE1_EventScript_Bed_6
+	goto L1_HOUSE1_EventScript_Bed_1
+
+L1_HOUSE1_EventScript_Bed_6:
+# 72 "data/maps/L1_HOUSE1/scripts.pory"
+	removemoney 9999
+# 73 "data/maps/L1_HOUSE1/scripts.pory"
 	setflag FLAG_ROBBED
 	goto L1_HOUSE1_EventScript_Bed_1
 

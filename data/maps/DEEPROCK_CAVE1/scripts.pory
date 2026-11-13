@@ -1,0 +1,63 @@
+raw `DEEPROCK_CAVE1_MapScripts::
+	.byte 0
+`
+
+script DEEPROCK_CAVE1_EventScript_Move_Dubois {
+    lockall
+    if (!flag(FLAG_CAVE_DUBOIS)) {
+        applymovement(1, RUNUP_DUBOIS)
+        waitmovement(1)
+        removeobject(1)
+        setflag(FLAG_CAVE_DUBOIS)
+        releaseall
+    }
+    releaseall
+}
+
+movement RUNUP_DUBOIS {
+    face_up
+    walk_up * 3
+}
+
+script DEEPROCK_CAVE1_EventScriptDoll {
+    lockall
+    msgbox("(There is a giant statue of Regirock\nblocking the way.)")
+    msgbox("Looking closely, you can see a small\nkey slot.")
+    releaseall
+}
+
+script DEEPROCK_CAVE1_EventScript_Move_Dubois2 {
+    lockall
+    if (!flag(FLAG_CAVE_DUBOIS2)) {
+        applymovement(8, RUNUP_DUBOIS)
+        waitmovement(8)
+        removeobject(8)
+        setflag(FLAG_CAVE_DUBOIS2)
+        releaseall
+    }
+    releaseall
+}
+
+script DEEPROCK_CAVE1_EventScript_Ball1 {
+    lockall
+    call(Rummage_Common)
+    setflag(FLAG_L1AREA_BALL1)
+    removeobject(2)
+    releaseall
+}
+
+script DEEPROCK_CAVE1_EventScript_Ball3 {
+    lockall
+    call(Rummage_Uncommon)
+    setflag(FLAG_L1AREA_BALL3)
+    removeobject(4)
+    releaseall
+}
+
+script DEEPROCK_CAVE1_EventScript_Ball2 {
+    lockall
+    call(Rummage_Common)
+    setflag(FLAG_L1AREA_BALL2)
+    removeobject(3)
+    releaseall
+}

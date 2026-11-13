@@ -9410,6 +9410,27 @@
       "border_filepath": "data/layouts/L1_HOUSE1/border.bin",
       "blockdata_filepath": "data/layouts/L1_HOUSE1/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_TEST",
+      "name": "test_Layout",
+      "width": 22,
+      "height": 36,
+      "primary_tileset": "gTileset_weirdshit1",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/test/border.bin",
+      "blockdata_filepath": "data/layouts/test/map.bin"
+    },
+    {
+      "id": "LAYOUT_DEEPROCK_CAVE1",
+      "name": "DEEPROCK_CAVE1_Layout",
+      "width": 46,
+      "height": 46,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DEEPROCK_CAVE1/border.bin",
+      "blockdata_filepath": "data/layouts/DEEPROCK_CAVE1/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

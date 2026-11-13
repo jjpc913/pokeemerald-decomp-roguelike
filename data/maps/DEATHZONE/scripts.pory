@@ -105,14 +105,24 @@ script Learn {
                 msgbox("Your question was not understood...")
             } elif (var(VAR_RESULT) == 1) {
                 # rose
+                msgbox("The host of the dream...")
+                msgbox("Long ago, ")
             } elif (var(VAR_RESULT) == 2) {
               # mothman
+                msgbox("Mothman...")
+                msgbox("There are many beings in the universe\nmore sadistic than Mothman, but few\pare as nakedly indulgent.")
             } elif (var(VAR_RESULT) == 3) {
                 # lady
             } elif (var(VAR_RESULT) == 4) {
                # yan
+               msgbox("The detective...")
+               msgbox("The few fragments of self that remain\nthreaten to be consumed by her own role.")
+               msgbox("But will the truth be enough to\nset her free?")
+               msgbox("Only time will tell.")
             } elif (var(VAR_RESULT) == 5) {
                 # dubois
+                msgbox("..............")
+                msgbox("Your question was not understood...")
             } elif (var(VAR_RESULT) == 6) {
                 # you
                 fadeoutbgm(1)
@@ -164,5 +174,6 @@ script Learn {
             }
             addvar(VAR_QUESTIONS_LEFT, -1)
         }
+        call(Rummage_Uncommon)
     releaseall
 }

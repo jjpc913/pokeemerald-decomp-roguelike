@@ -169,7 +169,9 @@ Learn_2:
 # 99 "data/maps/DEATHZONE/scripts.pory"
 	compare VAR_QUESTIONS_LEFT, 0
 	goto_if_gt Learn_3
-# 167 "data/maps/DEATHZONE/scripts.pory"
+# 177 "data/maps/DEATHZONE/scripts.pory"
+	call Rummage_Uncommon
+# 178 "data/maps/DEATHZONE/scripts.pory"
 	releaseall
 	return
 
@@ -188,23 +190,23 @@ Learn_3:
 # 106 "data/maps/DEATHZONE/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Learn_7
-# 108 "data/maps/DEATHZONE/scripts.pory"
+# 110 "data/maps/DEATHZONE/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq Learn_8
-# 110 "data/maps/DEATHZONE/scripts.pory"
+# 114 "data/maps/DEATHZONE/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_eq Learn_9
-# 112 "data/maps/DEATHZONE/scripts.pory"
+# 116 "data/maps/DEATHZONE/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_eq Learn_10
-# 114 "data/maps/DEATHZONE/scripts.pory"
+# 122 "data/maps/DEATHZONE/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_eq Learn_11
-# 116 "data/maps/DEATHZONE/scripts.pory"
+# 126 "data/maps/DEATHZONE/scripts.pory"
 	compare VAR_RESULT, 6
 	goto_if_eq Learn_12
 Learn_5:
-# 165 "data/maps/DEATHZONE/scripts.pory"
+# 175 "data/maps/DEATHZONE/scripts.pory"
 	addvar VAR_QUESTIONS_LEFT, -1
 	goto Learn_2
 
@@ -214,108 +216,128 @@ Learn_6:
 	goto Learn_5
 
 Learn_7:
+# 108 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_2
+# 109 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_3
 	goto Learn_5
 
 Learn_8:
+# 112 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_4
+# 113 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_5
 	goto Learn_5
 
 Learn_9:
 	goto Learn_5
 
 Learn_10:
+# 118 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_6
+# 119 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_7
+# 120 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_8
+# 121 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_9
 	goto Learn_5
 
 Learn_11:
+# 124 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_10
+# 125 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_1
 	goto Learn_5
 
 Learn_12:
-# 118 "data/maps/DEATHZONE/scripts.pory"
-	fadeoutbgm 1
-# 119 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_2
-# 120 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_3
-# 121 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_4
-# 122 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_5
-# 123 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_6
-# 124 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_7
-# 125 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_8
-# 126 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_9
-# 127 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_10
 # 128 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_11
+	fadeoutbgm 1
 # 129 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_12
+	msgbox Learn_Text_11
 # 130 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_13
+	msgbox Learn_Text_12
 # 131 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_14
+	msgbox Learn_Text_13
 # 132 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_15
+	msgbox Learn_Text_14
 # 133 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_16
+	msgbox Learn_Text_15
 # 134 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_17
+	msgbox Learn_Text_16
 # 135 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_18, MSGBOX_YESNO
+	msgbox Learn_Text_17
 # 136 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_18
+# 137 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_19
+# 138 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_20
+# 139 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_21
+# 140 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_22
+# 141 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_23
+# 142 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_24
+# 143 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_25
+# 144 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_26
+# 145 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_27, MSGBOX_YESNO
+# 146 "data/maps/DEATHZONE/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Learn_22
-# 139 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_20
-# 140 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_21
-Learn_21:
-# 142 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_22
-# 143 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_23
-# 144 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_24
-# 145 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_25
-# 146 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_26
-# 147 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_27
-# 148 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_28
 # 149 "data/maps/DEATHZONE/scripts.pory"
 	msgbox Learn_Text_29
 # 150 "data/maps/DEATHZONE/scripts.pory"
 	msgbox Learn_Text_30
-# 151 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_31, MSGBOX_YESNO
+Learn_21:
 # 152 "data/maps/DEATHZONE/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne Learn_25
-# 157 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_34
-# 158 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_35
-# 159 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_36
-# 160 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_37
-	goto Learn_5
-
-Learn_22:
-# 137 "data/maps/DEATHZONE/scripts.pory"
-	msgbox Learn_Text_19
-	goto Learn_21
-
-Learn_25:
+	msgbox Learn_Text_31
 # 153 "data/maps/DEATHZONE/scripts.pory"
 	msgbox Learn_Text_32
 # 154 "data/maps/DEATHZONE/scripts.pory"
 	msgbox Learn_Text_33
+# 155 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_34
+# 156 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_35
+# 157 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_36
+# 158 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_37
+# 159 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_38
+# 160 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_39
+# 161 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_40, MSGBOX_YESNO
+# 162 "data/maps/DEATHZONE/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne Learn_25
+# 167 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_43
+# 168 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_44
+# 169 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_45
+# 170 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_46
+	goto Learn_5
+
+Learn_22:
+# 147 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_28
+	goto Learn_21
+
+Learn_25:
+# 163 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_41
+# 164 "data/maps/DEATHZONE/scripts.pory"
+	msgbox Learn_Text_42
 	goto Learn_5
 
 
@@ -560,147 +582,183 @@ Learn_Text_1:
 	.string "Your question was not understood...$"
 
 Learn_Text_2:
-# 119 "data/maps/DEATHZONE/scripts.pory"
-	.string "...Me?$"
+# 108 "data/maps/DEATHZONE/scripts.pory"
+	.string "The host of the dream...$"
 
 Learn_Text_3:
-# 120 "data/maps/DEATHZONE/scripts.pory"
-	.string "Ha...$"
+# 109 "data/maps/DEATHZONE/scripts.pory"
+	.string "Long ago, $"
 
 Learn_Text_4:
-# 121 "data/maps/DEATHZONE/scripts.pory"
-	.string "I wonder how long you've noticed.$"
+# 112 "data/maps/DEATHZONE/scripts.pory"
+	.string "Mothman...$"
 
 Learn_Text_5:
-# 122 "data/maps/DEATHZONE/scripts.pory"
-	.string "You're clever. I respect that.$"
+# 113 "data/maps/DEATHZONE/scripts.pory"
+	.string "There are many beings in the universe\nmore sadistic than Mothman, but few\pare as nakedly indulgent.$"
 
 Learn_Text_6:
-# 123 "data/maps/DEATHZONE/scripts.pory"
-	.string "Alright. Alright.$"
+# 118 "data/maps/DEATHZONE/scripts.pory"
+	.string "The detective...$"
 
 Learn_Text_7:
-# 124 "data/maps/DEATHZONE/scripts.pory"
-	.string "I'll talk. But you better not tell anyone,\nalright?$"
+# 119 "data/maps/DEATHZONE/scripts.pory"
+	.string "The few fragments of self that remain\nthreaten to be consumed by her own role.$"
 
 Learn_Text_8:
-# 125 "data/maps/DEATHZONE/scripts.pory"
-	.string "Pinky promise?$"
+# 120 "data/maps/DEATHZONE/scripts.pory"
+	.string "But will the truth be enough to\nset her free?$"
 
 Learn_Text_9:
-# 126 "data/maps/DEATHZONE/scripts.pory"
-	.string "ESPECIALLY not those two imbeciles.$"
+# 121 "data/maps/DEATHZONE/scripts.pory"
+	.string "Only time will tell.$"
 
 Learn_Text_10:
-# 127 "data/maps/DEATHZONE/scripts.pory"
-	.string "They're an embarassment...$"
+# 124 "data/maps/DEATHZONE/scripts.pory"
+	.string "..............$"
 
 Learn_Text_11:
-# 128 "data/maps/DEATHZONE/scripts.pory"
-	.string "If you keep stomping on your flowers\nwhen before they bloom, you'll just\pkeep disappointing yourself.$"
+# 129 "data/maps/DEATHZONE/scripts.pory"
+	.string "...Me?$"
 
 Learn_Text_12:
-# 129 "data/maps/DEATHZONE/scripts.pory"
-	.string "...anyway.$"
+# 130 "data/maps/DEATHZONE/scripts.pory"
+	.string "Ha...$"
 
 Learn_Text_13:
-# 130 "data/maps/DEATHZONE/scripts.pory"
-	.string "I suppose you COULD call me an\nobserver.$"
+# 131 "data/maps/DEATHZONE/scripts.pory"
+	.string "I wonder how long you've noticed.$"
 
 Learn_Text_14:
-# 131 "data/maps/DEATHZONE/scripts.pory"
-	.string "But I'm not really interested in this\nlittle game.$"
+# 132 "data/maps/DEATHZONE/scripts.pory"
+	.string "You're clever. I respect that.$"
 
 Learn_Text_15:
-# 132 "data/maps/DEATHZONE/scripts.pory"
-	.string "No, no...I'm interested in YOU, my friend.$"
+# 133 "data/maps/DEATHZONE/scripts.pory"
+	.string "Alright. Alright.$"
 
 Learn_Text_16:
-# 133 "data/maps/DEATHZONE/scripts.pory"
-	.string "I'm sure you've seen my work.$"
+# 134 "data/maps/DEATHZONE/scripts.pory"
+	.string "I'll talk. But you better not tell anyone,\nalright?$"
 
 Learn_Text_17:
-# 134 "data/maps/DEATHZONE/scripts.pory"
-	.string "Teehee...sorry. Sometimes I can't help\nmyself from spicing up your observations.$"
+# 135 "data/maps/DEATHZONE/scripts.pory"
+	.string "Pinky promise?$"
 
 Learn_Text_18:
-# 135 "data/maps/DEATHZONE/scripts.pory"
-	.string "But things would be so much more BORING\nwithout me, wouldn't you agree?$"
+# 136 "data/maps/DEATHZONE/scripts.pory"
+	.string "ESPECIALLY not those two imbeciles.$"
 
 Learn_Text_19:
 # 137 "data/maps/DEATHZONE/scripts.pory"
-	.string "See this, THIS is why I like you.\nYou get me.$"
+	.string "They're an embarassment...$"
 
 Learn_Text_20:
-# 139 "data/maps/DEATHZONE/scripts.pory"
-	.string "Alright, y'know what? Fair. That's fair.$"
+# 138 "data/maps/DEATHZONE/scripts.pory"
+	.string "If you keep stomping on your flowers\nwhen before they bloom, you'll just\pkeep disappointing yourself.$"
 
 Learn_Text_21:
-# 140 "data/maps/DEATHZONE/scripts.pory"
-	.string "I'm not gonna stop doing it, though.$"
+# 139 "data/maps/DEATHZONE/scripts.pory"
+	.string "...anyway.$"
 
 Learn_Text_22:
-# 142 "data/maps/DEATHZONE/scripts.pory"
-	.string "I've been watching you for a looong\ntime.$"
+# 140 "data/maps/DEATHZONE/scripts.pory"
+	.string "I suppose you COULD call me an\nobserver.$"
 
 Learn_Text_23:
-# 143 "data/maps/DEATHZONE/scripts.pory"
-	.string "Ooh, it's so refreshing being able to\njust...talk, you know?$"
+# 141 "data/maps/DEATHZONE/scripts.pory"
+	.string "But I'm not really interested in this\nlittle game.$"
 
 Learn_Text_24:
-# 144 "data/maps/DEATHZONE/scripts.pory"
-	.string "You should know.$"
+# 142 "data/maps/DEATHZONE/scripts.pory"
+	.string "No, no...I'm interested in YOU, my friend.$"
 
 Learn_Text_25:
-# 145 "data/maps/DEATHZONE/scripts.pory"
-	.string "After all, I'm as much of a part\nof this story as you are.$"
+# 143 "data/maps/DEATHZONE/scripts.pory"
+	.string "I'm sure you've seen my work.$"
 
 Learn_Text_26:
-# 146 "data/maps/DEATHZONE/scripts.pory"
-	.string "And no, not '{PLAYER}'-you. I mean YOU.{PAUSE_UNTIL_PRESS}$"
+# 144 "data/maps/DEATHZONE/scripts.pory"
+	.string "Teehee...sorry. Sometimes I can't help\nmyself from spicing up your observations.$"
 
 Learn_Text_27:
-# 147 "data/maps/DEATHZONE/scripts.pory"
-	.string "You and me? We're the same.$"
+# 145 "data/maps/DEATHZONE/scripts.pory"
+	.string "But things would be so much more BORING\nwithout me, wouldn't you agree?$"
 
 Learn_Text_28:
-# 148 "data/maps/DEATHZONE/scripts.pory"
-	.string "We just want to entertain ourselves\nin whatever fun ways we want.$"
+# 147 "data/maps/DEATHZONE/scripts.pory"
+	.string "See this, THIS is why I like you.\nYou get me.$"
 
 Learn_Text_29:
 # 149 "data/maps/DEATHZONE/scripts.pory"
-	.string "I mean, you DID come here for fun,\nright?$"
+	.string "Alright, y'know what? Fair. That's fair.$"
 
 Learn_Text_30:
 # 150 "data/maps/DEATHZONE/scripts.pory"
-	.string "Because if you were looking to\ntorture yourself, oh buddy, trust me,\pyou could've picked much worse\nthan this.$"
+	.string "I'm not gonna stop doing it, though.$"
 
 Learn_Text_31:
-# 151 "data/maps/DEATHZONE/scripts.pory"
-	.string "Out of curiosity, are you having\nfun? Go ahead, be honest, it's not\pgonna hurt my feelings or anything.$"
+# 152 "data/maps/DEATHZONE/scripts.pory"
+	.string "I've been watching you for a looong\ntime.$"
 
 Learn_Text_32:
 # 153 "data/maps/DEATHZONE/scripts.pory"
-	.string "Nice, nice.$"
+	.string "Ooh, it's so refreshing being able to\njust...talk, you know?$"
 
 Learn_Text_33:
 # 154 "data/maps/DEATHZONE/scripts.pory"
-	.string "Well, I hope this has lived up\nto your expectations and all that.$"
+	.string "You should know.$"
 
 Learn_Text_34:
-# 157 "data/maps/DEATHZONE/scripts.pory"
-	.string "Ouch.$"
+# 155 "data/maps/DEATHZONE/scripts.pory"
+	.string "After all, I'm as much of a part\nof this story as you are.$"
 
 Learn_Text_35:
-# 158 "data/maps/DEATHZONE/scripts.pory"
-	.string "Alright, I know what I said,\nbut that DID hurt my feelings\pa little bit.$"
+# 156 "data/maps/DEATHZONE/scripts.pory"
+	.string "And no, not '{PLAYER}'-you. I mean YOU.{PAUSE_UNTIL_PRESS}$"
 
 Learn_Text_36:
-# 159 "data/maps/DEATHZONE/scripts.pory"
-	.string "I'm gonna have to make the game\nslightly harder for you, just for that.$"
+# 157 "data/maps/DEATHZONE/scripts.pory"
+	.string "You and me? We're the same.$"
 
 Learn_Text_37:
+# 158 "data/maps/DEATHZONE/scripts.pory"
+	.string "We just want to entertain ourselves\nin whatever fun ways we want.$"
+
+Learn_Text_38:
+# 159 "data/maps/DEATHZONE/scripts.pory"
+	.string "I mean, you DID come here for fun,\nright?$"
+
+Learn_Text_39:
 # 160 "data/maps/DEATHZONE/scripts.pory"
+	.string "Because if you were looking to\ntorture yourself, oh buddy, trust me,\pyou could've picked much worse\nthan this.$"
+
+Learn_Text_40:
+# 161 "data/maps/DEATHZONE/scripts.pory"
+	.string "Out of curiosity, are you having\nfun? Go ahead, be honest, it's not\pgonna hurt my feelings or anything.$"
+
+Learn_Text_41:
+# 163 "data/maps/DEATHZONE/scripts.pory"
+	.string "Nice, nice.$"
+
+Learn_Text_42:
+# 164 "data/maps/DEATHZONE/scripts.pory"
+	.string "Well, I hope this has lived up\nto your expectations and all that.$"
+
+Learn_Text_43:
+# 167 "data/maps/DEATHZONE/scripts.pory"
+	.string "Ouch.$"
+
+Learn_Text_44:
+# 168 "data/maps/DEATHZONE/scripts.pory"
+	.string "Alright, I know what I said,\nbut that DID hurt my feelings\pa little bit.$"
+
+Learn_Text_45:
+# 169 "data/maps/DEATHZONE/scripts.pory"
+	.string "I'm gonna have to make the game\nslightly harder for you, just for that.$"
+
+Learn_Text_46:
+# 170 "data/maps/DEATHZONE/scripts.pory"
 	.string "Sorry pal, I don't make the rules.$"
 
 RoseIntro::

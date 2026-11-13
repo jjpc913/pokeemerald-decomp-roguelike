@@ -1,0 +1,65 @@
+raw `test_MapScripts::
+	.byte 0
+`
+
+script test_EventScript_dubois2 {
+    lockall
+    if (!flag(FLAG_DUBOIS_OPENER)) {
+        msgbox("Ah...it's you.")
+        msgbox("I don't believe we've been formally\nintroduced.")
+        msgbox("My name is DUBOIS.")
+        msgbox("And your name...'{PLAYER}'")
+        msgbox("What a nice name.")
+        msgbox("I have been tracking you, watching you.")
+        msgbox("Observing you, and how you respond\nto your enviromnent")
+        msgbox("It is clear to me your goal is to reach\nthe end.")
+        msgbox("And, as a result, reach the truth.")
+        msgbox("But, what you might not know, is\nthat at the bottom there's only room\pfor one.")
+        msgbox("And so I have come to my conclusion.")
+        msgbox("Your prescence here...and\nyour mission...are a threat to\pLady Yan.")
+        msgbox("So, I will give you a chance to step\nback.")
+        msgbox("Go, live your life, and be happy,\nand prosper.")
+        msgbox("I mean no offense, but this world\nis better off without your intervention.")
+        msgbox("I'll put it bluntly: You have no\nidea what you are doing.")
+        msgbox("So again I ask, just go home.")
+        msgbox("Take one step further, and I\nwill have to intervene myself.")
+        msgbox("That is all.")
+        setflag(FLAG_DUBOIS_OPENER)
+    } else {
+        msgbox("..so be it.")
+        trainerbattle_no_intro(TRAINER_WALLY_VR_5, DUBOIS_OUTRO)
+    }
+    releaseall
+}
+
+text DUBOIS_OUTRO {
+    "...."
+}
+
+script DUBOIS_POST {
+}
+
+movement faceatplayer {
+    face_down
+    walk_down * 1
+}
+
+script test_EventScript_dubois {
+    lockall
+    if (!flag(FLAG_DUBOIS_OPENER)) {
+        msgbox("...")
+        msgbox("(The mysterious man stands before you.)")
+        applymovement(1, faceatplayer)
+        waitmovement(1)
+        msgbox("You have no idea what you are\ndoing.")
+        msgbox("I mean no offense, but this world\nis better off without your intervention.")
+        msgbox("Just go home.")
+        msgbox("Take one step further, and I\nwill have to intervene myself.")
+        msgbox("That is all.")
+        setflag(FLAG_DUBOIS_OPENER)
+    } else {
+        msgbox("..so be it.")
+        trainerbattle_no_intro(TRAINER_WALLY_VR_5, DUBOIS_OUTRO)
+    }
+    releaseall
+}

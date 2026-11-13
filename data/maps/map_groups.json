@@ -141,7 +141,9 @@
     "DEATHZONE",
     "HOMETOWN",
     "HOMETOWN2",
-    "L1_HOUSE1"
+    "L1_HOUSE1",
+    "test",
+    "DEEPROCK_CAVE1"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

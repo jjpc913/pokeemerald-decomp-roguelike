@@ -709,7 +709,7 @@ bool32 TryRunFromBattle(enum BattlerId battler)
     }
     else
     {
-        if (RandomPercentage(RNG_NONE, 65)) {
+        if (RandomPercentage(RNG_NONE, 20)) {
             gBattleStruct->runTries++;
             return FALSE;
         }

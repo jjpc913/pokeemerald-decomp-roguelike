@@ -1108,16 +1108,18 @@ Script_Save::
 # 363 "data/maps/SPAWN/scripts.pory"
 	fadescreen FADE_FROM_WHITE
 # 364 "data/maps/SPAWN/scripts.pory"
+	msgbox Script_Save_Text_1
+# 365 "data/maps/SPAWN/scripts.pory"
 	releaseall
 	return
 
 
 DISABLEEXP::
-# 368 "data/maps/SPAWN/scripts.pory"
-	lockall
 # 369 "data/maps/SPAWN/scripts.pory"
-	setflag FLAG_DISABLE_EXP
+	lockall
 # 370 "data/maps/SPAWN/scripts.pory"
+	setflag FLAG_DISABLE_EXP
+# 371 "data/maps/SPAWN/scripts.pory"
 	releaseall
 	return
 
@@ -1173,3 +1175,7 @@ SPAWN_MapScripts_Hole_Text_10:
 Script_Save_Text_0:
 # 360 "data/maps/SPAWN/scripts.pory"
 	.string "You exhale a sigh of relief.$"
+
+Script_Save_Text_1:
+# 364 "data/maps/SPAWN/scripts.pory"
+	.string "It seems like you were asleep\nfor a few hours.$"

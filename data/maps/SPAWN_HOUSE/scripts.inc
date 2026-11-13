@@ -187,7 +187,7 @@ SPAWN_HOUSE_EventScript_Mudkip_7:
 # 95 "data/maps/SPAWN_HOUSE/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 96 "data/maps/SPAWN_HOUSE/scripts.pory"
-	removeobject 3
+	removeobject 2
 	goto SPAWN_HOUSE_EventScript_Mudkip_1
 
 
@@ -259,7 +259,7 @@ SPAWN_HOUSE_EventScript_Treecko_7:
 # 130 "data/maps/SPAWN_HOUSE/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 131 "data/maps/SPAWN_HOUSE/scripts.pory"
-	removeobject 5
+	removeobject 4
 	goto SPAWN_HOUSE_EventScript_Treecko_1
 
 

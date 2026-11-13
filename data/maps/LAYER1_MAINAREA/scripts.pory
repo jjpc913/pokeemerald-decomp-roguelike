@@ -8,6 +8,7 @@ script LAYER1_MAINAREA_EventScript_Mothman {
         releaseall
         return
     }
+    hideobjectat(9, MAP_LAYER1_MAINAREA)
     msgbox("..not so fast, buddy!")
     applymovement(1, MothmanMoveRight)
     waitmovement(1)
@@ -30,6 +31,8 @@ script LAYER1_MAINAREA_EventScript_Mothman {
     msgbox("You can take this.")
     giveitem(ITEM_FULL_HEAL, 1)
     giveitem(ITEM_POTION, 1)
+    giveitem(ITEM_ETHER, 1)
+    msgbox("Just a little stuff to get you started.")
     msgbox("It's brutal out there.")
     msgbox("Good luck, {PLAYER}.\n")
     msgbox("I'll be rooting for you...eheheh.")
@@ -141,6 +144,24 @@ text LAYER1_MAINAREA_LassPost {
     "Sorry"
 }
 
+script LAYER1_MAINAREA_EventScript_Lass2 {
+    trainerbattle_single(TRAINER_JANICE, LAYER1_MAINAREA_Lass2Intro, LAYER1_MAINAREA_Lass2Outro)
+    msgbox(LAYER1_MAINAREA_Lass2Post, MSGBOX_AUTOCLOSE)
+}
+
+text LAYER1_MAINAREA_Lass2Intro {
+    "SO  CUTE~!\p"
+    "I'M GONNA TAKE YOU HOME~!"
+}
+
+text LAYER1_MAINAREA_Lass2Outro {
+    "."
+}
+
+text LAYER1_MAINAREA_Lass2Post {
+    "Sorry"
+}
+
 script LAYER1_MAINAREA_EventScript_Youngster {
     trainerbattle_single(TRAINER_DEANDRE, LAYER1_MAINAREA_YoungsterIntro, LAYER1_MAINAREA_YoungsterOutro)
     msgbox(LAYER1_MAINAREA_YoungsterPost, MSGBOX_AUTOCLOSE)
@@ -224,11 +245,7 @@ script LAYER1_MAINAREA_EventScript_Ball4 {
 }
 
 script LAYER1_MAINAREA_EventScript_Ball3 {
-    lockall
-    call(Rummage_Rare)
-    waitstate
     trainerbattle_single(TRAINER_WAYNE, WAYNEINTRO, WAYNEOUTRO, WAYNEPOST)
-    releaseall
 }
 
 text WAYNEINTRO {
@@ -243,6 +260,8 @@ script WAYNEPOST {
     setflag(FLAG_L1AREA_BALL3)
     removeobject(7)
     removeobject(10)
+    call(Rummage_Rare)
+    waitstate
     releaseall
 }
 
@@ -300,6 +319,7 @@ script LAYER1_MAINAREA_EventScript_Sign {
 
 script LAYER1_MAINAREA_EventScript_Yan1 {
     lockall
+    if (!flag(FLAG_YAN_1)) {
     msgbox("Hmm?")
     applymovement(8, YanTurnAround1)
     waitmovement(8)
@@ -327,6 +347,7 @@ script LAYER1_MAINAREA_EventScript_Yan1 {
     waitmovement(8)
     setflag(FLAG_YAN_1)
     removeobject(8)
+    }
     releaseall
 }
 
@@ -389,10 +410,16 @@ movement YanLeave2 {
     walk_left * 10
 }
 
-script LAYER1_MAINAREA_EventScript_dubois {
+script LAYER1_MAINAREA_EventScript_yanbeach {
     lockall
-    msgbox("(There is a man standing here,\nsilently staring into the ocean.)")
-    msgbox("(He doesn't even acknowledge your\npresence.)")
+    if (flag(FLAG_ROBBED)) {
+        msgbox("(The woman named Yan is standing here.)")
+        msgbox("(She is staring blankly into the ocean.)")
+        msgbox("Oh?")
+        faceplayer
+        msgbox("Hey, {PLAYER}.")
+        msgbox("Sorry, but would you mind giving me\na moment alone?")
+    }
     releaseall
 }
 
@@ -404,6 +431,17 @@ script LAYER1_MAINAREA_EventScript_SignCave {
 
 script LAYER1_MAINAREA_EventScript_SignWoods {
     lockall
-    msgbox("DEEP WOODS")
+    msgbox("DEEPf WOODS")
+    releaseall
+}
+
+script LAYER1_MAINAREA_EventScript_RemoveDubois {
+    lockall
+    if (!flag(FLAG_ROBBED)) {
+        hideobjectat(9, MAP_LAYER1_MAINAREA)
+    } else {
+        hideobjectat(9, MAP_LAYER1_MAINAREA)
+        setflag(FLAG_DUBOIS_LAYER1_MAINAREA)
+    }
     releaseall
 }
