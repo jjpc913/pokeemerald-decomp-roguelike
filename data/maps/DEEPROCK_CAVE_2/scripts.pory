@@ -1,0 +1,40 @@
+mapscripts DEEPROCK_CAVE_2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        checkitem(ITEM_WELLSPRING_MASK) 
+        if (var(VAR_RESULT) == FALSE) {
+            # msgbox("The oppressive darkness of the cave\nfills you with a sense of unease...")
+            setflag(FLAG_CAVE_CULTIST)
+        }
+    }
+}
+
+script DEEPROCK_CAVE_2_EventScripts_Ball1 {
+    lockall
+    if (!flag(FLAG_CAVE_BALL4)) {
+        call(Rummage_Rare)
+        setflag(FLAG_CAVE_BALL4)
+        msgbox("Trope achieved.")
+    }
+    releaseall
+}
+
+script DEEPROCK_CAVE_2_GetKey {
+    lockall
+    clearflag(FLAG_CAVE_CULTIST)
+    giveitem(ITEM_WELLSPRING_MASK, 1) # change to key
+    addobject(1)
+    releaseall
+}
+
+script DEEPROCK_CAVE_2_EventScript_Cultist {
+    trainerbattle_single(TRAINER_GABRIELLE_1, GABRIELLE_INTRO, GABRIELLE_OUTRO)
+    msgbox("Why...")
+}
+
+text GABRIELLE_INTRO {
+    "LADY OF THE SNOW...PLEASE...\nGUIDE MY HAND!"
+}
+
+text GABRIELLE_OUTRO {
+    "WHY...HAVE YOU ABANDONED US?"
+}

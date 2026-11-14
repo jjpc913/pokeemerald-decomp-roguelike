@@ -15644,20 +15644,18 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_WELLSPRING_MASK] =
     {
-        .name = ITEM_NAME("Wellspring Mask"),
+        .name = ITEM_NAME("Rocky Key"),
         .price = 0,
-        .holdEffect = HOLD_EFFECT_OGERPON_MASK,
-        .holdEffectParam = 20,
         .description = COMPOUND_STRING(
-            "Allows Ogerpon to\n"
-            "wield the Water\n"
-            "type in battle."),
-        .pocket = POCKET_ITEMS,
-        .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
+            "A key that unlocks\n"
+            "something. There is a\n"
+            "rock engraved on it."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .iconPic = gItemIcon_WellspringMask,
-        .iconPalette = gItemIconPalette_WellspringMask,
+        .iconPic = gItemIcon_BasementKey,
+        .iconPalette = gItemIconPalette_HearthflameMask,
     },
 
     [ITEM_HEARTHFLAME_MASK] =

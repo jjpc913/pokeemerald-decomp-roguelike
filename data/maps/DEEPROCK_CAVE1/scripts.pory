@@ -61,3 +61,56 @@ script DEEPROCK_CAVE1_EventScript_Ball2 {
     removeobject(3)
     releaseall
 }
+
+script DEEPROCK_CAVE1_EventScript_Hiker2 {
+    trainerbattle_single(TRAINER_SAWYER_1, SAWYER_INTRO, Generic_Outro)
+    msgbox("Sorry.")
+}
+
+text SAWYER_INTRO {
+    "I'M HAPPILY SURROUNDED BY HOT PEOPLE\n"
+	"AROUND THESE PARTS. I WON'T LOSE!"
+}
+
+script DEEPROCK_CAVE1_EventScript_Hiker1 {
+    trainerbattle_single(TRAINER_CHIP, CHIP_INTRO, Generic_Outro)
+    msgbox("Sorry.")
+}
+
+text CHIP_INTRO {
+    "WHO MIGHT YOU BE?\p"
+    "ARE YOU PERHAPS SEARCHING FOR ANCIENT\n"
+	"RUINS THAT ARE RUMORED TO POSSIBLY\l"
+	"EXIST ACCORDING TO LEGENDS?$"
+}   
+
+script DEEPROCK_CAVE1_EventScript_BlackBelt {
+    trainerbattle_single(TRAINER_TAKAO, TAKAO_INTRO, Generic_Outro)
+    msgbox("Sorry.")
+}
+
+text TAKAO_INTRO {
+    "MIGHT IS RIGHT!\n"
+	"COME ON"
+}
+
+script DEEPROCK_CAVE1_EventScript_CrushGirl {
+    trainerbattle_single(TRAINER_HELENE, HELENE_INTRO, Generic_Outro)
+    msgbox("Sorry.")
+}
+
+text HELENE_INTRO {
+    "MY POKéMON HAVE BLACK BELT-LEVEL\n"
+	"STRENGTH!"
+}
+
+script DEEPROCK_CAVE1_EventScript_Gentleman {
+    trainerbattle_single(TRAINER_THOMAS, THOMAS_INTRO, Generic_Outro)
+    msgbox("Sorry.")
+}
+
+text THOMAS_INTRO {
+    "OHO...NEVER LET DOWN YOUR GUARD!"
+}
+
+

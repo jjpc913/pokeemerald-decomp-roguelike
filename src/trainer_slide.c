@@ -86,8 +86,10 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_
             [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("It is not too late for you to lay down your arms.\pI can't bear to see your wonderful friends get hurt.{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_DEFENDER_TAKES_FIRST_DOWN] = COMPOUND_STRING("I won't forget your courage, my friend.{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_SELF_LAST_SWITCHIN] = COMPOUND_STRING("...so this is it, then.{PAUSE_UNTIL_PRESS}"),
-
-
+        },
+        [TRAINER_GABRIELLE_1] =
+        {
+            [TRAINER_SLIDE_BEFORE_FIRST_TURN] = COMPOUND_STRING("THE WILL OF THE HOST AND MY WILL ARE ONE AND THE SAME.\pSHE WILL GUIDE ME TO JUSTICE AND PEACE.\pIT IS A LEVEL OF FAITH THAT GOES BEYOND COMPREHENSION.{PAUSE_UNTIL_PRESS}")   
         }
     },
 };

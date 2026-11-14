@@ -9431,6 +9431,17 @@
       "border_filepath": "data/layouts/DEEPROCK_CAVE1/border.bin",
       "blockdata_filepath": "data/layouts/DEEPROCK_CAVE1/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DEEPROCK_CAVE_2",
+      "name": "DEEPROCK_CAVE_2_Layout",
+      "width": 46,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DEEPROCK_CAVE_2/border.bin",
+      "blockdata_filepath": "data/layouts/DEEPROCK_CAVE_2/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

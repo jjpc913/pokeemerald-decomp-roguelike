@@ -117,48 +117,58 @@ L1_HOUSE1_EventScript_Bed::
 # 72 "data/maps/L1_HOUSE1/scripts.pory"
 	showobjectat 9, MAP_LAYER1_MAINAREA
 # 73 "data/maps/L1_HOUSE1/scripts.pory"
-	call Script_Save
+	call Script_Save1
 # 74 "data/maps/L1_HOUSE1/scripts.pory"
-	checkmoney 1
-# 75 "data/maps/L1_HOUSE1/scripts.pory"
-	compare VAR_RESULT, TRUE
-	goto_if_eq L1_HOUSE1_EventScript_Bed_2
+	goto_if_set FLAG_ROBBED, L1_HOUSE1_EventScript_Bed_2
 L1_HOUSE1_EventScript_Bed_1:
-# 83 "data/maps/L1_HOUSE1/scripts.pory"
+# 78 "data/maps/L1_HOUSE1/scripts.pory"
+	checkmoney 1
+# 79 "data/maps/L1_HOUSE1/scripts.pory"
+	compare VAR_RESULT, TRUE
+	goto_if_eq L1_HOUSE1_EventScript_Bed_5
+L1_HOUSE1_EventScript_Bed_4:
+# 88 "data/maps/L1_HOUSE1/scripts.pory"
 	releaseall
 	return
 
 L1_HOUSE1_EventScript_Bed_2:
-# 76 "data/maps/L1_HOUSE1/scripts.pory"
-	goto_if_unset FLAG_ROBBED, L1_HOUSE1_EventScript_Bed_4
+# 75 "data/maps/L1_HOUSE1/scripts.pory"
+	msgbox L1_HOUSE1_EventScript_Bed_Text_0
 	goto L1_HOUSE1_EventScript_Bed_1
 
-L1_HOUSE1_EventScript_Bed_4:
-# 77 "data/maps/L1_HOUSE1/scripts.pory"
+L1_HOUSE1_EventScript_Bed_5:
+# 80 "data/maps/L1_HOUSE1/scripts.pory"
+	goto_if_unset FLAG_ROBBED, L1_HOUSE1_EventScript_Bed_7
+	goto L1_HOUSE1_EventScript_Bed_4
+
+L1_HOUSE1_EventScript_Bed_7:
+# 81 "data/maps/L1_HOUSE1/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq L1_HOUSE1_EventScript_Bed_6
-	goto L1_HOUSE1_EventScript_Bed_1
+	goto_if_eq L1_HOUSE1_EventScript_Bed_9
+	goto L1_HOUSE1_EventScript_Bed_4
 
-L1_HOUSE1_EventScript_Bed_6:
-# 78 "data/maps/L1_HOUSE1/scripts.pory"
+L1_HOUSE1_EventScript_Bed_9:
+# 82 "data/maps/L1_HOUSE1/scripts.pory"
 	removemoney 9999
-# 79 "data/maps/L1_HOUSE1/scripts.pory"
+# 83 "data/maps/L1_HOUSE1/scripts.pory"
 	setflag FLAG_ROBBED
-	goto L1_HOUSE1_EventScript_Bed_1
+# 84 "data/maps/L1_HOUSE1/scripts.pory"
+	msgbox L1_HOUSE1_EventScript_Bed_Text_1
+	goto L1_HOUSE1_EventScript_Bed_4
 
 
 L1_HOUSE1_EventScript_GetPranked::
-# 87 "data/maps/L1_HOUSE1/scripts.pory"
-	lockall
-# 88 "data/maps/L1_HOUSE1/scripts.pory"
-	msgbox L1_HOUSE1_EventScript_GetPranked_Text_0
-# 89 "data/maps/L1_HOUSE1/scripts.pory"
-	msgbox L1_HOUSE1_EventScript_GetPranked_Text_1
-# 90 "data/maps/L1_HOUSE1/scripts.pory"
-	removeobject 2
-# 91 "data/maps/L1_HOUSE1/scripts.pory"
-	setflag FLAG_PRANKED
 # 92 "data/maps/L1_HOUSE1/scripts.pory"
+	lockall
+# 93 "data/maps/L1_HOUSE1/scripts.pory"
+	msgbox L1_HOUSE1_EventScript_GetPranked_Text_0
+# 94 "data/maps/L1_HOUSE1/scripts.pory"
+	msgbox L1_HOUSE1_EventScript_GetPranked_Text_1
+# 95 "data/maps/L1_HOUSE1/scripts.pory"
+	removeobject 2
+# 96 "data/maps/L1_HOUSE1/scripts.pory"
+	setflag FLAG_PRANKED
+# 97 "data/maps/L1_HOUSE1/scripts.pory"
 	releaseall
 	return
 
@@ -207,12 +217,20 @@ JohannaPost_Text_0:
 # 65 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "(You aren't sure where the rest\nwent, but you recovered 1000 dollars.)$"
 
+L1_HOUSE1_EventScript_Bed_Text_0:
+# 75 "data/maps/L1_HOUSE1/scripts.pory"
+	.string "You feel rested, but not much\ntime seemed to pass.$"
+
+L1_HOUSE1_EventScript_Bed_Text_1:
+# 84 "data/maps/L1_HOUSE1/scripts.pory"
+	.string "It seems like you were asleep\nfor a few hours.$"
+
 L1_HOUSE1_EventScript_GetPranked_Text_0:
-# 88 "data/maps/L1_HOUSE1/scripts.pory"
+# 93 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "The Pokeball has a note in it.$"
 
 L1_HOUSE1_EventScript_GetPranked_Text_1:
-# 89 "data/maps/L1_HOUSE1/scripts.pory"
+# 94 "data/maps/L1_HOUSE1/scripts.pory"
 	.string "'Thanks for the money, sucker!'$"
 
 JohannaOpening::

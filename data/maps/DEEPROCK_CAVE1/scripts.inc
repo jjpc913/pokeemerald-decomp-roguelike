@@ -117,6 +117,46 @@ DEEPROCK_CAVE1_EventScript_Ball2::
 	return
 
 
+DEEPROCK_CAVE1_EventScript_Hiker2::
+# 66 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	trainerbattle_single TRAINER_SAWYER_1, SAWYER_INTRO, Generic_Outro
+# 67 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
+	return
+
+
+DEEPROCK_CAVE1_EventScript_Hiker1::
+# 76 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	trainerbattle_single TRAINER_CHIP, CHIP_INTRO, Generic_Outro
+# 77 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
+	return
+
+
+DEEPROCK_CAVE1_EventScript_BlackBelt::
+# 88 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	trainerbattle_single TRAINER_TAKAO, TAKAO_INTRO, Generic_Outro
+# 89 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
+	return
+
+
+DEEPROCK_CAVE1_EventScript_CrushGirl::
+# 98 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	trainerbattle_single TRAINER_HELENE, HELENE_INTRO, Generic_Outro
+# 99 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
+	return
+
+
+DEEPROCK_CAVE1_EventScript_Gentleman::
+# 108 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	trainerbattle_single TRAINER_THOMAS, THOMAS_INTRO, Generic_Outro
+# 109 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
+	return
+
+
 DEEPROCK_CAVE1_EventScriptDoll_Text_0:
 # 24 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	.string "(There is a giant statue of Regirock\nblocking the way.)$"
@@ -124,3 +164,33 @@ DEEPROCK_CAVE1_EventScriptDoll_Text_0:
 DEEPROCK_CAVE1_EventScriptDoll_Text_1:
 # 25 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	.string "Looking closely, you can see a small\nkey slot.$"
+
+DEEPROCK_CAVE1_EventScript_Hiker2_Text_0:
+# 67 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	.string "Sorry.$"
+
+SAWYER_INTRO::
+# 70 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	.string "I'M HAPPILY SURROUNDED BY HOT PEOPLE\n"
+	.string "AROUND THESE PARTS. I WON'T LOSE!$"
+
+CHIP_INTRO::
+# 80 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	.string "WHO MIGHT YOU BE?\p"
+	.string "ARE YOU PERHAPS SEARCHING FOR ANCIENT\n"
+	.string "RUINS THAT ARE RUMORED TO POSSIBLY\l"
+	.string "EXIST ACCORDING TO LEGENDS?$"
+
+TAKAO_INTRO::
+# 92 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	.string "MIGHT IS RIGHT!\n"
+	.string "COME ON$"
+
+HELENE_INTRO::
+# 102 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	.string "MY POKéMON HAVE BLACK BELT-LEVEL\n"
+	.string "STRENGTH!$"
+
+THOMAS_INTRO::
+# 112 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	.string "OHO...NEVER LET DOWN YOUR GUARD!$"

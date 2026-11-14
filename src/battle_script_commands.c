@@ -2153,11 +2153,11 @@ static void Cmd_getexp(void)
 
     switch (gBattleScripting.getexpState)
     {
-    case 0: // check if should receive exp at all
+    case 0: // check if should receive exp at all (only give exp for trainer battles)
         if (IsOnPlayerSide(gBattlerFainted)
             || IsAiVsAiBattle()
-            || !BattleTypeAllowsExp()
-            || FlagGet(FLAG_DISABLE_EXP))
+            || !BattleTypeAllowsExp() || !(gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+           // || FlagGet(FLAG_DISABLE_EXP))
         {
             gBattleScripting.getexpState = 6; // goto last case
         }

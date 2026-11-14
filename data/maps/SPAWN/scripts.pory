@@ -354,7 +354,7 @@ script EnableRunning {
 	releaseall
 }
 
-script Script_Save {
+script Script_Save1 {
 	lockall
 	fadescreen(FADE_TO_WHITE)
 	delay(5)
@@ -362,7 +362,6 @@ script Script_Save {
 	special(SaveGame)
 	waitstate
 	fadescreen(FADE_FROM_WHITE)
-	msgbox("It seems like you were asleep\nfor a few hours.")
 	releaseall
 }
 

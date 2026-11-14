@@ -70,13 +70,18 @@ script JohannaPost {
 script L1_HOUSE1_EventScript_Bed {
     lockall
     showobjectat(9, MAP_LAYER1_MAINAREA)
-    call(Script_Save)
+    call(Script_Save1)
+    if (flag(FLAG_ROBBED)) {
+        msgbox("You feel rested, but not much\ntime seemed to pass.")
+    }
+
     checkmoney(1)
     if (var(VAR_RESULT) == TRUE) {
         if (!flag(FLAG_ROBBED)) {
             if (var(VAR_RESULT) == TRUE) {
             removemoney(9999)
             setflag(FLAG_ROBBED)
+            msgbox("It seems like you were asleep\nfor a few hours.")
             }
         }
     }
