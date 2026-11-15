@@ -144,7 +144,8 @@
     "L1_HOUSE1",
     "test",
     "DEEPROCK_CAVE1",
-    "DEEPROCK_CAVE_2"
+    "DEEPROCK_CAVE_2",
+    "DEEPROCK_CAVE_EXIT"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

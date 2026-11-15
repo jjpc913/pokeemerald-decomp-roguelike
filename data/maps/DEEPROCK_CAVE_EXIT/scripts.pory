@@ -1,0 +1,64 @@
+raw `DEEPROCK_CAVE_EXIT_MapScripts::
+	.byte`
+
+
+script DEEPROCK_CAVE_EXIT_EventScript_Ball4 {
+    lockall
+    call(Rummage_Common)
+    setflag(FLAG_CAVE_BALL5)
+    removeobject(2)
+    releaseall
+}
+
+script DEEPROCK_CAVE_EXIT_EventScript_Ball5 {
+    lockall
+    call(Rummage_Common)
+    setflag(FLAG_CAVE_BALL6)
+    removeobject(2)
+    releaseall
+}
+
+script DEEPROCK_CAVE_EXIT_EventScript_Ball6 {
+    lockall
+    call(Rummage_Common)
+    setflag(FLAG_CAVE_BALL7)
+    removeobject(2)
+    releaseall
+}
+
+script DEEPROCK_CAVE_EXIT_EventScript_Ball7 {
+    lockall
+    call(Rummage_Uncommon)
+    setflag(FLAG_CAVE_BALL8)
+    removeobject(2)
+    releaseall
+}
+
+script DEEPROCK_CAVE_EXIT_EventScript_Ball8 {
+    lockall
+    call(Rummage_Rare)
+    setflag(FLAG_CAVE_BALL9)
+    removeobject(2)
+    releaseall
+}
+
+script DEEPROCK_CAVE_EXIT_EventScript_BlackBelt {
+    trainerbattle_single(TRAINER_HITOSHI, HITOSHI_INTRO, Generic_Outro)
+    msgbox("Sorry.")
+}
+
+text HITOSHI_INTRO {
+    "SHOW ME THE STRENGTH OF YOUR\n"
+    "POKEMON!"
+}
+
+script DEEPROCK_CAVE_EXIT_EventScript_Hiker {
+    trainerbattle_single(TRAINER_DUSTY_1, DUSTY_INTRO, Generic_Outro)
+    msgbox("Sorry.")
+}
+
+text DUSTY_INTRO {
+    "FOR THIRTY YEARS I HAVE SEARCHED FOR\n"
+	"ANCIENT RUINS I AM TO BE\l"
+	"CHALLENGED?"
+}

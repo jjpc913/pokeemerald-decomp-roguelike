@@ -23,6 +23,16 @@ script DEEPROCK_CAVE1_EventScriptDoll {
     lockall
     msgbox("(There is a giant statue of Regirock\nblocking the way.)")
     msgbox("Looking closely, you can see a small\nkey slot.")
+    checkitem(ITEM_WELLSPRING_MASK)
+    if (var(VAR_RESULT) == TRUE) {
+        msgbox("Insert the Rocky Key?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == TRUE) {
+            msgbox("You inserted the key into the statue.")
+            msgbox("It's disappearing..!")
+            setflag(FLAG_CAVE_DOLL)
+            removeobject(7)
+        }
+    }
     releaseall
 }
 
@@ -41,7 +51,7 @@ script DEEPROCK_CAVE1_EventScript_Move_Dubois2 {
 script DEEPROCK_CAVE1_EventScript_Ball1 {
     lockall
     call(Rummage_Common)
-    setflag(FLAG_L1AREA_BALL1)
+    setflag(FLAG_CAVE_BALL1)
     removeobject(2)
     releaseall
 }
@@ -49,7 +59,7 @@ script DEEPROCK_CAVE1_EventScript_Ball1 {
 script DEEPROCK_CAVE1_EventScript_Ball3 {
     lockall
     call(Rummage_Uncommon)
-    setflag(FLAG_L1AREA_BALL3)
+    setflag(FLAG_CAVE_BALL3)
     removeobject(4)
     releaseall
 }
@@ -57,7 +67,7 @@ script DEEPROCK_CAVE1_EventScript_Ball3 {
 script DEEPROCK_CAVE1_EventScript_Ball2 {
     lockall
     call(Rummage_Common)
-    setflag(FLAG_L1AREA_BALL2)
+    setflag(FLAG_CAVE_BALL2)
     removeobject(3)
     releaseall
 }

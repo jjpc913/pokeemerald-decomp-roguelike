@@ -47,112 +47,137 @@ DEEPROCK_CAVE1_EventScriptDoll::
 # 25 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	msgbox DEEPROCK_CAVE1_EventScriptDoll_Text_1
 # 26 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	checkitem ITEM_WELLSPRING_MASK
+# 27 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	compare VAR_RESULT, TRUE
+	goto_if_eq DEEPROCK_CAVE1_EventScriptDoll_2
+DEEPROCK_CAVE1_EventScriptDoll_1:
+# 36 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	releaseall
 	return
 
+DEEPROCK_CAVE1_EventScriptDoll_2:
+# 28 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	msgbox DEEPROCK_CAVE1_EventScriptDoll_Text_2, MSGBOX_YESNO
+# 29 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	compare VAR_RESULT, TRUE
+	goto_if_eq DEEPROCK_CAVE1_EventScriptDoll_4
+	goto DEEPROCK_CAVE1_EventScriptDoll_1
+
+DEEPROCK_CAVE1_EventScriptDoll_4:
+# 30 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	msgbox DEEPROCK_CAVE1_EventScriptDoll_Text_3
+# 31 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	msgbox DEEPROCK_CAVE1_EventScriptDoll_Text_4
+# 32 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	setflag FLAG_CAVE_DOLL
+# 33 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	removeobject 7
+	goto DEEPROCK_CAVE1_EventScriptDoll_1
+
 
 DEEPROCK_CAVE1_EventScript_Move_Dubois2::
-# 30 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 40 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	lockall
-# 31 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 41 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	goto_if_unset FLAG_CAVE_DUBOIS2, DEEPROCK_CAVE1_EventScript_Move_Dubois2_2
 DEEPROCK_CAVE1_EventScript_Move_Dubois2_1:
-# 38 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 48 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	releaseall
 	return
 
 DEEPROCK_CAVE1_EventScript_Move_Dubois2_2:
-# 32 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 42 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	applymovement 8, RUNUP_DUBOIS
-# 33 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 43 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	waitmovement 8
-# 34 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 44 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	removeobject 8
-# 35 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 45 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	setflag FLAG_CAVE_DUBOIS2
-# 36 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 46 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	releaseall
 	goto DEEPROCK_CAVE1_EventScript_Move_Dubois2_1
 
 
 DEEPROCK_CAVE1_EventScript_Ball1::
-# 42 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 52 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	lockall
-# 43 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 53 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	call Rummage_Common
-# 44 "data/maps/DEEPROCK_CAVE1/scripts.pory"
-	setflag FLAG_L1AREA_BALL1
-# 45 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 54 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	setflag FLAG_CAVE_BALL1
+# 55 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	removeobject 2
-# 46 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 56 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	releaseall
 	return
 
 
 DEEPROCK_CAVE1_EventScript_Ball3::
-# 50 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 60 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	lockall
-# 51 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 61 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	call Rummage_Uncommon
-# 52 "data/maps/DEEPROCK_CAVE1/scripts.pory"
-	setflag FLAG_L1AREA_BALL3
-# 53 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 62 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	setflag FLAG_CAVE_BALL3
+# 63 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	removeobject 4
-# 54 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 64 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	releaseall
 	return
 
 
 DEEPROCK_CAVE1_EventScript_Ball2::
-# 58 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 68 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	lockall
-# 59 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 69 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	call Rummage_Common
-# 60 "data/maps/DEEPROCK_CAVE1/scripts.pory"
-	setflag FLAG_L1AREA_BALL2
-# 61 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 70 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	setflag FLAG_CAVE_BALL2
+# 71 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	removeobject 3
-# 62 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 72 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	releaseall
 	return
 
 
 DEEPROCK_CAVE1_EventScript_Hiker2::
-# 66 "data/maps/DEEPROCK_CAVE1/scripts.pory"
-	trainerbattle_single TRAINER_SAWYER_1, SAWYER_INTRO, Generic_Outro
-# 67 "data/maps/DEEPROCK_CAVE1/scripts.pory"
-	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
-	return
-
-
-DEEPROCK_CAVE1_EventScript_Hiker1::
 # 76 "data/maps/DEEPROCK_CAVE1/scripts.pory"
-	trainerbattle_single TRAINER_CHIP, CHIP_INTRO, Generic_Outro
+	trainerbattle_single TRAINER_SAWYER_1, SAWYER_INTRO, Generic_Outro
 # 77 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
 	return
 
 
-DEEPROCK_CAVE1_EventScript_BlackBelt::
-# 88 "data/maps/DEEPROCK_CAVE1/scripts.pory"
-	trainerbattle_single TRAINER_TAKAO, TAKAO_INTRO, Generic_Outro
-# 89 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+DEEPROCK_CAVE1_EventScript_Hiker1::
+# 86 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	trainerbattle_single TRAINER_CHIP, CHIP_INTRO, Generic_Outro
+# 87 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
 	return
 
 
-DEEPROCK_CAVE1_EventScript_CrushGirl::
+DEEPROCK_CAVE1_EventScript_BlackBelt::
 # 98 "data/maps/DEEPROCK_CAVE1/scripts.pory"
-	trainerbattle_single TRAINER_HELENE, HELENE_INTRO, Generic_Outro
+	trainerbattle_single TRAINER_TAKAO, TAKAO_INTRO, Generic_Outro
 # 99 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
 	return
 
 
-DEEPROCK_CAVE1_EventScript_Gentleman::
+DEEPROCK_CAVE1_EventScript_CrushGirl::
 # 108 "data/maps/DEEPROCK_CAVE1/scripts.pory"
-	trainerbattle_single TRAINER_THOMAS, THOMAS_INTRO, Generic_Outro
+	trainerbattle_single TRAINER_HELENE, HELENE_INTRO, Generic_Outro
 # 109 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
+	return
+
+
+DEEPROCK_CAVE1_EventScript_Gentleman::
+# 118 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	trainerbattle_single TRAINER_THOMAS, THOMAS_INTRO, Generic_Outro
+# 119 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	msgbox DEEPROCK_CAVE1_EventScript_Hiker2_Text_0
 	return
 
@@ -165,32 +190,44 @@ DEEPROCK_CAVE1_EventScriptDoll_Text_1:
 # 25 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	.string "Looking closely, you can see a small\nkey slot.$"
 
+DEEPROCK_CAVE1_EventScriptDoll_Text_2:
+# 28 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	.string "Insert the Rocky Key?$"
+
+DEEPROCK_CAVE1_EventScriptDoll_Text_3:
+# 30 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	.string "You inserted the key into the statue.$"
+
+DEEPROCK_CAVE1_EventScriptDoll_Text_4:
+# 31 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+	.string "It's disappearing..!$"
+
 DEEPROCK_CAVE1_EventScript_Hiker2_Text_0:
-# 67 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 77 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	.string "Sorry.$"
 
 SAWYER_INTRO::
-# 70 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 80 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	.string "I'M HAPPILY SURROUNDED BY HOT PEOPLE\n"
 	.string "AROUND THESE PARTS. I WON'T LOSE!$"
 
 CHIP_INTRO::
-# 80 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 90 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	.string "WHO MIGHT YOU BE?\p"
 	.string "ARE YOU PERHAPS SEARCHING FOR ANCIENT\n"
 	.string "RUINS THAT ARE RUMORED TO POSSIBLY\l"
 	.string "EXIST ACCORDING TO LEGENDS?$"
 
 TAKAO_INTRO::
-# 92 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 102 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	.string "MIGHT IS RIGHT!\n"
 	.string "COME ON$"
 
 HELENE_INTRO::
-# 102 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 112 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	.string "MY POKéMON HAVE BLACK BELT-LEVEL\n"
 	.string "STRENGTH!$"
 
 THOMAS_INTRO::
-# 112 "data/maps/DEEPROCK_CAVE1/scripts.pory"
+# 122 "data/maps/DEEPROCK_CAVE1/scripts.pory"
 	.string "OHO...NEVER LET DOWN YOUR GUARD!$"
