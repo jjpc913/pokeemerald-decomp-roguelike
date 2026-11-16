@@ -38,3 +38,13 @@ text GABRIELLE_INTRO {
 text GABRIELLE_OUTRO {
     "WHY...HAVE YOU ABANDONED US?"
 }
+
+script DEEPROCK_CAVE_2_EventScript_Message {
+    lockall
+    if (!flag(FLAG_CAVE_OMINOUS)) {
+    msgbox("The darkness of the cave is oppressive.")
+    msgbox("You feel like you are being watched.")
+    setflag(FLAG_CAVE_OMINOUS)
+    }
+    releaseall
+}

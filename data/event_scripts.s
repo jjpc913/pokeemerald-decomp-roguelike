@@ -1762,3 +1762,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/DEEPROCK_CAVE_2/scripts.inc"
 
 	.include "data/maps/DEEPROCK_CAVE_EXIT/scripts.inc"
+
+	.include "data/maps/CLEARING/scripts.inc"
+
+	.include "data/maps/PKMNCENTER/scripts.inc"

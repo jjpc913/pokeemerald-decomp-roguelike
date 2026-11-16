@@ -1,8 +1,14 @@
 mapscripts LAYER1_MAINAREA_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         if (flag(FLAG_ROBBED)) {
+            clearflag(FLAG_LADY_LAYER1)
+        } else {
+            setflag(FLAG_DUBOIS_LAYER1_MAINAREA)
+        }
+
+        if (flag(FLAG_YAN_1)) {
             clearflag(FLAG_DUBOIS_LAYER1_MAINAREA)
-            setflag(FLAG_LADY_LAYER1)
+            addobject(9) 
         } else {
             setflag(FLAG_DUBOIS_LAYER1_MAINAREA)
         }
@@ -260,7 +266,7 @@ script LAYER1_MAINAREA_EventScript_Ball3 {
     lockall
     if (!flag(FLAG_L1AREA_BALL4)) {
         call(Rummage_Rare)
-        setflag(FLAG_L1AREA_BALL4)
+        setflag(FLAG_L1AREA_BALL3)
     }
     releaseall
 }
@@ -340,27 +346,65 @@ script LAYER1_MAINAREA_EventScript_Yan1 {
     applymovement(8, YanTurnAround1)
     waitmovement(8)
     playbgm(MUS_ENCOUNTER_INTERVIEWER, FALSE)
+    faceplayer
     msgbox("Oh, hello there!")
     msgbox("I haven't met you before.")
     msgbox("'Name's Yan.")
     msgbox("You can take this.")
     giveitem(ITEM_BLUE_SCARF, 1)
+    msgbox(".....")
+    msgbox("Oh...you're {PLAYER}?")
+    msgbox("Nice to meetcha!")
     msgbox("I'm a detective currently investigating\nthis strange phenomenon.")
     msgbox("...what, don't tell me you haven't\nseen it?")
-    msgbox("All these people, gone completely\ncuckoo.")
+    call(RollD20)
+    if (var(VAR_RESULT) > 10) {
+        msgbox("All these people, gone completely\ncuckoo.")
+    } else {
+        msgbox("All these people, gone completely\ncrazy.")
+    }
+
     msgbox("I, uh, haven't really made any\nprogress, yet.")
     msgbox("But, young explorer, don't fret.")
     msgbox("I'm going to get to the bottom of this.")
-    msgbox("I mean that literally.")
-    msgbox("I think...the answers I seek are\nin the deepest pits below.")
-    msgbox("...weird.")
-    msgbox("I'm getting a really strange feeling...")
-    msgbox("The only way to go deeper is to\nkeep jumping into holes, right?")
-    msgbox("Well, if that's what you're looking\nfor, there was one just up ahead.")
-    msgbox("I'll meet you down there, 'kay?")
-    msgbox("I still have a few more interviews\nto conduct, and stones to turn over.")
-    msgbox("Toodles!")
+    msgbox("For now, I'm doing some field research.")
+    msgbox("There's a small village up ahead,\non the other side of the mountain.")
+    msgbox("It's become somewhat of a safe haven.")
+    call(RollD20)
+    if (var(VAR_RESULT) > 10) {
+        msgbox("Don't go dying on me now, alright?")
+    } else {
+        msgbox("I'll meet you there, 'kay?")
+    }
+    msgbox("I still have a few more interviews\nto conduct, stones to turn over.")
+    call(RollD20)
+    if (var(VAR_RESULT) > 10) {
+        msgbox("Toodles!")
+    } else {
+        msgbox("See ya!")
+    }
     applymovement(8, YanLeave1)
+    waitmovement(8)
+    delay(100)
+    fadeoutbgm(1)
+    msgbox("{PLAYER}...")
+    msgbox("Oh, {PLAYER}. One more thing.")
+    delay(100)
+    msgbox("You haven't...er, how do I\nput this...")
+    msgbox("A girl with a face like TV static,\nand her hair jet black.")
+    msgbox("You haven't seen anyone like that,\nhave you?")
+    dynmultichoice(20,8, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "NO", "NO")
+    msgbox("...alright.")
+    msgbox("Just curious.")
+    call(RollD20)
+    if (var(VAR_RESULT) < 7) {
+        msgbox(".......")
+        msgbox("What a weird feeling.")
+        msgbox("You...")
+        msgbox("Sorry, ignore me.")
+    }
+    msgbox("Good luck, {PLAYER}.")
+    applymovement(8, YanGoOffscreen)
     waitmovement(8)
     setflag(FLAG_YAN_1)
     removeobject(8)
@@ -376,27 +420,63 @@ script LAYER1_MAINAREA_EventScript_Yan2 {
     applymovement(8, YanTurnAround2)
     waitmovement(8)
     playbgm(MUS_ENCOUNTER_INTERVIEWER, FALSE)
+    faceplayer
     msgbox("Oh, hello there!")
     msgbox("I haven't met you before.")
     msgbox("'Name's Yan.")
     msgbox("You can take this.")
     giveitem(ITEM_BLUE_SCARF, 1)
+    msgbox(".....")
+    msgbox("Oh...you're {PLAYER}?")
+    msgbox("Nice to meetcha!")
     msgbox("I'm a detective currently investigating\nthis strange phenomenon.")
     msgbox("...what, don't tell me you haven't\nseen it?")
-    msgbox("All these people, gone completely\ncuckoo.")
+    call(RollD20)
+    if (var(VAR_RESULT) > 10) {
+        msgbox("All these people, gone completely\ncuckoo.")
+    } else {
+        msgbox("All these people, gone completely\ncrazy.")
+    }
+
     msgbox("I, uh, haven't really made any\nprogress, yet.")
     msgbox("But, young explorer, don't fret.")
     msgbox("I'm going to get to the bottom of this.")
-    msgbox("I mean that literally.")
-    msgbox("I think...the answers I seek are\nin the deepest pits below.")
-    msgbox("...weird.")
-    msgbox("I'm getting a really strange feeling...")
-    msgbox("The only way to go deeper is to\nkeep jumping into holes, right?")
-    msgbox("Well, if that's what you're looking\nfor, there was one just up ahead.")
-    msgbox("I'll meet you down there, 'kay?")
-    msgbox("I still have a few more interviews\nto conduct, and stones to turn over.")
-    msgbox("Toodles!")
+    msgbox("For now, I'm doing some field research.")
+    msgbox("There's a small village up ahead,\non the other side of the mountain.")
+    msgbox("It's become somewhat of a safe haven.")
+    call(RollD20)
+    if (var(VAR_RESULT) > 10) {
+        msgbox("Don't go dying on me now, alright?")
+    } else {
+        msgbox("I'll meet you there, 'kay?")
+    }
+    msgbox("I still have a few more interviews\nto conduct, stones to turn over.")
+    call(RollD20)
+    if (var(VAR_RESULT) > 10) {
+        msgbox("Toodles!")
+    } else {
+        msgbox("See ya!")
+    }
     applymovement(8, YanLeave2)
+    waitmovement(8)
+    delay(100)
+    fadenewbgm(MUS_NONE)
+    msgbox("Oh, {PLAYER}. One more thing.")
+    msgbox("You haven't...er, how do I\nput this...")
+    msgbox("A girl with a face like TV static,\nand her hair jet black.")
+    msgbox("You haven't seen anyone like that,\nhave you?")
+    dynmultichoice(20,8, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "NO", "NO")
+    msgbox("...alright.")
+    msgbox("Just curious.")
+    call(RollD20)
+    if (var(VAR_RESULT) < 7) {
+        msgbox(".......")
+        msgbox("What a weird feeling.")
+        msgbox("You...")
+        msgbox("Sorry, ignore me.")
+    }
+    msgbox("Good luck, {PLAYER}.")
+    applymovement(8, YanGoOffscreen)
     waitmovement(8)
     setflag(FLAG_YAN_1)
     removeobject(8)
@@ -422,27 +502,47 @@ movement YanLeave1 {
     face_down
     walk_down
     face_left
-    walk_left * 10
+    walk_left * 3
 }
 
 movement YanLeave2 {
     face_up
     walk_up
     face_left
-    walk_left * 10
+    walk_left * 3
+}
+
+movement YanFaceBack {
+    face_right
+}
+
+movement YanGoOffscreen {
+    face_left
+    walk_left * 6
 }
 
 script LAYER1_MAINAREA_EventScript_yanbeach {
     lockall
-    if (flag(FLAG_ROBBED)) {
+    if (!flag(FLAG_TALKED_YAN_BEACH)) {
         msgbox("(The woman named Yan is standing here.)")
         msgbox("(She is staring blankly into the ocean.)")
         msgbox("Oh?")
         faceplayer
         msgbox("Hey, {PLAYER}.")
         msgbox("Sorry, but would you mind giving me\na moment alone?")
+        setflag(FLAG_TALKED_YAN_BEACH)
+        applymovement(9, yfaceleft)
+        waitmovement(9)
+    } else {
+        msgbox("The woman is not even acknowledging\nyou.")
+        msgbox("But it doesn't seem like she is\nignoring you.")
+        msgbox("Rather, it seems she is focusing\non something else so intently that\pshe doesn't even sense you.")
     }
     releaseall
+}
+
+movement yfaceleft {
+    face_left
 }
 
 script LAYER1_MAINAREA_EventScript_SignCave {

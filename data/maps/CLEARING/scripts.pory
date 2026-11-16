@@ -1,0 +1,4 @@
+raw `CLEARING_MapScripts::
+	.byte 0
+`
+

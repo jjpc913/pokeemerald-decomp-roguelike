@@ -1,0 +1,198 @@
+raw `PKMNCENTER_MapScripts::
+	.byte 0`
+
+script PKMNCENTER_EventScript_PC {
+    lockall
+    msgbox("(The PC is turned off.)")
+    msgbox("There is a thick layer of dust\nover the keyboard.")
+    releaseall
+}
+
+script PKMNCENTER_EventScript_Healing {
+    lockall
+    msgbox("(It seems the healing device is\npowered off.)")
+    releaseall
+}
+
+script PKMNCENTER_EventScript_Map {
+    lockall
+    msgbox("It's a map of North America.")
+    releaseall
+}
+
+
+script PKMNCENTER_EventScript_Yan {
+    lockall
+    faceplayer
+    if (!flag(FLAG_TALKED_TO_YAN_PC)) {
+        setflag(FLAG_TALKED_TO_YAN_PC)
+        setvar(VAR_GIRL_OPTION, 1)
+        setvar(VAR_YOU_OPTION, 1)
+        msgbox("Oh, hey, {PLAYER}.")
+        msgbox("Good to see you again.")
+        msgbox("I'm just taking a break...from\ninvestigating.")
+        msgbox("Hah...sorry.")
+        msgbox("I feel like my body is shutting down or something.")
+        msgbox("I'm so tired...hah.")
+        msgbox("I'll be staying here for a bit...\nwhile I rest up.")
+        msgbox("In the meantime, I'd be happy to\ntalk to you about anything.")
+    } else {
+        msgbox("Hey, {PLAYER}.")
+    }
+    msgbox("What'd you want to talk about?")
+    if (flag(FLAG_DEFAULT_YAN)) {
+        dynmultichoice(0,0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "Business Card", "This Place", "This World", "Silver Girl", "You", "What Should I Do Now")
+    }
+
+    faceplayer
+    switch (var(VAR_RESULT)) {
+        case 0:
+            if (!flag(FLAG_TALKED_BUSINESS_CARD)) {
+                msgbox("Ah, the card?")
+                msgbox("That's my special business card.")
+                msgbox("It even has a watermark!")
+                setflag(FLAG_TALKED_BUSINESS_CARD)
+            } elif (flag(FLAG_TALKED_BUSINESS_CARD) && !flag(FLAG_TALKED_BUSINESS_CARD_2)) {
+                msgbox("Hm?")
+                msgbox("What, still on the card?")
+                msgbox("Yes, I know it's great.")
+                msgbox("You've got good taste, my friend!")
+                setflag(FLAG_TALKED_BUSINESS_CARD_2)
+            } else {
+                msgbox("(Seems there's nothing left to discuss.)")
+            }
+            releaseall
+            face_right
+            break
+        case 1:
+            if (!flag(FLAG_TALKED_MAP)){
+                msgbox("This place?")
+                msgbox("Well, I'm sorry to say, I don't\nreally have an answer for you.")
+                msgbox("But if I had to take a guess...hmm.")
+                msgbox("Well, obviously, it resembles a\nPokemon Center.")
+                msgbox("But, it's, uh, not, obviously.")
+                msgbox("It doesn't seem dangerous or\nanything, though.")
+                msgbox("Seems safe enough for taking a nap.")
+                msgbox("..oh! There is something interesting,\nactually.")
+                msgbox("Why don't you take a look at the map?")
+                msgbox("The one on the wall, I mean.")
+                setflag(FLAG_TALKED_MAP)
+            }
+            elif (flag(FLAG_TALKED_MAP) && !flag(FLAG_TALKED_MAP_2)) {
+                msgbox("See what I mean?")
+                msgbox("It quite odd...it looks familiar,\nbut it's definitely not Hoenn.")
+                msgbox("Well, if you were asking about this\ntown, I'm afraid I know even less.")
+                msgbox("It's got a nostalgic vibe, I guess.\nIt's pretty cute.")
+                msgbox("God, I feel like I'm...missing\nsomething,y'know?")
+                msgbox("Maybe if I hang out here longer,\nI might make a connection.")
+                msgbox("For now, let's just enjoy this\nlittle safe room, eheh.")
+                setflag(FLAG_TALKED_MAP_2)
+            } 
+            else {
+                msgbox("(Seems there's nothing left to discuss.)")
+            }
+            releaseall
+            face_right
+            break
+        case 2:
+            msgbox("This world, huh?")
+            msgbox("I'm sorry, {PLAYER}, but I don't have\nany real answers for you.")
+            msgbox("I know as much as you do.")
+            releaseall
+            face_right
+            break
+        case 3:
+            if (var(VAR_GIRL_OPTION) >= 2 && var(VAR_GIRL_OPTION) < 4) {
+                msgbox("This option is unavailable.")
+                addvar(VAR_GIRL_OPTION, 1)
+            } elif (var(VAR_GIRL_OPTION) >= 4 && var(VAR_GIRL_OPTION) < 6) {
+                msgbox("This OPTION IS UNAVAILABLE.")
+                addvar(VAR_GIRL_OPTION, 1)
+            } elif (var(VAR_GIRL_OPTION) >= 6 && var(VAR_GIRL_OPTION) < 8) {
+                msgbox("This OPTION IS UNAVAILABLE.\nThis OPTION IS UNAVAILABLE.This\nOPTION IS UNAVAILABLE.This OPTION IS\nUNAVAILABLE.This OPTION IS UNAVAILABLE.")
+                addvar(VAR_GIRL_OPTION, 1)
+            } elif (var(VAR_GIRL_OPTION) >= 8 && var(VAR_GIRL_OPTION) <= 9) {
+                msgbox("This Option is Unavailable.")
+                addvar(VAR_GIRL_OPTION, 1)
+            }
+            elif (var(VAR_GIRL_OPTION) == 10) {
+                msgbox("WARNING!\pThe following option will\ndelete all saved data.{PAUSE_UNTIL_PRESS}")
+                msgbox("Is it really okay to delete all saved\ndata? This cannot be undone.{PAUSE_UNTIL_PRESS}", MSGBOX_YESNO)
+                if (var(VAR_RESULT) == NO) {
+                    releaseall
+                    face_right
+                    break
+                }
+                msgbox(".........")
+                msgbox("Fine.")
+                msgbox("'...a girl?'")
+                msgbox("I think...I know what you are\ntalking about.")
+                msgbox("So, you have seen her.")
+                msgbox("The woman in gray.")
+                msgbox("That phantom girl who appears in\nmy dreams.")
+             
+                addvar(VAR_VENOM, 5)
+                setvar(VAR_GIRL_OPTION, 99)
+            } elif (var(VAR_GIRL_OPTION) == 99) {
+                msgbox("(Seems there's nothing left to discuss.)")
+                msgbox("...I hope you're satisfied.")
+            } else {
+                msgbox("(This optioin is unavailable.)")
+                addvar(VAR_GIRL_OPTION, 1)
+            }
+            
+            releaseall
+            face_right
+            break
+        case 4:
+            if (var(VAR_YOU_OPTION) == 1) {
+                msgbox("Me?")
+                msgbox("What, didja forget my name already?")
+                msgbox("I'm Yan!")
+                msgbox("And it's my job to figure out what's\ngoing on.")
+                msgbox("Y'know, with the weirdness and all.")
+                addvar(VAR_YOU_OPTION, 1)
+                
+            } elif (var(VAR_YOU_OPTION) == 2) {
+                msgbox("...I just told you, dude.")
+                msgbox("Yan.")
+                msgbox("I'm a detective.")
+                msgbox("Don't make me investigate your case of\nmemory loss, now!")
+                msgbox("...eheh. Bad joke.")
+                msgbox("....mm.")
+                addvar(VAR_YOU_OPTION, 1)
+            } elif (var(VAR_YOU_OPTION) == 3) {
+                msgbox("...")
+                msgbox("Alright, your kind of starting\nto creep me out now.")
+                msgbox("Are you feeling alright, {PLAYER}?")
+                msgbox("You know my name.")
+                addvar(VAR_YOU_OPTION, 1)
+            } else {
+                msgbox("(Seems there's nothing left to discuss.)")
+            }
+            releaseall
+            face_right
+            break
+        case 5:
+            // note to self for future me: For this incredibly bad bit of code, 
+            // make sure the most recent instructions are higher up in the if statement.
+            msgbox("What to do, eh?")
+            msgbox("Hmmmm....")
+            break
+        case 127:
+            msgbox("See you, then!")
+            msgbox("Come back if anything happens, alright?")
+            releaseall
+            face_right
+            break
+        applymovement(1, yanfaceright)
+        waitmovement(1)
+        releaseall
+    }
+    
+}
+
+movement yanfaceright {
+    face_down
+}
+

@@ -1124,6 +1124,12 @@ DISABLEEXP::
 	return
 
 
+RollD20::
+# 375 "data/maps/SPAWN/scripts.pory"
+	random 20
+	return
+
+
 SPAWN_MapScripts_Sign_Text_0:
 # 13 "data/maps/SPAWN/scripts.pory"
 	.string "     's House$"

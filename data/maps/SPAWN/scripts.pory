@@ -370,3 +370,8 @@ script DISABLEEXP {
 	setflag(FLAG_DISABLE_EXP)
 	releaseall
 }
+
+script RollD20 {
+	random(20)
+	return
+}
