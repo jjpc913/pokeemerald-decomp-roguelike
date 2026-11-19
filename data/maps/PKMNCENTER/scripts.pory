@@ -24,6 +24,12 @@ script PKMNCENTER_EventScript_Map {
 script PKMNCENTER_EventScript_Yan {
     lockall
     faceplayer
+
+    if (flag(FLAG_KILLED_YAN)) {
+        msgbox("(She doesn't respond.)")
+        releaseall
+        return
+    }
     if (!flag(FLAG_TALKED_TO_YAN_PC)) {
         setflag(FLAG_TALKED_TO_YAN_PC)
         setvar(VAR_GIRL_OPTION, 1)
@@ -32,16 +38,18 @@ script PKMNCENTER_EventScript_Yan {
         msgbox("Good to see you again.")
         msgbox("I'm just taking a break...from\ninvestigating.")
         msgbox("Hah...sorry.")
-        msgbox("I feel like my body is shutting down or something.")
+        msgbox("I feel like my body is shutting\ndown or something.")
         msgbox("I'm so tired...hah.")
         msgbox("I'll be staying here for a bit...\nwhile I rest up.")
+        msgbox("One of the neighbors might let you take a nap.")
         msgbox("In the meantime, I'd be happy to\ntalk to you about anything.")
+        setflag(FLAG_DEFAULT_YAN)
     } else {
         msgbox("Hey, {PLAYER}.")
     }
     msgbox("What'd you want to talk about?")
     if (flag(FLAG_DEFAULT_YAN)) {
-        dynmultichoice(0,0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "Business Card", "This Place", "This World", "Silver Girl", "You", "What Should I Do Now")
+        dynmultichoice(0,0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "Business Card", "Town", "Investigation", "Static Girl", "You", "What Should I Do Now")
     }
 
     faceplayer
@@ -65,29 +73,13 @@ script PKMNCENTER_EventScript_Yan {
             face_right
             break
         case 1:
-            if (!flag(FLAG_TALKED_MAP)){
-                msgbox("This place?")
-                msgbox("Well, I'm sorry to say, I don't\nreally have an answer for you.")
-                msgbox("But if I had to take a guess...hmm.")
-                msgbox("Well, obviously, it resembles a\nPokemon Center.")
-                msgbox("But, it's, uh, not, obviously.")
-                msgbox("It doesn't seem dangerous or\nanything, though.")
-                msgbox("Seems safe enough for taking a nap.")
-                msgbox("..oh! There is something interesting,\nactually.")
-                msgbox("Why don't you take a look at the map?")
-                msgbox("The one on the wall, I mean.")
-                setflag(FLAG_TALKED_MAP)
+            if (!flag(FLAG_TALKED_ONCE)) {
+                msgbox("I found this little town only a\nshort while ago.")
+                msgbox("They do give off a vibe that they\ndon't want me here.")
+                msgbox("But compared to the others, the\npeople here are nice.")
+                msgbox("There's a lot of useful")
+                setflag(FLAG_TALKED_ONCE)
             }
-            elif (flag(FLAG_TALKED_MAP) && !flag(FLAG_TALKED_MAP_2)) {
-                msgbox("See what I mean?")
-                msgbox("It quite odd...it looks familiar,\nbut it's definitely not Hoenn.")
-                msgbox("Well, if you were asking about this\ntown, I'm afraid I know even less.")
-                msgbox("It's got a nostalgic vibe, I guess.\nIt's pretty cute.")
-                msgbox("God, I feel like I'm...missing\nsomething,y'know?")
-                msgbox("Maybe if I hang out here longer,\nI might make a connection.")
-                msgbox("For now, let's just enjoy this\nlittle safe room, eheh.")
-                setflag(FLAG_TALKED_MAP_2)
-            } 
             else {
                 msgbox("(Seems there's nothing left to discuss.)")
             }
@@ -95,9 +87,32 @@ script PKMNCENTER_EventScript_Yan {
             face_right
             break
         case 2:
-            msgbox("This world, huh?")
-            msgbox("I'm sorry, {PLAYER}, but I don't have\nany real answers for you.")
-            msgbox("I know as much as you do.")
+            if (!flag(FLAG_TALKED_MAP)) {
+            msgbox("Oh, my investigation?")
+            msgbox("Er, well...")
+            msgbox("Well...it's definitely weird.")
+            msgbox("Everyone I've run into has yelled nonsense\nat me before promptly trying to kill me.")
+            msgbox("Save for a few exceptions, of course.")
+            msgbox("Nobody seems to want to just...talk.")
+            msgbox("I'll be honest, {PLAYER}.")
+            msgbox("I don't know how far my investigation will go.")
+            msgbox("The answers I'm looking for...I'm certain\nthey're here.")
+            msgbox("I can feel it.")
+            msgbox("East of here, I can sense that's exactly\nwhere I need to go.")
+            msgbox("That the answers are waiting for me.")
+            msgbox("...some detective, I am, huh?")
+            msgbox("Just working off of hunches and gut feelings.")
+            msgbox("But it's as good of a lead as any, I guess.")
+            msgbox("I'm sure that's where your adventure\nwill take you to as well.")
+            msgbox("I do enjoy your company, {PLAYER}, but\nI'll be blunt.")
+            msgbox("If it comes down to it...I won't hold\nback.")
+            msgbox("What I'm fighting for...is too important.")
+            msgbox("...but hopefully it won't\ncome to that, heehee.")
+            msgbox("Sorry, I don't mean to frighten you.")
+            setflag(FLAG_TALKED_MAP)
+            } else {
+                msgbox("(Seems like Yan doesn't want to\ncontinue that conversation.)")
+            }
             releaseall
             face_right
             break
@@ -130,6 +145,9 @@ script PKMNCENTER_EventScript_Yan {
                 msgbox("So, you have seen her.")
                 msgbox("The woman in gray.")
                 msgbox("That phantom girl who appears in\nmy dreams.")
+                msgbox("Who are you?")
+                msgbox("What does this all mean?")
+                msgbox("To tell the truth, these are the\nquestions I really want to answer.")
              
                 addvar(VAR_VENOM, 5)
                 setvar(VAR_GIRL_OPTION, 99)
@@ -137,7 +155,7 @@ script PKMNCENTER_EventScript_Yan {
                 msgbox("(Seems there's nothing left to discuss.)")
                 msgbox("...I hope you're satisfied.")
             } else {
-                msgbox("(This optioin is unavailable.)")
+                msgbox("This optioin is unavailable.")
                 addvar(VAR_GIRL_OPTION, 1)
             }
             
@@ -183,10 +201,31 @@ script PKMNCENTER_EventScript_Yan {
             msgbox("See you, then!")
             msgbox("Come back if anything happens, alright?")
             releaseall
-            face_right
-            break
         applymovement(1, yanfaceright)
         waitmovement(1)
+
+        checkitem(ITEM_DRAGON_FANG, 1)
+        if (var(VAR_RESULT) == TRUE) {
+            msgbox("..........")
+            msgbox("..........")
+            msgbox("Would you like to use the Fangblade?", MSGBOX_YESNO)
+            if (var(VAR_RESULT)) {
+                msgbox("(You pull the blade out and raise\nit towards Yan's neck.)")
+                message("Hmm? {PLAYER}? What are....What\nare you d-!")
+                waitmessage
+                delay(30)
+                closemessage
+                fadescreen(FADE_TO_BLACK)
+                delay(500)
+                msgbox("And with that... {PAUSE_UNTIL_PRESS}")
+                delay(10)
+                msgbox("The{PAUSE 100} story{PAUSE 100} of{PAUSE 100} 'Yan'{PAUSE 100} was{PAUSE 100} over. {PAUSE_UNTIL_PRESS}")
+                setflag(FLAG_KILLED_YAN)
+                delay(100)
+                fadescreen(FADE_FROM_BLACK)
+            }
+        }
+
         releaseall
     }
     
@@ -196,3 +235,12 @@ movement yanfaceright {
     face_down
 }
 
+script PKMN_CENTER_WARP {
+    lockall
+    if (flag(FLAG_KILLED_YAN)) {
+        warp(MAP_CLEARING_EVIL, 40, 11)
+    } else {
+        warp(MAP_CLEARING, 40, 11)
+    }
+    releaseall
+}

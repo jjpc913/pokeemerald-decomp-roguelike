@@ -40,403 +40,498 @@ PKMNCENTER_EventScript_Yan::
 	lockall
 # 26 "data/maps/PKMNCENTER/scripts.pory"
 	faceplayer
-# 27 "data/maps/PKMNCENTER/scripts.pory"
-	goto_if_unset FLAG_TALKED_TO_YAN_PC, PKMNCENTER_EventScript_Yan_2
-# 40 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_8
-PKMNCENTER_EventScript_Yan_1:
-# 42 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_9
-# 43 "data/maps/PKMNCENTER/scripts.pory"
-	goto_if_set FLAG_DEFAULT_YAN, PKMNCENTER_EventScript_Yan_6
-PKMNCENTER_EventScript_Yan_5:
-# 47 "data/maps/PKMNCENTER/scripts.pory"
-	faceplayer
+# 28 "data/maps/PKMNCENTER/scripts.pory"
+	goto_if_set FLAG_KILLED_YAN, PKMNCENTER_EventScript_Yan_2
+# 33 "data/maps/PKMNCENTER/scripts.pory"
+	goto_if_unset FLAG_TALKED_TO_YAN_PC, PKMNCENTER_EventScript_Yan_5
 # 48 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_10
+PKMNCENTER_EventScript_Yan_4:
+# 50 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_11
+# 51 "data/maps/PKMNCENTER/scripts.pory"
+	goto_if_set FLAG_DEFAULT_YAN, PKMNCENTER_EventScript_Yan_9
+PKMNCENTER_EventScript_Yan_8:
+# 55 "data/maps/PKMNCENTER/scripts.pory"
+	faceplayer
+# 56 "data/maps/PKMNCENTER/scripts.pory"
 	switch VAR_RESULT
-# 49 "data/maps/PKMNCENTER/scripts.pory"
-	case 0, PKMNCENTER_EventScript_Yan_9
-# 67 "data/maps/PKMNCENTER/scripts.pory"
-	case 1, PKMNCENTER_EventScript_Yan_10
-# 97 "data/maps/PKMNCENTER/scripts.pory"
-	case 2, PKMNCENTER_EventScript_Yan_11
-# 104 "data/maps/PKMNCENTER/scripts.pory"
-	case 3, PKMNCENTER_EventScript_Yan_12
-# 147 "data/maps/PKMNCENTER/scripts.pory"
-	case 4, PKMNCENTER_EventScript_Yan_13
-# 176 "data/maps/PKMNCENTER/scripts.pory"
-	case 5, PKMNCENTER_EventScript_Yan_14
-# 182 "data/maps/PKMNCENTER/scripts.pory"
-	case 127, PKMNCENTER_EventScript_Yan_15
+# 57 "data/maps/PKMNCENTER/scripts.pory"
+	case 0, PKMNCENTER_EventScript_Yan_12
+# 75 "data/maps/PKMNCENTER/scripts.pory"
+	case 1, PKMNCENTER_EventScript_Yan_13
+# 89 "data/maps/PKMNCENTER/scripts.pory"
+	case 2, PKMNCENTER_EventScript_Yan_14
+# 119 "data/maps/PKMNCENTER/scripts.pory"
+	case 3, PKMNCENTER_EventScript_Yan_15
+# 165 "data/maps/PKMNCENTER/scripts.pory"
+	case 4, PKMNCENTER_EventScript_Yan_16
+# 194 "data/maps/PKMNCENTER/scripts.pory"
+	case 5, PKMNCENTER_EventScript_Yan_17
+# 200 "data/maps/PKMNCENTER/scripts.pory"
+	case 127, PKMNCENTER_EventScript_Yan_18
 	return
 
 PKMNCENTER_EventScript_Yan_2:
-# 28 "data/maps/PKMNCENTER/scripts.pory"
-	setflag FLAG_TALKED_TO_YAN_PC
 # 29 "data/maps/PKMNCENTER/scripts.pory"
-	setvar VAR_GIRL_OPTION, 1
-# 30 "data/maps/PKMNCENTER/scripts.pory"
-	setvar VAR_YOU_OPTION, 1
-# 31 "data/maps/PKMNCENTER/scripts.pory"
 	msgbox PKMNCENTER_EventScript_Yan_Text_0
-# 32 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_1
-# 33 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_2
-# 34 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_3
-# 35 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_4
-# 36 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_5
-# 37 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_6
-# 38 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_7
-	goto PKMNCENTER_EventScript_Yan_1
+# 30 "data/maps/PKMNCENTER/scripts.pory"
+	releaseall
+	return
 
-PKMNCENTER_EventScript_Yan_6:
+PKMNCENTER_EventScript_Yan_5:
+# 34 "data/maps/PKMNCENTER/scripts.pory"
+	setflag FLAG_TALKED_TO_YAN_PC
+# 35 "data/maps/PKMNCENTER/scripts.pory"
+	setvar VAR_GIRL_OPTION, 1
+# 36 "data/maps/PKMNCENTER/scripts.pory"
+	setvar VAR_YOU_OPTION, 1
+# 37 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_1
+# 38 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_2
+# 39 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_3
+# 40 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_4
+# 41 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_5
+# 42 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_6
+# 43 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_7
 # 44 "data/maps/PKMNCENTER/scripts.pory"
-	dynmultichoice 0, 0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, PKMNCENTER_EventScript_Yan_Text_10, PKMNCENTER_EventScript_Yan_Text_11, PKMNCENTER_EventScript_Yan_Text_12, PKMNCENTER_EventScript_Yan_Text_13, PKMNCENTER_EventScript_Yan_Text_14, PKMNCENTER_EventScript_Yan_Text_15
-	goto PKMNCENTER_EventScript_Yan_5
+	msgbox PKMNCENTER_EventScript_Yan_Text_8
+# 45 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_9
+# 46 "data/maps/PKMNCENTER/scripts.pory"
+	setflag FLAG_DEFAULT_YAN
+	goto PKMNCENTER_EventScript_Yan_4
 
 PKMNCENTER_EventScript_Yan_9:
-# 50 "data/maps/PKMNCENTER/scripts.pory"
-	goto_if_unset FLAG_TALKED_BUSINESS_CARD, PKMNCENTER_EventScript_Yan_17
-# 55 "data/maps/PKMNCENTER/scripts.pory"
-	goto_if_set FLAG_TALKED_BUSINESS_CARD, PKMNCENTER_EventScript_Yan_20
-PKMNCENTER_EventScript_Yan_19:
-# 62 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_23
-PKMNCENTER_EventScript_Yan_16:
-# 64 "data/maps/PKMNCENTER/scripts.pory"
-	releaseall
-# 65 "data/maps/PKMNCENTER/scripts.pory"
-	face_right
-	return
-
-PKMNCENTER_EventScript_Yan_10:
-# 68 "data/maps/PKMNCENTER/scripts.pory"
-	goto_if_unset FLAG_TALKED_MAP, PKMNCENTER_EventScript_Yan_25
-# 81 "data/maps/PKMNCENTER/scripts.pory"
-	goto_if_set FLAG_TALKED_MAP, PKMNCENTER_EventScript_Yan_28
-PKMNCENTER_EventScript_Yan_27:
-# 92 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_23
-PKMNCENTER_EventScript_Yan_24:
-# 94 "data/maps/PKMNCENTER/scripts.pory"
-	releaseall
-# 95 "data/maps/PKMNCENTER/scripts.pory"
-	face_right
-	return
-
-PKMNCENTER_EventScript_Yan_11:
-# 98 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_41
-# 99 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_42
-# 100 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_43
-# 101 "data/maps/PKMNCENTER/scripts.pory"
-	releaseall
-# 102 "data/maps/PKMNCENTER/scripts.pory"
-	face_right
-	return
+# 52 "data/maps/PKMNCENTER/scripts.pory"
+	dynmultichoice 0, 0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, PKMNCENTER_EventScript_Yan_Text_12, PKMNCENTER_EventScript_Yan_Text_13, PKMNCENTER_EventScript_Yan_Text_14, PKMNCENTER_EventScript_Yan_Text_15, PKMNCENTER_EventScript_Yan_Text_16, PKMNCENTER_EventScript_Yan_Text_17
+	goto PKMNCENTER_EventScript_Yan_8
 
 PKMNCENTER_EventScript_Yan_12:
-# 105 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 2
-	goto_if_ge PKMNCENTER_EventScript_Yan_51
-PKMNCENTER_EventScript_Yan_49:
-# 108 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 4
-	goto_if_ge PKMNCENTER_EventScript_Yan_48
-PKMNCENTER_EventScript_Yan_46:
-# 111 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 6
-	goto_if_ge PKMNCENTER_EventScript_Yan_45
-PKMNCENTER_EventScript_Yan_43:
-# 114 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 8
-	goto_if_ge PKMNCENTER_EventScript_Yan_42
-PKMNCENTER_EventScript_Yan_41:
-# 118 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 10
-	goto_if_eq PKMNCENTER_EventScript_Yan_37
-# 136 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 99
-	goto_if_eq PKMNCENTER_EventScript_Yan_38
-# 140 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_58
-# 141 "data/maps/PKMNCENTER/scripts.pory"
-	addvar VAR_GIRL_OPTION, 1
-PKMNCENTER_EventScript_Yan_32:
-# 144 "data/maps/PKMNCENTER/scripts.pory"
+# 58 "data/maps/PKMNCENTER/scripts.pory"
+	goto_if_unset FLAG_TALKED_BUSINESS_CARD, PKMNCENTER_EventScript_Yan_20
+# 63 "data/maps/PKMNCENTER/scripts.pory"
+	goto_if_set FLAG_TALKED_BUSINESS_CARD, PKMNCENTER_EventScript_Yan_23
+PKMNCENTER_EventScript_Yan_22:
+# 70 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_25
+PKMNCENTER_EventScript_Yan_19:
+# 72 "data/maps/PKMNCENTER/scripts.pory"
 	releaseall
-# 145 "data/maps/PKMNCENTER/scripts.pory"
+# 73 "data/maps/PKMNCENTER/scripts.pory"
 	face_right
 	return
 
 PKMNCENTER_EventScript_Yan_13:
-# 148 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_YOU_OPTION, 1
-	goto_if_eq PKMNCENTER_EventScript_Yan_55
-# 156 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_YOU_OPTION, 2
-	goto_if_eq PKMNCENTER_EventScript_Yan_56
-# 164 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_YOU_OPTION, 3
-	goto_if_eq PKMNCENTER_EventScript_Yan_57
-# 171 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_23
-PKMNCENTER_EventScript_Yan_54:
-# 173 "data/maps/PKMNCENTER/scripts.pory"
+# 76 "data/maps/PKMNCENTER/scripts.pory"
+	goto_if_unset FLAG_TALKED_ONCE, PKMNCENTER_EventScript_Yan_28
+# 84 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_25
+PKMNCENTER_EventScript_Yan_27:
+# 86 "data/maps/PKMNCENTER/scripts.pory"
 	releaseall
-# 174 "data/maps/PKMNCENTER/scripts.pory"
+# 87 "data/maps/PKMNCENTER/scripts.pory"
 	face_right
 	return
 
 PKMNCENTER_EventScript_Yan_14:
-# 179 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_74
-# 180 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_75
+# 90 "data/maps/PKMNCENTER/scripts.pory"
+	goto_if_unset FLAG_TALKED_MAP, PKMNCENTER_EventScript_Yan_32
+# 114 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_51
+PKMNCENTER_EventScript_Yan_31:
+# 116 "data/maps/PKMNCENTER/scripts.pory"
+	releaseall
+# 117 "data/maps/PKMNCENTER/scripts.pory"
+	face_right
 	return
 
 PKMNCENTER_EventScript_Yan_15:
-# 183 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_76
-# 184 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_77
-# 185 "data/maps/PKMNCENTER/scripts.pory"
+# 120 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 2
+	goto_if_ge PKMNCENTER_EventScript_Yan_54
+PKMNCENTER_EventScript_Yan_52:
+# 123 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 4
+	goto_if_ge PKMNCENTER_EventScript_Yan_51
+PKMNCENTER_EventScript_Yan_49:
+# 126 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 6
+	goto_if_ge PKMNCENTER_EventScript_Yan_48
+PKMNCENTER_EventScript_Yan_46:
+# 129 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 8
+	goto_if_ge PKMNCENTER_EventScript_Yan_45
+PKMNCENTER_EventScript_Yan_44:
+# 133 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 10
+	goto_if_eq PKMNCENTER_EventScript_Yan_40
+# 154 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 99
+	goto_if_eq PKMNCENTER_EventScript_Yan_41
+# 158 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_69
+# 159 "data/maps/PKMNCENTER/scripts.pory"
+	addvar VAR_GIRL_OPTION, 1
+PKMNCENTER_EventScript_Yan_35:
+# 162 "data/maps/PKMNCENTER/scripts.pory"
 	releaseall
-# 186 "data/maps/PKMNCENTER/scripts.pory"
+# 163 "data/maps/PKMNCENTER/scripts.pory"
+	face_right
+	return
+
+PKMNCENTER_EventScript_Yan_16:
+# 166 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_YOU_OPTION, 1
+	goto_if_eq PKMNCENTER_EventScript_Yan_58
+# 174 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_YOU_OPTION, 2
+	goto_if_eq PKMNCENTER_EventScript_Yan_59
+# 182 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_YOU_OPTION, 3
+	goto_if_eq PKMNCENTER_EventScript_Yan_60
+# 189 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_25
+PKMNCENTER_EventScript_Yan_57:
+# 191 "data/maps/PKMNCENTER/scripts.pory"
+	releaseall
+# 192 "data/maps/PKMNCENTER/scripts.pory"
 	face_right
 	return
 
 PKMNCENTER_EventScript_Yan_17:
-# 51 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_16
-# 52 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_17
-# 53 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_18
-# 54 "data/maps/PKMNCENTER/scripts.pory"
-	setflag FLAG_TALKED_BUSINESS_CARD
-	goto PKMNCENTER_EventScript_Yan_16
+# 197 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_85
+# 198 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_86
+	return
 
 PKMNCENTER_EventScript_Yan_18:
-# 56 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_19
-# 57 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_20
-# 58 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_21
-# 59 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_22
-# 60 "data/maps/PKMNCENTER/scripts.pory"
-	setflag FLAG_TALKED_BUSINESS_CARD_2
-	goto PKMNCENTER_EventScript_Yan_16
+# 201 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_87
+# 202 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_88
+# 203 "data/maps/PKMNCENTER/scripts.pory"
+	releaseall
+# 204 "data/maps/PKMNCENTER/scripts.pory"
+	applymovement 1, yanfaceright
+# 205 "data/maps/PKMNCENTER/scripts.pory"
+	waitmovement 1
+# 207 "data/maps/PKMNCENTER/scripts.pory"
+	checkitem ITEM_DRAGON_FANG, 1
+# 208 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_RESULT, TRUE
+	goto_if_eq PKMNCENTER_EventScript_Yan_66
+PKMNCENTER_EventScript_Yan_65:
+# 229 "data/maps/PKMNCENTER/scripts.pory"
+	releaseall
+	return
 
 PKMNCENTER_EventScript_Yan_20:
-# 55 "data/maps/PKMNCENTER/scripts.pory"
-	goto_if_unset FLAG_TALKED_BUSINESS_CARD_2, PKMNCENTER_EventScript_Yan_18
+# 59 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_18
+# 60 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_19
+# 61 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_20
+# 62 "data/maps/PKMNCENTER/scripts.pory"
+	setflag FLAG_TALKED_BUSINESS_CARD
 	goto PKMNCENTER_EventScript_Yan_19
 
-PKMNCENTER_EventScript_Yan_25:
-# 69 "data/maps/PKMNCENTER/scripts.pory"
+PKMNCENTER_EventScript_Yan_21:
+# 64 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_21
+# 65 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_22
+# 66 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_23
+# 67 "data/maps/PKMNCENTER/scripts.pory"
 	msgbox PKMNCENTER_EventScript_Yan_Text_24
-# 70 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_25
-# 71 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_26
-# 72 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_27
-# 73 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_28
-# 74 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_29
-# 75 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_30
-# 76 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_31
-# 77 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_32
-# 78 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_33
-# 79 "data/maps/PKMNCENTER/scripts.pory"
-	setflag FLAG_TALKED_MAP
-	goto PKMNCENTER_EventScript_Yan_24
+# 68 "data/maps/PKMNCENTER/scripts.pory"
+	setflag FLAG_TALKED_BUSINESS_CARD_2
+	goto PKMNCENTER_EventScript_Yan_19
 
-PKMNCENTER_EventScript_Yan_26:
-# 82 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_34
-# 83 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_35
-# 84 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_36
-# 85 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_37
-# 86 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_38
-# 87 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_39
-# 88 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_40
-# 89 "data/maps/PKMNCENTER/scripts.pory"
-	setflag FLAG_TALKED_MAP_2
-	goto PKMNCENTER_EventScript_Yan_24
+PKMNCENTER_EventScript_Yan_23:
+# 63 "data/maps/PKMNCENTER/scripts.pory"
+	goto_if_unset FLAG_TALKED_BUSINESS_CARD_2, PKMNCENTER_EventScript_Yan_21
+	goto PKMNCENTER_EventScript_Yan_22
 
 PKMNCENTER_EventScript_Yan_28:
+# 77 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_26
+# 78 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_27
+# 79 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_28
+# 80 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_29
 # 81 "data/maps/PKMNCENTER/scripts.pory"
-	goto_if_unset FLAG_TALKED_MAP_2, PKMNCENTER_EventScript_Yan_26
+	setflag FLAG_TALKED_ONCE
 	goto PKMNCENTER_EventScript_Yan_27
 
-PKMNCENTER_EventScript_Yan_33:
-# 106 "data/maps/PKMNCENTER/scripts.pory"
+PKMNCENTER_EventScript_Yan_32:
+# 91 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_30
+# 92 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_31
+# 93 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_32
+# 94 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_33
+# 95 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_34
+# 96 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_35
+# 97 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_36
+# 98 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_37
+# 99 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_38
+# 100 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_39
+# 101 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_40
+# 102 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_41
+# 103 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_42
+# 104 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_43
+# 105 "data/maps/PKMNCENTER/scripts.pory"
 	msgbox PKMNCENTER_EventScript_Yan_Text_44
-# 107 "data/maps/PKMNCENTER/scripts.pory"
-	addvar VAR_GIRL_OPTION, 1
-	goto PKMNCENTER_EventScript_Yan_32
-
-PKMNCENTER_EventScript_Yan_34:
-# 109 "data/maps/PKMNCENTER/scripts.pory"
+# 106 "data/maps/PKMNCENTER/scripts.pory"
 	msgbox PKMNCENTER_EventScript_Yan_Text_45
-# 110 "data/maps/PKMNCENTER/scripts.pory"
-	addvar VAR_GIRL_OPTION, 1
-	goto PKMNCENTER_EventScript_Yan_32
-
-PKMNCENTER_EventScript_Yan_35:
-# 112 "data/maps/PKMNCENTER/scripts.pory"
+# 107 "data/maps/PKMNCENTER/scripts.pory"
 	msgbox PKMNCENTER_EventScript_Yan_Text_46
-# 113 "data/maps/PKMNCENTER/scripts.pory"
-	addvar VAR_GIRL_OPTION, 1
-	goto PKMNCENTER_EventScript_Yan_32
+# 108 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_47
+# 109 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_48
+# 110 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_49
+# 111 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_50
+# 112 "data/maps/PKMNCENTER/scripts.pory"
+	setflag FLAG_TALKED_MAP
+	goto PKMNCENTER_EventScript_Yan_31
 
 PKMNCENTER_EventScript_Yan_36:
-# 115 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_47
-# 116 "data/maps/PKMNCENTER/scripts.pory"
+# 121 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_52
+# 122 "data/maps/PKMNCENTER/scripts.pory"
 	addvar VAR_GIRL_OPTION, 1
-	goto PKMNCENTER_EventScript_Yan_32
+	goto PKMNCENTER_EventScript_Yan_35
 
 PKMNCENTER_EventScript_Yan_37:
-# 119 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_48
-# 120 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_49, MSGBOX_YESNO
-# 121 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq PKMNCENTER_EventScript_Yan_63
-# 126 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_50
-# 127 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_51
-# 128 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_52
-# 129 "data/maps/PKMNCENTER/scripts.pory"
+# 124 "data/maps/PKMNCENTER/scripts.pory"
 	msgbox PKMNCENTER_EventScript_Yan_Text_53
-# 130 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_54
-# 131 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_55
-# 132 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_56
-# 134 "data/maps/PKMNCENTER/scripts.pory"
-	addvar VAR_VENOM, 5
-# 135 "data/maps/PKMNCENTER/scripts.pory"
-	setvar VAR_GIRL_OPTION, 99
-	goto PKMNCENTER_EventScript_Yan_32
+# 125 "data/maps/PKMNCENTER/scripts.pory"
+	addvar VAR_GIRL_OPTION, 1
+	goto PKMNCENTER_EventScript_Yan_35
 
 PKMNCENTER_EventScript_Yan_38:
-# 137 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_23
-# 138 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_57
-	goto PKMNCENTER_EventScript_Yan_32
+# 127 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_54
+# 128 "data/maps/PKMNCENTER/scripts.pory"
+	addvar VAR_GIRL_OPTION, 1
+	goto PKMNCENTER_EventScript_Yan_35
 
-PKMNCENTER_EventScript_Yan_42:
-# 114 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 9
-	goto_if_le PKMNCENTER_EventScript_Yan_36
-	goto PKMNCENTER_EventScript_Yan_41
+PKMNCENTER_EventScript_Yan_39:
+# 130 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_55
+# 131 "data/maps/PKMNCENTER/scripts.pory"
+	addvar VAR_GIRL_OPTION, 1
+	goto PKMNCENTER_EventScript_Yan_35
+
+PKMNCENTER_EventScript_Yan_40:
+# 134 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_56
+# 135 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_57, MSGBOX_YESNO
+# 136 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq PKMNCENTER_EventScript_Yan_69
+# 141 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_58
+# 142 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_59
+# 143 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_60
+# 144 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_61
+# 145 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_62
+# 146 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_63
+# 147 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_64
+# 148 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_65
+# 149 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_66
+# 150 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_67
+# 152 "data/maps/PKMNCENTER/scripts.pory"
+	addvar VAR_VENOM, 5
+# 153 "data/maps/PKMNCENTER/scripts.pory"
+	setvar VAR_GIRL_OPTION, 99
+	goto PKMNCENTER_EventScript_Yan_35
+
+PKMNCENTER_EventScript_Yan_41:
+# 155 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_25
+# 156 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_68
+	goto PKMNCENTER_EventScript_Yan_35
 
 PKMNCENTER_EventScript_Yan_45:
-# 111 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 8
-	goto_if_lt PKMNCENTER_EventScript_Yan_35
-	goto PKMNCENTER_EventScript_Yan_43
+# 129 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 9
+	goto_if_le PKMNCENTER_EventScript_Yan_39
+	goto PKMNCENTER_EventScript_Yan_44
 
 PKMNCENTER_EventScript_Yan_48:
-# 108 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 6
-	goto_if_lt PKMNCENTER_EventScript_Yan_34
+# 126 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 8
+	goto_if_lt PKMNCENTER_EventScript_Yan_38
 	goto PKMNCENTER_EventScript_Yan_46
 
 PKMNCENTER_EventScript_Yan_51:
-# 105 "data/maps/PKMNCENTER/scripts.pory"
-	compare VAR_GIRL_OPTION, 4
-	goto_if_lt PKMNCENTER_EventScript_Yan_33
+# 123 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 6
+	goto_if_lt PKMNCENTER_EventScript_Yan_37
 	goto PKMNCENTER_EventScript_Yan_49
 
-PKMNCENTER_EventScript_Yan_55:
-# 149 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_59
-# 150 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_60
-# 151 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_61
-# 152 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_62
-# 153 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_63
-# 154 "data/maps/PKMNCENTER/scripts.pory"
-	addvar VAR_YOU_OPTION, 1
-	goto PKMNCENTER_EventScript_Yan_54
+PKMNCENTER_EventScript_Yan_54:
+# 120 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_GIRL_OPTION, 4
+	goto_if_lt PKMNCENTER_EventScript_Yan_36
+	goto PKMNCENTER_EventScript_Yan_52
 
-PKMNCENTER_EventScript_Yan_56:
-# 157 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_64
-# 158 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_65
-# 159 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_66
-# 160 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_67
-# 161 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_68
-# 162 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_69
-# 163 "data/maps/PKMNCENTER/scripts.pory"
-	addvar VAR_YOU_OPTION, 1
-	goto PKMNCENTER_EventScript_Yan_54
-
-PKMNCENTER_EventScript_Yan_57:
-# 165 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_70
-# 166 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_71
+PKMNCENTER_EventScript_Yan_58:
 # 167 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_72
+	msgbox PKMNCENTER_EventScript_Yan_Text_70
 # 168 "data/maps/PKMNCENTER/scripts.pory"
-	msgbox PKMNCENTER_EventScript_Yan_Text_73
+	msgbox PKMNCENTER_EventScript_Yan_Text_71
 # 169 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_72
+# 170 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_73
+# 171 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_74
+# 172 "data/maps/PKMNCENTER/scripts.pory"
 	addvar VAR_YOU_OPTION, 1
-	goto PKMNCENTER_EventScript_Yan_54
+	goto PKMNCENTER_EventScript_Yan_57
 
-PKMNCENTER_EventScript_Yan_63:
-# 122 "data/maps/PKMNCENTER/scripts.pory"
+PKMNCENTER_EventScript_Yan_59:
+# 175 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_75
+# 176 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_76
+# 177 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_77
+# 178 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_78
+# 179 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_79
+# 180 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_80
+# 181 "data/maps/PKMNCENTER/scripts.pory"
+	addvar VAR_YOU_OPTION, 1
+	goto PKMNCENTER_EventScript_Yan_57
+
+PKMNCENTER_EventScript_Yan_60:
+# 183 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_81
+# 184 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_82
+# 185 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_83
+# 186 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_84
+# 187 "data/maps/PKMNCENTER/scripts.pory"
+	addvar VAR_YOU_OPTION, 1
+	goto PKMNCENTER_EventScript_Yan_57
+
+PKMNCENTER_EventScript_Yan_66:
+# 209 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_89
+# 210 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_89
+# 211 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_90, MSGBOX_YESNO
+# 212 "data/maps/PKMNCENTER/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne PKMNCENTER_EventScript_Yan_71
+	goto PKMNCENTER_EventScript_Yan_65
+
+PKMNCENTER_EventScript_Yan_69:
+# 137 "data/maps/PKMNCENTER/scripts.pory"
 	releaseall
-# 123 "data/maps/PKMNCENTER/scripts.pory"
+# 138 "data/maps/PKMNCENTER/scripts.pory"
 	face_right
 	return
 
+PKMNCENTER_EventScript_Yan_71:
+# 213 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_91
+# 214 "data/maps/PKMNCENTER/scripts.pory"
+	message PKMNCENTER_EventScript_Yan_Text_92
+# 215 "data/maps/PKMNCENTER/scripts.pory"
+	waitmessage
+# 216 "data/maps/PKMNCENTER/scripts.pory"
+	delay 30
+# 217 "data/maps/PKMNCENTER/scripts.pory"
+	closemessage
+# 218 "data/maps/PKMNCENTER/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 219 "data/maps/PKMNCENTER/scripts.pory"
+	delay 500
+# 220 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_93
+# 221 "data/maps/PKMNCENTER/scripts.pory"
+	delay 10
+# 222 "data/maps/PKMNCENTER/scripts.pory"
+	msgbox PKMNCENTER_EventScript_Yan_Text_94
+# 223 "data/maps/PKMNCENTER/scripts.pory"
+	setflag FLAG_KILLED_YAN
+# 224 "data/maps/PKMNCENTER/scripts.pory"
+	delay 100
+# 225 "data/maps/PKMNCENTER/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+	goto PKMNCENTER_EventScript_Yan_65
 
-# 195 "data/maps/PKMNCENTER/scripts.pory"
+
+# 234 "data/maps/PKMNCENTER/scripts.pory"
 yanfaceright:
-# 196 "data/maps/PKMNCENTER/scripts.pory"
+# 235 "data/maps/PKMNCENTER/scripts.pory"
 	face_down
 	step_end
+
+PKMN_CENTER_WARP::
+# 239 "data/maps/PKMNCENTER/scripts.pory"
+	lockall
+# 240 "data/maps/PKMNCENTER/scripts.pory"
+	goto_if_set FLAG_KILLED_YAN, PKMN_CENTER_WARP_2
+# 243 "data/maps/PKMNCENTER/scripts.pory"
+	warp MAP_CLEARING, 40, 11
+PKMN_CENTER_WARP_1:
+# 245 "data/maps/PKMNCENTER/scripts.pory"
+	releaseall
+	return
+
+PKMN_CENTER_WARP_2:
+# 241 "data/maps/PKMNCENTER/scripts.pory"
+	warp MAP_CLEARING_EVIL, 40, 11
+	goto PKMN_CENTER_WARP_1
+
 
 PKMNCENTER_EventScript_PC_Text_0:
 # 6 "data/maps/PKMNCENTER/scripts.pory"
@@ -455,313 +550,381 @@ PKMNCENTER_EventScript_Map_Text_0:
 	.string "It's a map of North America.$"
 
 PKMNCENTER_EventScript_Yan_Text_0:
-# 31 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Oh, hey, {PLAYER}.$"
+# 29 "data/maps/PKMNCENTER/scripts.pory"
+	.string "(She doesn't respond.)$"
 
 PKMNCENTER_EventScript_Yan_Text_1:
-# 32 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Good to see you again.$"
+# 37 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Oh, hey, {PLAYER}.$"
 
 PKMNCENTER_EventScript_Yan_Text_2:
-# 33 "data/maps/PKMNCENTER/scripts.pory"
-	.string "I'm just taking a break...from\ninvestigating.$"
+# 38 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Good to see you again.$"
 
 PKMNCENTER_EventScript_Yan_Text_3:
-# 34 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Hah...sorry.$"
+# 39 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I'm just taking a break...from\ninvestigating.$"
 
 PKMNCENTER_EventScript_Yan_Text_4:
-# 35 "data/maps/PKMNCENTER/scripts.pory"
-	.string "I feel like my body is shutting down or something.$"
+# 40 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Hah...sorry.$"
 
 PKMNCENTER_EventScript_Yan_Text_5:
-# 36 "data/maps/PKMNCENTER/scripts.pory"
-	.string "I'm so tired...hah.$"
+# 41 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I feel like my body is shutting\ndown or something.$"
 
 PKMNCENTER_EventScript_Yan_Text_6:
-# 37 "data/maps/PKMNCENTER/scripts.pory"
-	.string "I'll be staying here for a bit...\nwhile I rest up.$"
+# 42 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I'm so tired...hah.$"
 
 PKMNCENTER_EventScript_Yan_Text_7:
-# 38 "data/maps/PKMNCENTER/scripts.pory"
-	.string "In the meantime, I'd be happy to\ntalk to you about anything.$"
+# 43 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I'll be staying here for a bit...\nwhile I rest up.$"
 
 PKMNCENTER_EventScript_Yan_Text_8:
-# 40 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Hey, {PLAYER}.$"
+# 44 "data/maps/PKMNCENTER/scripts.pory"
+	.string "One of the neighbors might let you take a nap.$"
 
 PKMNCENTER_EventScript_Yan_Text_9:
-# 42 "data/maps/PKMNCENTER/scripts.pory"
-	.string "What'd you want to talk about?$"
+# 45 "data/maps/PKMNCENTER/scripts.pory"
+	.string "In the meantime, I'd be happy to\ntalk to you about anything.$"
 
 PKMNCENTER_EventScript_Yan_Text_10:
-# 44 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Business Card$"
+# 48 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Hey, {PLAYER}.$"
 
 PKMNCENTER_EventScript_Yan_Text_11:
-# 44 "data/maps/PKMNCENTER/scripts.pory"
-	.string "This Place$"
+# 50 "data/maps/PKMNCENTER/scripts.pory"
+	.string "What'd you want to talk about?$"
 
 PKMNCENTER_EventScript_Yan_Text_12:
-# 44 "data/maps/PKMNCENTER/scripts.pory"
-	.string "This World$"
+# 52 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Business Card$"
 
 PKMNCENTER_EventScript_Yan_Text_13:
-# 44 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Silver Girl$"
+# 52 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Town$"
 
 PKMNCENTER_EventScript_Yan_Text_14:
-# 44 "data/maps/PKMNCENTER/scripts.pory"
-	.string "You$"
+# 52 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Investigation$"
 
 PKMNCENTER_EventScript_Yan_Text_15:
-# 44 "data/maps/PKMNCENTER/scripts.pory"
-	.string "What Should I Do Now$"
+# 52 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Static Girl$"
 
 PKMNCENTER_EventScript_Yan_Text_16:
-# 51 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Ah, the card?$"
+# 52 "data/maps/PKMNCENTER/scripts.pory"
+	.string "You$"
 
 PKMNCENTER_EventScript_Yan_Text_17:
 # 52 "data/maps/PKMNCENTER/scripts.pory"
-	.string "That's my special business card.$"
+	.string "What Should I Do Now$"
 
 PKMNCENTER_EventScript_Yan_Text_18:
-# 53 "data/maps/PKMNCENTER/scripts.pory"
-	.string "It even has a watermark!$"
+# 59 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Ah, the card?$"
 
 PKMNCENTER_EventScript_Yan_Text_19:
-# 56 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Hm?$"
+# 60 "data/maps/PKMNCENTER/scripts.pory"
+	.string "That's my special business card.$"
 
 PKMNCENTER_EventScript_Yan_Text_20:
-# 57 "data/maps/PKMNCENTER/scripts.pory"
-	.string "What, still on the card?$"
+# 61 "data/maps/PKMNCENTER/scripts.pory"
+	.string "It even has a watermark!$"
 
 PKMNCENTER_EventScript_Yan_Text_21:
-# 58 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Yes, I know it's great.$"
+# 64 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Hm?$"
 
 PKMNCENTER_EventScript_Yan_Text_22:
-# 59 "data/maps/PKMNCENTER/scripts.pory"
-	.string "You've got good taste, my friend!$"
+# 65 "data/maps/PKMNCENTER/scripts.pory"
+	.string "What, still on the card?$"
 
 PKMNCENTER_EventScript_Yan_Text_23:
-# 62 "data/maps/PKMNCENTER/scripts.pory"
-	.string "(Seems there's nothing left to discuss.)$"
+# 66 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Yes, I know it's great.$"
 
 PKMNCENTER_EventScript_Yan_Text_24:
-# 69 "data/maps/PKMNCENTER/scripts.pory"
-	.string "This place?$"
+# 67 "data/maps/PKMNCENTER/scripts.pory"
+	.string "You've got good taste, my friend!$"
 
 PKMNCENTER_EventScript_Yan_Text_25:
 # 70 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Well, I'm sorry to say, I don't\nreally have an answer for you.$"
+	.string "(Seems there's nothing left to discuss.)$"
 
 PKMNCENTER_EventScript_Yan_Text_26:
-# 71 "data/maps/PKMNCENTER/scripts.pory"
-	.string "But if I had to take a guess...hmm.$"
+# 77 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I found this little town only a\nshort while ago.$"
 
 PKMNCENTER_EventScript_Yan_Text_27:
-# 72 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Well, obviously, it resembles a\nPokemon Center.$"
+# 78 "data/maps/PKMNCENTER/scripts.pory"
+	.string "They do give off a vibe that they\ndon't want me here.$"
 
 PKMNCENTER_EventScript_Yan_Text_28:
-# 73 "data/maps/PKMNCENTER/scripts.pory"
-	.string "But, it's, uh, not, obviously.$"
+# 79 "data/maps/PKMNCENTER/scripts.pory"
+	.string "But compared to the others, the\npeople here are nice.$"
 
 PKMNCENTER_EventScript_Yan_Text_29:
-# 74 "data/maps/PKMNCENTER/scripts.pory"
-	.string "It doesn't seem dangerous or\nanything, though.$"
+# 80 "data/maps/PKMNCENTER/scripts.pory"
+	.string "There's a lot of useful$"
 
 PKMNCENTER_EventScript_Yan_Text_30:
-# 75 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Seems safe enough for taking a nap.$"
+# 91 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Oh, my investigation?$"
 
 PKMNCENTER_EventScript_Yan_Text_31:
-# 76 "data/maps/PKMNCENTER/scripts.pory"
-	.string "..oh! There is something interesting,\nactually.$"
+# 92 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Er, well...$"
 
 PKMNCENTER_EventScript_Yan_Text_32:
-# 77 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Why don't you take a look at the map?$"
+# 93 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Well...it's definitely weird.$"
 
 PKMNCENTER_EventScript_Yan_Text_33:
-# 78 "data/maps/PKMNCENTER/scripts.pory"
-	.string "The one on the wall, I mean.$"
+# 94 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Everyone I've run into has yelled nonsense\nat me before promptly trying to kill me.$"
 
 PKMNCENTER_EventScript_Yan_Text_34:
-# 82 "data/maps/PKMNCENTER/scripts.pory"
-	.string "See what I mean?$"
+# 95 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Save for a few exceptions, of course.$"
 
 PKMNCENTER_EventScript_Yan_Text_35:
-# 83 "data/maps/PKMNCENTER/scripts.pory"
-	.string "It quite odd...it looks familiar,\nbut it's definitely not Hoenn.$"
+# 96 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Nobody seems to want to just...talk.$"
 
 PKMNCENTER_EventScript_Yan_Text_36:
-# 84 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Well, if you were asking about this\ntown, I'm afraid I know even less.$"
+# 97 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I'll be honest, {PLAYER}.$"
 
 PKMNCENTER_EventScript_Yan_Text_37:
-# 85 "data/maps/PKMNCENTER/scripts.pory"
-	.string "It's got a nostalgic vibe, I guess.\nIt's pretty cute.$"
+# 98 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I don't know how far my investigation will go.$"
 
 PKMNCENTER_EventScript_Yan_Text_38:
-# 86 "data/maps/PKMNCENTER/scripts.pory"
-	.string "God, I feel like I'm...missing\nsomething,y'know?$"
+# 99 "data/maps/PKMNCENTER/scripts.pory"
+	.string "The answers I'm looking for...I'm certain\nthey're here.$"
 
 PKMNCENTER_EventScript_Yan_Text_39:
-# 87 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Maybe if I hang out here longer,\nI might make a connection.$"
+# 100 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I can feel it.$"
 
 PKMNCENTER_EventScript_Yan_Text_40:
-# 88 "data/maps/PKMNCENTER/scripts.pory"
-	.string "For now, let's just enjoy this\nlittle safe room, eheh.$"
+# 101 "data/maps/PKMNCENTER/scripts.pory"
+	.string "East of here, I can sense that's exactly\nwhere I need to go.$"
 
 PKMNCENTER_EventScript_Yan_Text_41:
-# 98 "data/maps/PKMNCENTER/scripts.pory"
-	.string "This world, huh?$"
+# 102 "data/maps/PKMNCENTER/scripts.pory"
+	.string "That the answers are waiting for me.$"
 
 PKMNCENTER_EventScript_Yan_Text_42:
-# 99 "data/maps/PKMNCENTER/scripts.pory"
-	.string "I'm sorry, {PLAYER}, but I don't have\nany real answers for you.$"
+# 103 "data/maps/PKMNCENTER/scripts.pory"
+	.string "...some detective, I am, huh?$"
 
 PKMNCENTER_EventScript_Yan_Text_43:
-# 100 "data/maps/PKMNCENTER/scripts.pory"
-	.string "I know as much as you do.$"
+# 104 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Just working off of hunches and gut feelings.$"
 
 PKMNCENTER_EventScript_Yan_Text_44:
-# 106 "data/maps/PKMNCENTER/scripts.pory"
-	.string "This option is unavailable.$"
+# 105 "data/maps/PKMNCENTER/scripts.pory"
+	.string "But it's as good of a lead as any, I guess.$"
 
 PKMNCENTER_EventScript_Yan_Text_45:
-# 109 "data/maps/PKMNCENTER/scripts.pory"
-	.string "This OPTION IS UNAVAILABLE.$"
+# 106 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I'm sure that's where your adventure\nwill take you to as well.$"
 
 PKMNCENTER_EventScript_Yan_Text_46:
-# 112 "data/maps/PKMNCENTER/scripts.pory"
-	.string "This OPTION IS UNAVAILABLE.\nThis OPTION IS UNAVAILABLE.This\nOPTION IS UNAVAILABLE.This OPTION IS\nUNAVAILABLE.This OPTION IS UNAVAILABLE.$"
+# 107 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I do enjoy your company, {PLAYER}, but\nI'll be blunt.$"
 
 PKMNCENTER_EventScript_Yan_Text_47:
-# 115 "data/maps/PKMNCENTER/scripts.pory"
-	.string "This Option is Unavailable.$"
+# 108 "data/maps/PKMNCENTER/scripts.pory"
+	.string "If it comes down to it...I won't hold\nback.$"
 
 PKMNCENTER_EventScript_Yan_Text_48:
-# 119 "data/maps/PKMNCENTER/scripts.pory"
-	.string "WARNING!\pThe following option will\ndelete all saved data.{PAUSE_UNTIL_PRESS}$"
+# 109 "data/maps/PKMNCENTER/scripts.pory"
+	.string "What I'm fighting for...is too important.$"
 
 PKMNCENTER_EventScript_Yan_Text_49:
-# 120 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Is it really okay to delete all saved\ndata? This cannot be undone.{PAUSE_UNTIL_PRESS}$"
+# 110 "data/maps/PKMNCENTER/scripts.pory"
+	.string "...but hopefully it won't\ncome to that, heehee.$"
 
 PKMNCENTER_EventScript_Yan_Text_50:
-# 126 "data/maps/PKMNCENTER/scripts.pory"
-	.string ".........$"
+# 111 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Sorry, I don't mean to frighten you.$"
 
 PKMNCENTER_EventScript_Yan_Text_51:
-# 127 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Fine.$"
+# 114 "data/maps/PKMNCENTER/scripts.pory"
+	.string "(Seems like Yan doesn't want to\ncontinue that conversation.)$"
 
 PKMNCENTER_EventScript_Yan_Text_52:
-# 128 "data/maps/PKMNCENTER/scripts.pory"
-	.string "'...a girl?'$"
+# 121 "data/maps/PKMNCENTER/scripts.pory"
+	.string "This option is unavailable.$"
 
 PKMNCENTER_EventScript_Yan_Text_53:
-# 129 "data/maps/PKMNCENTER/scripts.pory"
-	.string "I think...I know what you are\ntalking about.$"
+# 124 "data/maps/PKMNCENTER/scripts.pory"
+	.string "This OPTION IS UNAVAILABLE.$"
 
 PKMNCENTER_EventScript_Yan_Text_54:
-# 130 "data/maps/PKMNCENTER/scripts.pory"
-	.string "So, you have seen her.$"
+# 127 "data/maps/PKMNCENTER/scripts.pory"
+	.string "This OPTION IS UNAVAILABLE.\nThis OPTION IS UNAVAILABLE.This\nOPTION IS UNAVAILABLE.This OPTION IS\nUNAVAILABLE.This OPTION IS UNAVAILABLE.$"
 
 PKMNCENTER_EventScript_Yan_Text_55:
-# 131 "data/maps/PKMNCENTER/scripts.pory"
-	.string "The woman in gray.$"
+# 130 "data/maps/PKMNCENTER/scripts.pory"
+	.string "This Option is Unavailable.$"
 
 PKMNCENTER_EventScript_Yan_Text_56:
-# 132 "data/maps/PKMNCENTER/scripts.pory"
-	.string "That phantom girl who appears in\nmy dreams.$"
+# 134 "data/maps/PKMNCENTER/scripts.pory"
+	.string "WARNING!\pThe following option will\ndelete all saved data.{PAUSE_UNTIL_PRESS}$"
 
 PKMNCENTER_EventScript_Yan_Text_57:
-# 138 "data/maps/PKMNCENTER/scripts.pory"
-	.string "...I hope you're satisfied.$"
+# 135 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Is it really okay to delete all saved\ndata? This cannot be undone.{PAUSE_UNTIL_PRESS}$"
 
 PKMNCENTER_EventScript_Yan_Text_58:
-# 140 "data/maps/PKMNCENTER/scripts.pory"
-	.string "(This optioin is unavailable.)$"
+# 141 "data/maps/PKMNCENTER/scripts.pory"
+	.string ".........$"
 
 PKMNCENTER_EventScript_Yan_Text_59:
-# 149 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Me?$"
+# 142 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Fine.$"
 
 PKMNCENTER_EventScript_Yan_Text_60:
-# 150 "data/maps/PKMNCENTER/scripts.pory"
-	.string "What, didja forget my name already?$"
+# 143 "data/maps/PKMNCENTER/scripts.pory"
+	.string "'...a girl?'$"
 
 PKMNCENTER_EventScript_Yan_Text_61:
-# 151 "data/maps/PKMNCENTER/scripts.pory"
-	.string "I'm Yan!$"
+# 144 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I think...I know what you are\ntalking about.$"
 
 PKMNCENTER_EventScript_Yan_Text_62:
-# 152 "data/maps/PKMNCENTER/scripts.pory"
-	.string "And it's my job to figure out what's\ngoing on.$"
+# 145 "data/maps/PKMNCENTER/scripts.pory"
+	.string "So, you have seen her.$"
 
 PKMNCENTER_EventScript_Yan_Text_63:
-# 153 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Y'know, with the weirdness and all.$"
+# 146 "data/maps/PKMNCENTER/scripts.pory"
+	.string "The woman in gray.$"
 
 PKMNCENTER_EventScript_Yan_Text_64:
-# 157 "data/maps/PKMNCENTER/scripts.pory"
-	.string "...I just told you, dude.$"
+# 147 "data/maps/PKMNCENTER/scripts.pory"
+	.string "That phantom girl who appears in\nmy dreams.$"
 
 PKMNCENTER_EventScript_Yan_Text_65:
-# 158 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Yan.$"
+# 148 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Who are you?$"
 
 PKMNCENTER_EventScript_Yan_Text_66:
-# 159 "data/maps/PKMNCENTER/scripts.pory"
-	.string "I'm a detective.$"
+# 149 "data/maps/PKMNCENTER/scripts.pory"
+	.string "What does this all mean?$"
 
 PKMNCENTER_EventScript_Yan_Text_67:
-# 160 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Don't make me investigate your case of\nmemory loss, now!$"
+# 150 "data/maps/PKMNCENTER/scripts.pory"
+	.string "To tell the truth, these are the\nquestions I really want to answer.$"
 
 PKMNCENTER_EventScript_Yan_Text_68:
-# 161 "data/maps/PKMNCENTER/scripts.pory"
-	.string "...eheh. Bad joke.$"
+# 156 "data/maps/PKMNCENTER/scripts.pory"
+	.string "...I hope you're satisfied.$"
 
 PKMNCENTER_EventScript_Yan_Text_69:
-# 162 "data/maps/PKMNCENTER/scripts.pory"
-	.string "....mm.$"
+# 158 "data/maps/PKMNCENTER/scripts.pory"
+	.string "This optioin is unavailable.$"
 
 PKMNCENTER_EventScript_Yan_Text_70:
-# 165 "data/maps/PKMNCENTER/scripts.pory"
-	.string "...$"
+# 167 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Me?$"
 
 PKMNCENTER_EventScript_Yan_Text_71:
-# 166 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Alright, your kind of starting\nto creep me out now.$"
+# 168 "data/maps/PKMNCENTER/scripts.pory"
+	.string "What, didja forget my name already?$"
 
 PKMNCENTER_EventScript_Yan_Text_72:
-# 167 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Are you feeling alright, {PLAYER}?$"
+# 169 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I'm Yan!$"
 
 PKMNCENTER_EventScript_Yan_Text_73:
-# 168 "data/maps/PKMNCENTER/scripts.pory"
-	.string "You know my name.$"
+# 170 "data/maps/PKMNCENTER/scripts.pory"
+	.string "And it's my job to figure out what's\ngoing on.$"
 
 PKMNCENTER_EventScript_Yan_Text_74:
-# 179 "data/maps/PKMNCENTER/scripts.pory"
-	.string "What to do, eh?$"
+# 171 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Y'know, with the weirdness and all.$"
 
 PKMNCENTER_EventScript_Yan_Text_75:
-# 180 "data/maps/PKMNCENTER/scripts.pory"
-	.string "Hmmmm....$"
+# 175 "data/maps/PKMNCENTER/scripts.pory"
+	.string "...I just told you, dude.$"
 
 PKMNCENTER_EventScript_Yan_Text_76:
-# 183 "data/maps/PKMNCENTER/scripts.pory"
-	.string "See you, then!$"
+# 176 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Yan.$"
 
 PKMNCENTER_EventScript_Yan_Text_77:
+# 177 "data/maps/PKMNCENTER/scripts.pory"
+	.string "I'm a detective.$"
+
+PKMNCENTER_EventScript_Yan_Text_78:
+# 178 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Don't make me investigate your case of\nmemory loss, now!$"
+
+PKMNCENTER_EventScript_Yan_Text_79:
+# 179 "data/maps/PKMNCENTER/scripts.pory"
+	.string "...eheh. Bad joke.$"
+
+PKMNCENTER_EventScript_Yan_Text_80:
+# 180 "data/maps/PKMNCENTER/scripts.pory"
+	.string "....mm.$"
+
+PKMNCENTER_EventScript_Yan_Text_81:
+# 183 "data/maps/PKMNCENTER/scripts.pory"
+	.string "...$"
+
+PKMNCENTER_EventScript_Yan_Text_82:
 # 184 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Alright, your kind of starting\nto creep me out now.$"
+
+PKMNCENTER_EventScript_Yan_Text_83:
+# 185 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Are you feeling alright, {PLAYER}?$"
+
+PKMNCENTER_EventScript_Yan_Text_84:
+# 186 "data/maps/PKMNCENTER/scripts.pory"
+	.string "You know my name.$"
+
+PKMNCENTER_EventScript_Yan_Text_85:
+# 197 "data/maps/PKMNCENTER/scripts.pory"
+	.string "What to do, eh?$"
+
+PKMNCENTER_EventScript_Yan_Text_86:
+# 198 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Hmmmm....$"
+
+PKMNCENTER_EventScript_Yan_Text_87:
+# 201 "data/maps/PKMNCENTER/scripts.pory"
+	.string "See you, then!$"
+
+PKMNCENTER_EventScript_Yan_Text_88:
+# 202 "data/maps/PKMNCENTER/scripts.pory"
 	.string "Come back if anything happens, alright?$"
+
+PKMNCENTER_EventScript_Yan_Text_89:
+# 209 "data/maps/PKMNCENTER/scripts.pory"
+	.string "..........$"
+
+PKMNCENTER_EventScript_Yan_Text_90:
+# 211 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Would you like to use the Fangblade?$"
+
+PKMNCENTER_EventScript_Yan_Text_91:
+# 213 "data/maps/PKMNCENTER/scripts.pory"
+	.string "(You pull the blade out and raise\nit towards Yan's neck.)$"
+
+PKMNCENTER_EventScript_Yan_Text_92:
+# 214 "data/maps/PKMNCENTER/scripts.pory"
+	.string "Hmm? {PLAYER}? What are....What\nare you d-!$"
+
+PKMNCENTER_EventScript_Yan_Text_93:
+# 220 "data/maps/PKMNCENTER/scripts.pory"
+	.string "And with that... {PAUSE_UNTIL_PRESS}$"
+
+PKMNCENTER_EventScript_Yan_Text_94:
+# 222 "data/maps/PKMNCENTER/scripts.pory"
+	.string "The{PAUSE 100} story{PAUSE 100} of{PAUSE 100} 'Yan'{PAUSE 100} was{PAUSE 100} over. {PAUSE_UNTIL_PRESS}$"

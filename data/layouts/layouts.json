@@ -9457,7 +9457,7 @@
     {
       "id": "LAYOUT_CLEARING",
       "name": "CLEARING_Layout",
-      "width": 48,
+      "width": 50,
       "height": 33,
       "primary_tileset": "gTileset_weirdshit1",
       "secondary_tileset": "gTileset_Petalburg",
@@ -9474,6 +9474,72 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/PKMNCENTER/border.bin",
       "blockdata_filepath": "data/layouts/PKMNCENTER/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CLEARING_HOUSE2",
+      "name": "CLEARING_HOUSE2_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CLEARING_HOUSE2/border.bin",
+      "blockdata_filepath": "data/layouts/CLEARING_HOUSE2/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CLEARING_HOUSE1",
+      "name": "CLEARING_HOUSE1_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CLEARING_HOUSE1/border.bin",
+      "blockdata_filepath": "data/layouts/CLEARING_HOUSE1/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CLEARING_TREEAREA",
+      "name": "CLEARING_TREEAREA_Layout",
+      "width": 28,
+      "height": 22,
+      "primary_tileset": "gTileset_weirdshit1",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CLEARING_TREEAREA/border.bin",
+      "blockdata_filepath": "data/layouts/CLEARING_TREEAREA/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CLEARING_HOUSE4",
+      "name": "CLEARING_HOUSE4_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CLEARING_HOUSE4/border.bin",
+      "blockdata_filepath": "data/layouts/CLEARING_HOUSE4/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CLEARING_HOUSE3",
+      "name": "CLEARING_HOUSE3_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/CLEARING_HOUSE3/border.bin",
+      "blockdata_filepath": "data/layouts/CLEARING_HOUSE3/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CLEARING_EVIL",
+      "name": "CLEARING_EVIL_Layout",
+      "width": 50,
+      "height": 33,
+      "primary_tileset": "gTileset_weirdshit1",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CLEARING_EVIL/border.bin",
+      "blockdata_filepath": "data/layouts/CLEARING_EVIL/map.bin",
       "layout_version": "emerald"
     }
   ]

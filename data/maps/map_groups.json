@@ -147,7 +147,12 @@
     "DEEPROCK_CAVE_2",
     "DEEPROCK_CAVE_EXIT",
     "CLEARING",
-    "PKMNCENTER"
+    "PKMNCENTER",
+    "CLEARING_HOUSE1",
+    "CLEARING_HOUSE2",
+    "CLEARING_TREEAREA",
+    "CLEARING_HOUSE3",
+    "CLEARING_EVIL"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -262,7 +267,8 @@
     "RustboroCity_Flat2_1F",
     "RustboroCity_Flat2_2F",
     "RustboroCity_Flat2_3F",
-    "RustboroCity_House3"
+    "RustboroCity_House3",
+    "CLEARING_HOUSE4"
   ],
   "gMapGroup_IndoorFortree": [
     "FortreeCity_House1",

@@ -1766,3 +1766,15 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/CLEARING/scripts.inc"
 
 	.include "data/maps/PKMNCENTER/scripts.inc"
+
+	.include "data/maps/CLEARING_HOUSE2/scripts.inc"
+
+	.include "data/maps/CLEARING_HOUSE1/scripts.inc"
+
+	.include "data/maps/CLEARING_TREEAREA/scripts.inc"
+
+	.include "data/maps/CLEARING_HOUSE4/scripts.inc"
+
+	.include "data/maps/CLEARING_HOUSE3/scripts.inc"
+
+	.include "data/maps/CLEARING_EVIL/scripts.inc"

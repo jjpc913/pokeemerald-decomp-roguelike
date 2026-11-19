@@ -76,20 +76,23 @@ movement MothmanMoveLeft {
 
 script LAYER1_MAINAREA_EventScript_Lamp {
     lockall
-    msgbox("(There is a suspicious looking\nlamp post here.)")
+    msgbox("(There is a suspicious looking hole\nhere.)")
+    msgbox("(It's too small for you to fit through.)")
     checkitem(ITEM_RED_SCARF, 1)
     if (var(VAR_RESULT)) {
-        msgbox("(The lamp is resonating with your wishing\nstone...)")
+        msgbox("(The hole is resonating with your wishing\nstone...)")
         msgbox("(The stone feels soft in your hand,\nmalleable like jelly but still\psolid enough to grip.)")
-        msgbox("(Would you like to crush a wishing\nstone?)", MSGBOX_YESNO)
+        msgbox("(Would you like to drop a wishing\nstone?)", MSGBOX_YESNO)
         if (var(VAR_RESULT) == YES) {
-            msgbox("(You smash the stone against the\nlamp post.)")
+            msgbox("(You drop the stone into the\nhole...)")
             removeitem(ITEM_RED_SCARF, 1)
             delay(1)
             fadescreen(FADE_TO_WHITE)
             delay(10)
             fadescreen(FADE_FROM_WHITE)
             delay(1)
+            msgbox("...")
+            msgbox("(You feel a throbbing in your head.)")
             msgbox("What is your wish?", MSGBOX_DEFAULT)
             dynmultichoice(0,0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "I wish for power.", 
                 "I wish for healing.", "I wish for a better future.", "I wish for knowledge.", 
@@ -136,7 +139,8 @@ script LAYER1_MAINAREA_EventScript_Lamp {
                     msgbox("(You tripped over your words,\nand the wish failed.)")
             }
         }
-    }
+    } 
+
     releaseall
 }
 
@@ -335,7 +339,7 @@ script LAYER1_MAINAREA_EventScript_Boy1 {
 
 script LAYER1_MAINAREA_EventScript_Sign {
     lockall
-    msgbox("'No matter what, never stop dreaming.'")
+    msgbox("'May your wildest of dreams come true.'")
     releaseall
 }
 

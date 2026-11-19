@@ -1,0 +1,13 @@
+raw `CLEARING_TREEAREA_MapScripts::
+	.byte 0
+`
+
+
+script CLEARING_TREEAREA_EventScript_Tree {
+    lockall
+    msgbox("")
+    msgbox("(This tree looks cuttable.)")
+    msgbox("(...but not by a Pokemon.)")
+    releaseall
+}
+

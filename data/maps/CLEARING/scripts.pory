@@ -2,3 +2,35 @@ raw `CLEARING_MapScripts::
 	.byte 0
 `
 
+script CLEARING_EventScript_LockedDoor {
+	lockall
+	msgbox("(The door is locked.)")
+	msgbox("You hear sounds of people talking from inside.")
+	msgbox("You can't tell if they are laughing or arguing.")
+	releaseall
+}
+
+script CLEARING_EventScript_FatMan {
+    lockall
+    msgbox("Welcome to Sunup Village, traveler.")
+    msgbox("Here, the sun is perpetually stuck\nat the horizon.")
+    msgbox("Let the warmth calm your spirit.")
+    releaseall
+}
+
+script CLEARING_EventScript_Girl1 {
+    lockall
+    msgbox("Maybe someday we'll see the sunset.")
+    releaseall
+}
+
+script CLEARING_EventScript_Girl2 {
+	lockall
+	msgbox("")
+}
+
+script PKMN_CENTER_WARP_ENTRANCE {
+	lockall
+	warp(MAP_PKMNCENTER, 7,7)
+	releaseall
+}
