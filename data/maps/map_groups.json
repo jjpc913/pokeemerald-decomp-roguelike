@@ -152,7 +152,8 @@
     "CLEARING_HOUSE2",
     "CLEARING_TREEAREA",
     "CLEARING_HOUSE3",
-    "CLEARING_EVIL"
+    "CLEARING_EVIL",
+    "CLEARING_SHOP"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

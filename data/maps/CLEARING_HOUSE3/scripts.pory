@@ -1,0 +1,79 @@
+raw `CLEARING_HOUSE3_MapScripts::
+	.byte 0
+`
+
+script CLEARING_HOUSE3_EventScript_Girl {
+    lockall
+    if (!flag(FLAG_TALKED_GIRL)) {
+        faceplayer
+        msgbox("Hmm?")
+        msgbox("Hello, there.")
+        msgbox("I bet you're interested in these\nrocks. Am I right?")
+        msgbox("I've been studying them, trying to\nfigure out what they are for.")
+        msgbox("Would you like to hear my findings?", MSGBOX_YESNO)
+        if (var(VAR_RESULT)) {
+            msgbox("...do you actually care, or do\nyou just want one for yourself?", MSGBOX_YESNO)
+            if (var(VAR_RESULT)) {
+                msgbox("...I kind of respect your honesty.")
+                msgbox("Here, I'll lend you one.")
+                msgbox("But indulge me for a second, alright?")
+            } else {
+                msgbox("Alright, then.")
+            }
+            msgbox("The first thing you'll notice about\nthe stones is their texture.")
+            msgbox("You can push your thumb into it and it\nwill recede back like some kind of dough.")
+            msgbox("Weird, right?")
+            msgbox("And you can feel a warmth eminating\nfrom the core.")
+            msgbox("I've tried to shatter it or slice it\ninto pieces, but even my sharpest and\pheaviest tools are useless.")
+            msgbox("Most things just sink into it.")
+            msgbox("It's almost like it doesn't want\nto be disturbed.")
+            msgbox("But that's not even the strangest part.")
+            msgbox("The other day I was taking a stroll\nthrough the village, and decided to stop\pby the hole.")
+            msgbox("I don't know why I did.")
+            msgbox("But when I stared down the hole, I\nfelt a warmth radiating from my pocket.")
+            msgbox("I pulled the stone out of my\npocket and saw it was glowing!")
+            msgbox("I had to shield my eyes from the\nbrightness.")
+            msgbox("I deduced that the stone was resonating\nwith the hole for some reason.")
+            msgbox("But I haven't been back there since then.")
+            msgbox("I could feel an aura coming from the hole.")
+            msgbox("It wanted me to throw down the rock.\nIt hungered for it.")
+            msgbox("I couldn't do it, though.")
+            msgbox("Something about it terrifies me.")
+            msgbox("So I've been conducting my research in here.")
+            msgbox("....thanks for hearing me out.")
+            msgbox("Honestly, I don't really have a use for\ntwo of these.")
+            msgbox("Here.")
+            msgbox("I hope you'll get more use out of\nit than me.")
+            giveitem(ITEM_RED_SCARF, 1)
+            removeobject(2)
+            setflag(FLAG_TALKED_GIRL)
+        } else {
+            msgbox("Ah.")
+            msgbox("Well, fair enough.")
+            msgbox("I'm afraid I don't have much\nelse to offer you, then.")
+        }
+    } else {
+        msgbox("I've told you all I know, I'm afraid.")
+        msgbox("I hope you get more use out of\nthat stone than I did.")
+    }
+    releaseall
+}
+
+script CLEARING_HOUSE3_EventScript_Stones {
+    lockall
+    applymovement(1, GirlFacePlayer)
+    waitmovement(1)
+    msgbox("Ah ah ah! Hey! Hands off!")
+    msgbox("That's mine!")
+    applymovement(1, GirlFaceDown)
+    waitmovement(1)
+    releaseall
+}
+
+movement GirlFacePlayer {
+    faceplayer
+}
+
+movement GirlFaceDown {
+    face_down
+}

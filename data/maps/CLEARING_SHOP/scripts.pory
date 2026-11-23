@@ -1,0 +1,55 @@
+raw `CLEARING_SHOP_MapScripts::
+	.byte 0
+`
+
+script CLEARING_SHOP_CLERK {
+    lockall
+    msgbox("Hello, there.")
+    msgbox("Wecome to my humble store.")
+    msgbox("Please, have a look at what I have to offer.")
+    if (flag(FLAG_THIEF)) {
+        msgbox("...is what I would say, normally.")
+        if (flag(FLAG_TALKED_CLERK)) {
+            msgbox("You still have a job to do.")
+            msgbox("We have nothing to discuss yet.")
+            msgbox("Kill DUBOIS.")
+            msgbox("That is all.")
+            releaseall
+            return
+        }
+        msgbox("But you...I have nothing to offer you.")
+        msgbox("You've got some balls showing\nyour face around here, thief.")
+        msgbox("You thought I wouldn't notice?")
+        msgbox("I should kill you where you stand.")
+        msgbox("...")
+        msgbox("You know what...")
+        msgbox("You've been through enough.")
+        msgbox("Just return the stuff you stole,\nand we can put this behind us.")
+        msgbox("....")
+        msgbox("You don't have them anymore...do you?")
+        msgbox("You already used those items...")
+        msgbox("....")
+        msgbox("Alright, {PLAYER}.")
+        msgbox("I'll give you one last chance.")
+        msgbox("There is a man running around\nhere and causing trouble.")
+        msgbox("His name is DUBOIS.")
+        msgbox("He has black hair and a purple jacket.")
+        msgbox("I'd deal with him myself, but\nI have my own role to play.")
+        msgbox("Your job is simple.")
+        msgbox("I need you to kill him for me.")
+        msgbox("Do that, and we will be square.")
+        msgbox("This is my last offer for you.")
+        msgbox("Will you accept, {PLAYER}?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            msgbox("I see.")
+            msgbox("Well, that's fine.")
+            msgbox("I'm perfectly happy just killing you instead.")
+            trainerbattle_no_intro(TRAINER_VIVI, LADY_OUTRO)
+        } else {
+            msgbox("Excellent.")
+            msgbox("Good luck out there.")
+            setflag(FLAG_TALKED_CLERK)
+        }
+    }
+    releaseall
+}

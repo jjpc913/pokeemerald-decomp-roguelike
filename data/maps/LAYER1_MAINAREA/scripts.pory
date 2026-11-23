@@ -630,17 +630,6 @@ script LAYER1_MAINAREA_EventScript_Lady {
         msgbox("I'm sorry, but I won't be able\nto be of any use to you until\pthe criminal is found.")
         msgbox("Once I find them, I will make\nthem pay.")
         msgbox("But for now, I have nothing to\noffer you.")
-        msgbox("You wouldn't happen to have seen\nanything, have you?", MSGBOX_YESNO)
-        if (var(VAR_RESULT)) {
-            msgbox("You have?")
-            msgbox("Oh, joyous day.")
-            msgbox("With you help, we can bring the\ncriminal to justice.")
-            msgbox(".........{PAUSE_UNTIL_PRESS}")
-            msgbox("It was you, wasn't it?")
-        } else {
-            msgbox("Oh, that is a shame.")
-            msgbox("If you see anything, please let me know.")
-        }
         setflag(FLAG_TALKED_TO_LADY_THIEF)
     } else {
         msgbox("Please, take a look at what I\nhave to offer.")

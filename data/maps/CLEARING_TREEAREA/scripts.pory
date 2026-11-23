@@ -11,3 +11,12 @@ script CLEARING_TREEAREA_EventScript_Tree {
     releaseall
 }
 
+script CLEARING_TREEAREA_EventScript_Guy {
+    lockall
+    msgbox("Oh, are you also curious about\nthat hole?")
+    msgbox("My sister's been doing research\ninto it.")
+    msgbox("Right now we live in the bottom\nleft house in the town.")
+    msgbox("You should ask her about it.")
+    releaseall
+}
+

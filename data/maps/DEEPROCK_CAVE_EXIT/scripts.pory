@@ -1,5 +1,5 @@
 raw `DEEPROCK_CAVE_EXIT_MapScripts::
-	.byte`
+	.byte 0`
 
 
 script DEEPROCK_CAVE_EXIT_EventScript_Ball4 {

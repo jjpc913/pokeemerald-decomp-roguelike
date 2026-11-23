@@ -1,7 +1,7 @@
 # 1 "data/maps/DEEPROCK_CAVE_EXIT/scripts.pory"
 DEEPROCK_CAVE_EXIT_MapScripts::
 # 2 "data/maps/DEEPROCK_CAVE_EXIT/scripts.pory"
-	.byte
+	.byte 0
 
 DEEPROCK_CAVE_EXIT_EventScript_Ball4::
 # 6 "data/maps/DEEPROCK_CAVE_EXIT/scripts.pory"

@@ -5,8 +5,8 @@ raw `CLEARING_MapScripts::
 script CLEARING_EventScript_LockedDoor {
 	lockall
 	msgbox("(The door is locked.)")
-	msgbox("You hear sounds of people talking from inside.")
-	msgbox("You can't tell if they are laughing or arguing.")
+	msgbox("You hear sounds of people talking\nfrom inside.")
+	msgbox("You can't tell if they are laughing\nor arguing.")
 	releaseall
 }
 
@@ -26,7 +26,29 @@ script CLEARING_EventScript_Girl1 {
 
 script CLEARING_EventScript_Girl2 {
 	lockall
-	msgbox("")
+	msgbox("Get away from me...")
+	msgbox("I don't care what everyone else\nsees.")
+	msgbox("Don't think I trust you even for\na minute.")
+	releaseall
+}
+
+script CLEARING_EventScript_Hiker {
+	lockall
+	msgbox("That detective ran into the Pokemon center\nin a stupor.")
+	msgbox("I hope she isn't hurt...")
+	releaseall
+}
+
+script CLEARING_EventScript_Guy {
+	lockall
+	msgbox("'psst'")
+	msgbox("Hey, kid.")
+	msgbox("Listen to me.")
+	msgbox("That detective...")
+	msgbox("I don't trust her.")
+	msgbox("Somethin' about her really gives\nme the creeps.")
+	msgbox("You should watch your back.")
+	releaseall
 }
 
 script PKMN_CENTER_WARP_ENTRANCE {

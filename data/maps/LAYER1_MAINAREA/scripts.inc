@@ -1143,16 +1143,16 @@ LAYER1_MAINAREA_EventScript_Lady::
 	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_2
 # 626 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	goto_if_set FLAG_THIEF, LAYER1_MAINAREA_EventScript_Lady_2
-# 646 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_17
-# 647 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 635 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_9
+# 636 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	pokemart L1_LADY_MART
-# 648 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_18
-# 649 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_19
+# 637 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_10
+# 638 "data/maps/LAYER1_MAINAREA/scripts.pory"
+	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_11
 LAYER1_MAINAREA_EventScript_Lady_1:
-# 651 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 640 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	releaseall
 	return
 
@@ -1170,77 +1170,54 @@ LAYER1_MAINAREA_EventScript_Lady_2:
 # 632 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_8
 # 633 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_9, MSGBOX_YESNO
-# 634 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne LAYER1_MAINAREA_EventScript_Lady_6
-# 641 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_15
-# 642 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_16
-LAYER1_MAINAREA_EventScript_Lady_5:
-# 644 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	setflag FLAG_TALKED_TO_LADY_THIEF
 	goto LAYER1_MAINAREA_EventScript_Lady_1
 
-LAYER1_MAINAREA_EventScript_Lady_6:
-# 635 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_10
-# 636 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_11
-# 637 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_12
-# 638 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_13
-# 639 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	msgbox LAYER1_MAINAREA_EventScript_Lady_Text_14
-	goto LAYER1_MAINAREA_EventScript_Lady_5
-
 
 DIE_THIEF::
-# 655 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 644 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	lockall
-# 656 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 645 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	goto_if_set FLAG_TALKED_TO_LADY_THIEF, DIE_THIEF_2
 DIE_THIEF_1:
-# 665 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 654 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	releaseall
 	return
 
 DIE_THIEF_2:
-# 657 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 646 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	fadeoutbgm 1
-# 658 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 647 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox DIE_THIEF_Text_0
-# 659 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 648 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox DIE_THIEF_Text_1
-# 660 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 649 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox DIE_THIEF_Text_2
-# 661 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 650 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox DIE_THIEF_Text_3
-# 662 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 651 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	msgbox DIE_THIEF_Text_4
-# 663 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 652 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	trainerbattle_no_intro TRAINER_VIVI, LADY_OUTRO
 	goto DIE_THIEF_1
 
 
 	.align 2
-# 676 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 665 "data/maps/LAYER1_MAINAREA/scripts.pory"
 L1_LADY_MART:
-# 677 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 666 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.2byte ITEM_POTION
-# 678 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 667 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.2byte ITEM_SUPER_POTION
-# 679 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 668 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.2byte ITEM_POKE_BALL
-# 680 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 669 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.2byte ITEM_ANTIDOTE
-# 681 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 670 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.2byte ITEM_PARALYZE_HEAL
-# 682 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 671 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.2byte ITEM_BURN_HEAL
-# 683 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 672 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_NONE
 
@@ -1801,67 +1778,35 @@ LAYER1_MAINAREA_EventScript_Lady_Text_8:
 	.string "But for now, I have nothing to\noffer you.$"
 
 LAYER1_MAINAREA_EventScript_Lady_Text_9:
-# 633 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "You wouldn't happen to have seen\nanything, have you?$"
-
-LAYER1_MAINAREA_EventScript_Lady_Text_10:
 # 635 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "You have?$"
-
-LAYER1_MAINAREA_EventScript_Lady_Text_11:
-# 636 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "Oh, joyous day.$"
-
-LAYER1_MAINAREA_EventScript_Lady_Text_12:
-# 637 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "With you help, we can bring the\ncriminal to justice.$"
-
-LAYER1_MAINAREA_EventScript_Lady_Text_13:
-# 638 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string ".........{PAUSE_UNTIL_PRESS}$"
-
-LAYER1_MAINAREA_EventScript_Lady_Text_14:
-# 639 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "It was you, wasn't it?$"
-
-LAYER1_MAINAREA_EventScript_Lady_Text_15:
-# 641 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "Oh, that is a shame.$"
-
-LAYER1_MAINAREA_EventScript_Lady_Text_16:
-# 642 "data/maps/LAYER1_MAINAREA/scripts.pory"
-	.string "If you see anything, please let me know.$"
-
-LAYER1_MAINAREA_EventScript_Lady_Text_17:
-# 646 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "Please, take a look at what I\nhave to offer.$"
 
-LAYER1_MAINAREA_EventScript_Lady_Text_18:
-# 648 "data/maps/LAYER1_MAINAREA/scripts.pory"
+LAYER1_MAINAREA_EventScript_Lady_Text_10:
+# 637 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "I will be traveling futher soon.$"
 
-LAYER1_MAINAREA_EventScript_Lady_Text_19:
-# 649 "data/maps/LAYER1_MAINAREA/scripts.pory"
+LAYER1_MAINAREA_EventScript_Lady_Text_11:
+# 638 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "If you need anything, please see\nme again as soon as possible.$"
 
 DIE_THIEF_Text_0:
-# 658 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 647 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "...What, do you think I'm\nstupid?$"
 
 DIE_THIEF_Text_1:
-# 659 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 648 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "I know it was you.$"
 
 DIE_THIEF_Text_2:
-# 660 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 649 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "Who else could it possibly be?$"
 
 DIE_THIEF_Text_3:
-# 661 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 650 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "You've got some real balls\nshowing your face around me.$"
 
 DIE_THIEF_Text_4:
-# 662 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 651 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "Time for retribution.$"
 
 LAYER1_MAINAREA_LassIntro::
@@ -1940,9 +1885,9 @@ WAYNEOUTRO::
 	.string "$"
 
 LADY_OUTRO::
-# 668 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 657 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string "Impossible.$"
 
 Generic_Outro::
-# 672 "data/maps/LAYER1_MAINAREA/scripts.pory"
+# 661 "data/maps/LAYER1_MAINAREA/scripts.pory"
 	.string " $"
