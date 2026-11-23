@@ -49,7 +49,7 @@ script PKMNCENTER_EventScript_Yan {
     }
     msgbox("What'd you want to talk about?")
     if (flag(FLAG_DEFAULT_YAN)) {
-        dynmultichoice(0,0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "Business Card", "Town", "Investigation", "Static Girl", "You", "What Should I Do Now")
+        dynmultichoice(0,0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, "Business Card", "Town", "Investigation", "That Girl", "What to Do", "")
     }
 
     faceplayer
@@ -139,11 +139,11 @@ script PKMNCENTER_EventScript_Yan {
                     break
                 }
                 msgbox(".........")
-                msgbox("Fine.")
+                msgbox("...Fine.")
                 msgbox("'...a girl?'")
                 msgbox("I think...I know what you are\ntalking about.")
                 msgbox("So, you have seen her.")
-                msgbox("The woman in gray.")
+                msgbox("That girl in gray.")
                 msgbox("That phantom girl who appears in\nmy dreams.")
                 msgbox("Who are you?")
                 msgbox("What does this all mean?")
@@ -163,31 +163,16 @@ script PKMNCENTER_EventScript_Yan {
             face_right
             break
         case 4:
-            if (var(VAR_YOU_OPTION) == 1) {
-                msgbox("Me?")
-                msgbox("What, didja forget my name already?")
-                msgbox("I'm Yan!")
-                msgbox("And it's my job to figure out what's\ngoing on.")
-                msgbox("Y'know, with the weirdness and all.")
+                msgbox("To the north theres a forest.")
+                msgbox("To the south, there's some kind of bunker.")
+                msgbox("To the east, well...")
+                msgbox("That's where the light comes from.")
+                msgbox("That's where we need to go.")
+                msgbox("But it's currently blocked off by some trees.")
+                msgbox("Locals have said there's pieces to\na legendary axe in the heart of\pthe forest and the depths of the bunker.")
+                msgbox("That's what I'm doing once I'm ready.")
+                msgbox("Think you can beat me to it,{PLAYER}?")
                 addvar(VAR_YOU_OPTION, 1)
-                
-            } elif (var(VAR_YOU_OPTION) == 2) {
-                msgbox("...I just told you, dude.")
-                msgbox("Yan.")
-                msgbox("I'm a detective.")
-                msgbox("Don't make me investigate your case of\nmemory loss, now!")
-                msgbox("...eheh. Bad joke.")
-                msgbox("....mm.")
-                addvar(VAR_YOU_OPTION, 1)
-            } elif (var(VAR_YOU_OPTION) == 3) {
-                msgbox("...")
-                msgbox("Alright, your kind of starting\nto creep me out now.")
-                msgbox("Are you feeling alright, {PLAYER}?")
-                msgbox("You know my name.")
-                addvar(VAR_YOU_OPTION, 1)
-            } else {
-                msgbox("(Seems there's nothing left to discuss.)")
-            }
             releaseall
             face_right
             break

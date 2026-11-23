@@ -271,7 +271,10 @@ SPAWN_HOUSE_EventScript_OneMoreThing::
 # 141 "data/maps/SPAWN_HOUSE/scripts.pory"
 	goto_if_set FLAG_SYS_POKEMON_GET, SPAWN_HOUSE_EventScript_OneMoreThing_3
 SPAWN_HOUSE_EventScript_OneMoreThing_1:
-# 157 "data/maps/SPAWN_HOUSE/scripts.pory"
+# 158 "data/maps/SPAWN_HOUSE/scripts.pory"
+	goto_if_unset FLAG_ROSE_TALKED_DEATH, SPAWN_HOUSE_EventScript_OneMoreThing_7
+SPAWN_HOUSE_EventScript_OneMoreThing_6:
+# 166 "data/maps/SPAWN_HOUSE/scripts.pory"
 	releaseall
 	return
 
@@ -310,6 +313,22 @@ SPAWN_HOUSE_EventScript_OneMoreThing_3:
 # 141 "data/maps/SPAWN_HOUSE/scripts.pory"
 	goto_if_unset FLAG_OMINOUS_MESSAGE, SPAWN_HOUSE_EventScript_OneMoreThing_2
 	goto SPAWN_HOUSE_EventScript_OneMoreThing_1
+
+SPAWN_HOUSE_EventScript_OneMoreThing_7:
+# 159 "data/maps/SPAWN_HOUSE/scripts.pory"
+	special ReturnDeathCount
+# 160 "data/maps/SPAWN_HOUSE/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq SPAWN_HOUSE_EventScript_OneMoreThing_10
+SPAWN_HOUSE_EventScript_OneMoreThing_9:
+# 164 "data/maps/SPAWN_HOUSE/scripts.pory"
+	setflag FLAG_ROSE_TALKED_DEATH
+	goto SPAWN_HOUSE_EventScript_OneMoreThing_6
+
+SPAWN_HOUSE_EventScript_OneMoreThing_10:
+# 161 "data/maps/SPAWN_HOUSE/scripts.pory"
+	msgbox SPAWN_HOUSE_EventScript_OneMoreThing_Text_11
+	goto SPAWN_HOUSE_EventScript_OneMoreThing_9
 
 
 SPAWN_HOUSE_EventScript_Rose_Text_0:
@@ -455,3 +474,7 @@ SPAWN_HOUSE_EventScript_OneMoreThing_Text_9:
 SPAWN_HOUSE_EventScript_OneMoreThing_Text_10:
 # 153 "data/maps/SPAWN_HOUSE/scripts.pory"
 	.string "Good luck, kid.$"
+
+SPAWN_HOUSE_EventScript_OneMoreThing_Text_11:
+# 161 "data/maps/SPAWN_HOUSE/scripts.pory"
+	.string "Back again?$"

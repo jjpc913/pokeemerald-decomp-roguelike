@@ -46,9 +46,17 @@ movement faceatplayer {
 
 script test_EventScript_dubois {
     lockall
-    if (!flag(FLAG_DUBOIS_OPENER)) {
+    special(ReturnDeathCount)
+    if (var(VAR_RESULT) >= 1) {
+        msgbox("Tch.")
+        msgbox("Back again?")
+    } else {
         msgbox("...")
         msgbox("(The mysterious man stands before you.)")
+    }
+
+    if (!flag(FLAG_DUBOIS_OPENER)) {
+        
         applymovement(1, faceatplayer)
         waitmovement(1)
         msgbox("You have no idea what you are\ndoing.")

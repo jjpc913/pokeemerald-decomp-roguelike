@@ -68,7 +68,12 @@ void ClearSav3(void)
 
 void ClearSav2(void)
 {
+    u16 deathcount = 0;
+    if (gSaveFileStatus == SAVE_STATUS_OK) {
+        deathcount = gSaveBlock2Ptr->deathCount;
+    }
     CpuFill16(0, &gSaveblock2, sizeof(struct SaveBlock2ASLR));
+    gSaveBlock2Ptr->deathCount = deathcount;
 }
 
 void ClearSav1(void)

@@ -9552,6 +9552,28 @@
       "border_filepath": "data/layouts/CLEARING_SHOP/border.bin",
       "blockdata_filepath": "data/layouts/CLEARING_SHOP/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CLEARING_NORTH",
+      "name": "CLEARING_NORTH_Layout",
+      "width": 28,
+      "height": 22,
+      "primary_tileset": "gTileset_weirdshit1",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CLEARING_NORTH/border.bin",
+      "blockdata_filepath": "data/layouts/CLEARING_NORTH/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_CLEARING_SOUTH",
+      "name": "CLEARING_SOUTH_Layout",
+      "width": 28,
+      "height": 22,
+      "primary_tileset": "gTileset_weirdshit1",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CLEARING_SOUTH/border.bin",
+      "blockdata_filepath": "data/layouts/CLEARING_SOUTH/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

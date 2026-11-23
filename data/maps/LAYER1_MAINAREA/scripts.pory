@@ -424,7 +424,8 @@ script LAYER1_MAINAREA_EventScript_Yan2 {
     applymovement(8, YanTurnAround2)
     waitmovement(8)
     playbgm(MUS_ENCOUNTER_INTERVIEWER, FALSE)
-    faceplayer
+    applymovement(8, YanFaceLeft)
+    waitmovement(8)
     msgbox("Oh, hello there!")
     msgbox("I haven't met you before.")
     msgbox("'Name's Yan.")
@@ -500,6 +501,10 @@ movement YanTurnAround2 {
     face_down
     walk_down
     face_right
+}
+
+movement YanFaceLeft {
+    face_left
 }
 
 movement YanLeave1 {

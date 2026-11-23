@@ -36585,28 +36585,28 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 10,
-                "max_level": 10,
+                "min_level": 8,
+                "max_level": 8,
                 "species": "SPECIES_LILLIPUP"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
+                "min_level": 8,
+                "max_level": 8,
                 "species": "SPECIES_PIDOVE"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
+                "min_level": 8,
+                "max_level": 8,
                 "species": "SPECIES_WURMPLE"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
+                "min_level": 8,
+                "max_level": 8,
                 "species": "SPECIES_SNIVY"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
+                "min_level": 8,
+                "max_level": 8,
                 "species": "SPECIES_PARAS"
               },
               {
@@ -36635,13 +36635,13 @@
                 "species": "SPECIES_LARVESTA"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
+                "min_level": 9,
+                "max_level": 9,
                 "species": "SPECIES_BEEDRILL"
               },
               {
-                "min_level": 12,
-                "max_level": 12,
+                "min_level": 9,
+                "max_level": 9,
                 "species": "SPECIES_BEEDRILL"
               }
             ]

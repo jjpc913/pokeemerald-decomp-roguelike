@@ -77,38 +77,51 @@ test_EventScript_dubois::
 # 48 "data/maps/test/scripts.pory"
 	lockall
 # 49 "data/maps/test/scripts.pory"
-	goto_if_unset FLAG_DUBOIS_OPENER, test_EventScript_dubois_2
-# 61 "data/maps/test/scripts.pory"
-	msgbox test_EventScript_dubois2_Text_19
-# 62 "data/maps/test/scripts.pory"
-	trainerbattle_no_intro TRAINER_WALLY_VR_5, DUBOIS_OUTRO
+	special ReturnDeathCount
+# 50 "data/maps/test/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_ge test_EventScript_dubois_2
+# 54 "data/maps/test/scripts.pory"
+	msgbox test_EventScript_dubois_Text_2
+# 55 "data/maps/test/scripts.pory"
+	msgbox test_EventScript_dubois_Text_3
 test_EventScript_dubois_1:
-# 64 "data/maps/test/scripts.pory"
+# 58 "data/maps/test/scripts.pory"
+	goto_if_unset FLAG_DUBOIS_OPENER, test_EventScript_dubois_6
+# 69 "data/maps/test/scripts.pory"
+	msgbox test_EventScript_dubois2_Text_19
+# 70 "data/maps/test/scripts.pory"
+	trainerbattle_no_intro TRAINER_WALLY_VR_5, DUBOIS_OUTRO
+test_EventScript_dubois_5:
+# 72 "data/maps/test/scripts.pory"
 	releaseall
 	return
 
 test_EventScript_dubois_2:
-# 50 "data/maps/test/scripts.pory"
-	msgbox test_EventScript_dubois_Text_0
 # 51 "data/maps/test/scripts.pory"
-	msgbox test_EventScript_dubois_Text_1
+	msgbox test_EventScript_dubois_Text_0
 # 52 "data/maps/test/scripts.pory"
-	applymovement 1, faceatplayer
-# 53 "data/maps/test/scripts.pory"
-	waitmovement 1
-# 54 "data/maps/test/scripts.pory"
-	msgbox test_EventScript_dubois_Text_2
-# 55 "data/maps/test/scripts.pory"
-	msgbox test_EventScript_dubois2_Text_14
-# 56 "data/maps/test/scripts.pory"
-	msgbox test_EventScript_dubois_Text_3
-# 57 "data/maps/test/scripts.pory"
-	msgbox test_EventScript_dubois2_Text_17
-# 58 "data/maps/test/scripts.pory"
-	msgbox test_EventScript_dubois2_Text_18
-# 59 "data/maps/test/scripts.pory"
-	setflag FLAG_DUBOIS_OPENER
+	msgbox test_EventScript_dubois_Text_1
 	goto test_EventScript_dubois_1
+
+test_EventScript_dubois_6:
+# 60 "data/maps/test/scripts.pory"
+	applymovement 1, faceatplayer
+# 61 "data/maps/test/scripts.pory"
+	waitmovement 1
+# 62 "data/maps/test/scripts.pory"
+	msgbox test_EventScript_dubois_Text_4
+# 63 "data/maps/test/scripts.pory"
+	msgbox test_EventScript_dubois2_Text_14
+# 64 "data/maps/test/scripts.pory"
+	msgbox test_EventScript_dubois_Text_5
+# 65 "data/maps/test/scripts.pory"
+	msgbox test_EventScript_dubois2_Text_17
+# 66 "data/maps/test/scripts.pory"
+	msgbox test_EventScript_dubois2_Text_18
+# 67 "data/maps/test/scripts.pory"
+	setflag FLAG_DUBOIS_OPENER
+	goto test_EventScript_dubois_5
 
 
 test_EventScript_dubois2_Text_0:
@@ -192,19 +205,27 @@ test_EventScript_dubois2_Text_19:
 	.string "..so be it.$"
 
 test_EventScript_dubois_Text_0:
-# 50 "data/maps/test/scripts.pory"
-	.string "...$"
+# 51 "data/maps/test/scripts.pory"
+	.string "Tch.$"
 
 test_EventScript_dubois_Text_1:
-# 51 "data/maps/test/scripts.pory"
-	.string "(The mysterious man stands before you.)$"
+# 52 "data/maps/test/scripts.pory"
+	.string "Back again?$"
 
 test_EventScript_dubois_Text_2:
 # 54 "data/maps/test/scripts.pory"
-	.string "You have no idea what you are\ndoing.$"
+	.string "...$"
 
 test_EventScript_dubois_Text_3:
-# 56 "data/maps/test/scripts.pory"
+# 55 "data/maps/test/scripts.pory"
+	.string "(The mysterious man stands before you.)$"
+
+test_EventScript_dubois_Text_4:
+# 62 "data/maps/test/scripts.pory"
+	.string "You have no idea what you are\ndoing.$"
+
+test_EventScript_dubois_Text_5:
+# 64 "data/maps/test/scripts.pory"
 	.string "Just go home.$"
 
 DUBOIS_OUTRO::

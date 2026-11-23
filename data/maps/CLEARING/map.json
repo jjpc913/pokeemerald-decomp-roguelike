@@ -17,6 +17,16 @@
       "map": "MAP_CLEARING_TREEAREA",
       "offset": 8,
       "direction": "right"
+    },
+    {
+      "map": "MAP_CLEARING_NORTH",
+      "offset": 28,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_CLEARING_SOUTH",
+      "offset": 24,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -109,9 +119,9 @@
     },
     {
       "x": 36,
-      "y": 4,
+      "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_CLEARING_HOUSE1",
+      "dest_map": "MAP_CLEARING_SHOP",
       "dest_warp_id": "0"
     },
     {

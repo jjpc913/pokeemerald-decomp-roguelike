@@ -5795,3 +5795,8 @@ bool8 CheckAddCoins(void)
     else
         return TRUE;
 }
+
+void ReturnDeathCount(void) {
+    gSpecialVar_Result = gSaveBlock2Ptr->deathCount;
+    ConvertIntToDecimalStringN(gStringVar1, gSaveBlock2Ptr->deathCount, STR_CONV_MODE_LEFT_ALIGN, 3);
+}

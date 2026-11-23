@@ -592,6 +592,7 @@ struct SaveBlock2
     /*0x09*/ u8 specialSaveWarpFlags;
     /*0x0A*/ u8 playerTrainerId[TRAINER_ID_LENGTH];
     /*0x0E*/ u16 playTimeHours;
+             u16 deathCount;
     /*0x10*/ u8 playTimeMinutes;
     /*0x11*/ u8 playTimeSeconds;
     /*0x12*/ u8 playTimeVBlanks;

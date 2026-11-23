@@ -154,5 +154,14 @@ script SPAWN_HOUSE_EventScript_OneMoreThing {
         setflag(FLAG_DISABLE_EXP)
         setflag(FLAG_OMINOUS_MESSAGE)
     }
+
+    if (!flag(FLAG_ROSE_TALKED_DEATH)) {
+        special(ReturnDeathCount)
+        if (var(VAR_RESULT) >= 1) {
+            msgbox("Back again?")
+        }
+
+        setflag(FLAG_ROSE_TALKED_DEATH)
+    }
     releaseall
 }

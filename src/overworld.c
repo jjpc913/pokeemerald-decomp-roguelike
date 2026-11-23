@@ -1953,6 +1953,14 @@ void CB2_NewGame(void)
 #endif
 }
 
+static void IncreasePlayerDeathCount() {
+    if (LoadGameSave(SAVE_NORMAL == SAVE_STATUS_OK)) {
+        gSaveBlock2Ptr->deathCount++;
+        TrySavingData(SAVE_NORMAL);
+    }
+    return;
+}
+
 void CB2_WhiteOut(void)
 {
     u8 state;
@@ -1962,6 +1970,7 @@ void CB2_WhiteOut(void)
         FieldClearVBlankHBlankCallbacks();
         StopMapMusic();
         ResetSafariZoneFlag_();
+        IncreasePlayerDeathCount();
         DoWhiteOut();
         DoSoftReset();
         return
