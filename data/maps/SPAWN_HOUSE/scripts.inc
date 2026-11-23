@@ -319,7 +319,7 @@ SPAWN_HOUSE_EventScript_OneMoreThing_7:
 	special ReturnDeathCount
 # 160 "data/maps/SPAWN_HOUSE/scripts.pory"
 	compare VAR_RESULT, 1
-	goto_if_eq SPAWN_HOUSE_EventScript_OneMoreThing_10
+	goto_if_ge SPAWN_HOUSE_EventScript_OneMoreThing_10
 SPAWN_HOUSE_EventScript_OneMoreThing_9:
 # 164 "data/maps/SPAWN_HOUSE/scripts.pory"
 	setflag FLAG_ROSE_TALKED_DEATH

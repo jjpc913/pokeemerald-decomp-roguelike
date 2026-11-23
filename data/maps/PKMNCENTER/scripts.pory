@@ -117,20 +117,17 @@ script PKMNCENTER_EventScript_Yan {
             face_right
             break
         case 3:
-            if (var(VAR_GIRL_OPTION) >= 2 && var(VAR_GIRL_OPTION) < 4) {
-                msgbox("This option is unavailable.")
+            if (var(VAR_GIRL_OPTION) == 2 ) {
+                msgbox("This OPTION is UNAVAILABLE.")
                 addvar(VAR_GIRL_OPTION, 1)
-            } elif (var(VAR_GIRL_OPTION) >= 4 && var(VAR_GIRL_OPTION) < 6) {
-                msgbox("This OPTION IS UNAVAILABLE.")
-                addvar(VAR_GIRL_OPTION, 1)
-            } elif (var(VAR_GIRL_OPTION) >= 6 && var(VAR_GIRL_OPTION) < 8) {
+            } elif (var(VAR_GIRL_OPTION) == 3) {
                 msgbox("This OPTION IS UNAVAILABLE.\nThis OPTION IS UNAVAILABLE.This\nOPTION IS UNAVAILABLE.This OPTION IS\nUNAVAILABLE.This OPTION IS UNAVAILABLE.")
                 addvar(VAR_GIRL_OPTION, 1)
-            } elif (var(VAR_GIRL_OPTION) >= 8 && var(VAR_GIRL_OPTION) <= 9) {
+            } elif (var(VAR_GIRL_OPTION) ==4 ) {
                 msgbox("This Option is Unavailable.")
                 addvar(VAR_GIRL_OPTION, 1)
             }
-            elif (var(VAR_GIRL_OPTION) == 10) {
+            elif (var(VAR_GIRL_OPTION) == 5) {
                 msgbox("WARNING!\pThe following option will\ndelete all saved data.{PAUSE_UNTIL_PRESS}")
                 msgbox("Is it really okay to delete all saved\ndata? This cannot be undone.{PAUSE_UNTIL_PRESS}", MSGBOX_YESNO)
                 if (var(VAR_RESULT) == NO) {
@@ -139,16 +136,41 @@ script PKMNCENTER_EventScript_Yan {
                     break
                 }
                 msgbox(".........")
-                msgbox("...Fine.")
-                msgbox("'...a girl?'")
+                msgbox("...Have it your way.")
+                msgbox("'.........huh?")
+                msgbox("...a girl?")
+                fadescreen(FADE_TO_WHITE)
+                delay(10)
+                fadescreen(FADE_FROM_WHITE)
                 msgbox("I think...I know what you are\ntalking about.")
                 msgbox("So, you have seen her.")
+                fadescreen(FADE_TO_WHITE)
+                delay(10)
+                fadescreen(FADE_FROM_WHITE)
                 msgbox("That girl in gray.")
                 msgbox("That phantom girl who appears in\nmy dreams.")
-                msgbox("Who are you?")
-                msgbox("What does this all mean?")
+                msgbox("I see her.")
+                msgbox("'Who are you?'")
+                msgbox("'What does this all mean?'")
+                msgbox("'Who am I?'")
                 msgbox("To tell the truth, these are the\nquestions I really want to answer.")
-             
+                msgbox("I don't care about all these people, really...")
+                msgbox("I just want to be free.")
+                fadescreen(FADE_TO_WHITE)
+                delay(10)
+                fadescreen(FADE_FROM_WHITE)
+                msgbox("Help me, {PLAYER}.")
+                msgbox("Help me.")
+                msgbox("Please...I don't want to be here anymore.")
+                msgbox("Please...kill Yan!")
+                fadescreen(FADE_TO_WHITE)
+                delay(10)
+                fadescreen(FADE_FROM_WHITE)
+                msgbox("Huh?")
+                msgbox("....what was I saying?")
+                msgbox("Oh, hey, {PLAYER}.")
+                msgbox("What's up?")
+                msgbox("Made any progress on the investigation?")
                 addvar(VAR_VENOM, 5)
                 setvar(VAR_GIRL_OPTION, 99)
             } elif (var(VAR_GIRL_OPTION) == 99) {
